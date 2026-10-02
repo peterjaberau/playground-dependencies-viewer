@@ -1,4 +1,4 @@
-import type { GraphState } from "../graph"
+import type { GraphState } from "../lib/graph-types"
 
 type TraversalItem = [id: string, depth: number]
 
