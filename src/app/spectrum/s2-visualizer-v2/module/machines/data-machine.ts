@@ -1,18 +1,18 @@
-import { assign, fromPromise, sendTo, setup } from "xstate"
+import { assign, emit, fromPromise, setup } from "xstate"
 import { createDisplayGraph } from "../lib/display-graph"
 import type { DisplayGraphChangedEvent } from "../lib/display-graph-events"
 import { EMPTY_GRAPH, type GraphNode, type GraphState } from "../lib/graph-types"
 import { findRelated } from "../lib/graph-traversal"
 import { loadGraph } from "../lib/load-graph"
 
-export type DataContext = { completeGraph: GraphState; displayGraph: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; related: string[]; query: string; matches: GraphNode[]; error: string; graphEvents: any }
+export type DataContext = { completeGraph: GraphState; displayGraph: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; related: string[]; query: string; matches: GraphNode[]; error: string }
 type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "node.toggled"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string }
 type LoadedGraph = { graph: GraphState; components: string[] }
 
-const initialContext = ({ input }: { input: { graphEvents: any } }): DataContext => ({ completeGraph: EMPTY_GRAPH, displayGraph: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], related: [], query: "", matches: [], error: "", graphEvents: input.graphEvents })
+const initialContext: DataContext = { completeGraph: EMPTY_GRAPH, displayGraph: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], related: [], query: "", matches: [], error: "" }
 
 export const dataMachine = setup({
-  types: {} as { context: DataContext; input: { graphEvents: any }; events: DataEvent },
+  types: {} as { context: DataContext; events: DataEvent; emitted: DisplayGraphChangedEvent },
   actors: { loadGraph: fromPromise(({ input }: { input: { filters: string[] } }) => loadGraph(input.filters)) },
   actions: {
     applyFilters: assign(({ event }) => event.type === "filters.changed" ? { filters: event.filters } : {}),
@@ -38,7 +38,7 @@ export const dataMachine = setup({
     }),
     clearSelection: assign(({ context }) => ({ selected: [], selectionItems: [], related: [], displayGraph: createDisplayGraph(context.completeGraph, []) })),
     updateQuery: assign(({ context, event }) => event.type === "query.changed" ? { query: event.query, matches: event.query ? Object.values(context.completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(event.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(event.query.toLowerCase())).slice(0, 8) : [] } : {}),
-    notifyDisplayGraphChanged: sendTo(({ context }) => context.graphEvents, ({ context }) => ({ type: "displayGraph.published", event: { type: "displayGraph.changed", graph: context.displayGraph, selected: context.selected, related: context.related } as DisplayGraphChangedEvent })),
+    notifyDisplayGraphChanged: emit(({ context }) => ({ type: "displayGraph.changed", graph: context.displayGraph } as DisplayGraphChangedEvent)),
   },
 }).createMachine({
   id: "data",
