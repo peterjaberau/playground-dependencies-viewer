@@ -3,7 +3,7 @@ import { createDisplayGraph } from "../lib/display-graph"
 import type { GraphDataChangedEvent } from "../lib/display-graph-events"
 import { fetchTokenData, type RawTokens } from "../lib/fetch-token-data"
 import { EMPTY_GRAPH, type GraphNode, type GraphState } from "../lib/graph-types"
-import { findRelated } from "../lib/graph-traversal"
+import { createIncomingAdjacency, findRelated } from "../lib/graph-traversal"
 
 const valuePathSplitter = ":^;"
 const valuesListSplitter = ":*;"
@@ -24,7 +24,8 @@ export const dataMachine = setup({
     storeFetchedData: assign(({ event }) => ({ rawTokenData: (event as unknown as { output: RawTokens }).output, error: "" })),
     buildGraphFromData: assign(({ context }) => {
       const graph: GraphState = { width: 0, height: 0, nodes: {}, adjacencyList: {} }
-      const components: string[] = []
+      const componentIds = new Set<string>()
+      const tokenIdsByCategory = new Map<string, string[]>()
       const addNode = (node: GraphNode) => { graph.nodes[node.id] ??= node }
       const connect = (from: string, to: string, label?: string) => {
         const targets = graph.adjacencyList[from] ?? (graph.adjacencyList[from] = [])
@@ -32,8 +33,12 @@ export const dataMachine = setup({
         if (label) (graph.nodes[from]!.adjacencyLabels ??= {})[to] = label
       }
       for (const [id, token] of Object.entries(context.rawTokenData)) {
-        if (token.component) { addNode({ type: "component", id: token.component, x: 0, y: 0 }); if (!components.includes(token.component)) components.push(token.component); connect(token.component, id) }
+        if (token.component) { addNode({ type: "component", id: token.component, x: 0, y: 0 }); componentIds.add(token.component); connect(token.component, id) }
         addNode({ type: "token", id, x: 0, y: 0 })
+        const category = id.split("-")[0]!
+        const categoryTokenIds = tokenIdsByCategory.get(category) ?? []
+        categoryTokenIds.push(id)
+        tokenIdsByCategory.set(category, categoryTokenIds)
         const values: Array<{ value: string; path: string[] }> = []
         if (token.value) values.push({ value: token.value, path: [] })
         const pending = token.sets ? [{ sets: token.sets, path: [] as string[] }] : []
@@ -63,18 +68,19 @@ export const dataMachine = setup({
       for (const category of categories) {
         const categoryId = `${category}-*`
         addNode({ type: "orphan-category", id: categoryId, x: 0, y: 0 })
-        for (const id of Object.keys(context.rawTokenData)) if (id.startsWith(`${category}-`)) connect(categoryId, id)
+        for (const id of tokenIdsByCategory.get(category) ?? []) connect(categoryId, id)
       }
-      return { completeGraph: graph, components: components.sort() }
+      return { completeGraph: graph, components: [...componentIds].sort() }
     }),
     reconcileSelectionData: assign(({ context }) => ({ selected: context.selected.filter((id) => context.completeGraph.nodes[id]) })),
     deriveSelectionData: assign(({ context }) => {
       const selectionItems = context.selected.map((id) => context.completeGraph.nodes[id]).filter((node): node is GraphNode => Boolean(node)).sort((left, right) => Number(left.type !== "component") - Number(right.type !== "component")).map((node) => ({ id: node.id, type: node.type }))
-      const related = [...new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
-      const selectedTokens = context.selected.filter((id) => context.completeGraph.nodes[id]?.type !== "component")
       const downstream = new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))
+      const related = [...downstream]
+      const selectedTokens = context.selected.filter((id) => context.completeGraph.nodes[id]?.type !== "component")
       context.selected.forEach((id) => downstream.delete(id))
-      const focusNodeIds = downstream.size ? [...new Set([...context.selected, ...downstream])] : [...new Set([...context.selected, ...selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream")])])]
+      const incoming = downstream.size ? undefined : createIncomingAdjacency(context.completeGraph)
+      const focusNodeIds = downstream.size ? [...new Set([...context.selected, ...downstream])] : [...new Set([...context.selected, ...selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream", incoming)])])]
       return { selectionItems, related, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }
     }),
     deriveSearchMatches: assign(({ context }) => ({ matches: context.query ? Object.values(context.completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(context.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(context.query.toLowerCase())).slice(0, 8) : [] })),

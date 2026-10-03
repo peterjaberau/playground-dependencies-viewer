@@ -32,8 +32,8 @@ function calculateLayout(source: GraphState): GraphState {
   const validInsertionPoints: Record<string, number[]> = {}
   let maxWidth = 0
 
-  while (pending.length) {
-    const [id, depth] = pending.shift()!
+  for (let cursor = 0; cursor < pending.length; cursor++) {
+    const [id, depth] = pending[cursor]!
     const node = graph.nodes[id]
     if (!node) continue
     const adjacencies = [...(graph.adjacencyList[id] ?? [])].sort()
@@ -60,14 +60,26 @@ function calculateLayout(source: GraphState): GraphState {
     if (points.length > 2) graph.nodes[id]!.y = points[Math.floor(points.length / 2)]!
   }
 
+  const parentIdsByColumn = new Map<number, Set<string>>()
+  for (const [sourceId, targets] of Object.entries(graph.adjacencyList)) {
+    const source = graph.nodes[sourceId]
+    if (!source) continue
+    for (const targetId of targets) {
+      const target = graph.nodes[targetId]
+      if (!target || source.x >= target.x) continue
+      const column = target.x / COLUMN_WIDTH
+      const parentIds = parentIdsByColumn.get(column) ?? new Set<string>()
+      parentIds.add(sourceId)
+      parentIdsByColumn.set(column, parentIds)
+    }
+  }
+
   columnAssignments.forEach((assignments, column) => {
     if (column === 0 || !assignments.length) return
     const nodes = assignments.map((id) => graph.nodes[id]!).filter(Boolean)
-    const childIds = new Set(assignments)
-    const parentCenters = Object.entries(graph.adjacencyList).flatMap(([sourceId, targets]) => {
-      const source = graph.nodes[sourceId]
-      if (!source || source.x >= column * COLUMN_WIDTH || !targets.some((id) => childIds.has(id))) return []
-      return [source.y + nodeHeight(source) / 2]
+    const parentCenters = [...(parentIdsByColumn.get(column) ?? [])].map((id) => {
+      const parent = graph.nodes[id]!
+      return parent.y + nodeHeight(parent) / 2
     })
     if (!parentCenters.length) return
     const childTop = Math.min(...nodes.map((node) => node.y))
