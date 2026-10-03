@@ -29,3 +29,14 @@ export function collectRelated(graph: GraphState, nodeIds: Set<string>, start: s
   const incoming = direction === "upstream" ? createIncomingAdjacency(graph) : undefined
   for (const id of start) for (const relatedId of findRelated(graph, id, direction, incoming)) nodeIds.add(relatedId)
 }
+
+/** Mirrors the original graph controller's downstream-intersection state. */
+export function findDownstreamIntersection(graph: GraphState, selected: string[]) {
+  if (selected.length < 2) return []
+  let shared: Set<string> | undefined
+  for (const id of selected) {
+    const downstream = findRelated(graph, id, "downstream")
+    shared = shared ? new Set([...shared].filter((nodeId) => downstream.has(nodeId))) : downstream
+  }
+  return [...(shared ?? [])]
+}

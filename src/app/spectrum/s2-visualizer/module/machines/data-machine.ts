@@ -3,15 +3,15 @@ import { createDisplayGraph } from "../lib/display-graph"
 import type { GraphDataChangedEvent } from "../lib/display-graph-events"
 import { fetchTokenData, type RawTokens } from "../lib/fetch-token-data"
 import { EMPTY_GRAPH, type GraphNode, type GraphState } from "../lib/graph-types"
-import { createIncomingAdjacency, findRelated } from "../lib/graph-traversal"
+import { createIncomingAdjacency, findDownstreamIntersection, findRelated } from "../lib/graph-traversal"
 
 const valuePathSplitter = ":^;"
 const valuesListSplitter = ":*;"
 
-export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; related: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
+export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
 type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "selection.changed"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string }
 
-const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], related: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
+const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
 
 export const dataMachine = setup({
   types: {} as { context: DataContext; input: { graph: any }; events: DataEvent },
@@ -75,21 +75,21 @@ export const dataMachine = setup({
     reconcileSelectionData: assign(({ context }) => ({ selected: context.selected.filter((id) => context.completeGraph.nodes[id]) })),
     deriveSelectionData: assign(({ context }) => {
       const selectionItems = context.selected.map((id) => context.completeGraph.nodes[id]).filter((node): node is GraphNode => Boolean(node)).sort((left, right) => Number(left.type !== "component") - Number(right.type !== "component")).map((node) => ({ id: node.id, type: node.type }))
-      const downstream = new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))
-      const related = [...downstream]
       const selectedTokens = context.selected.filter((id) => context.completeGraph.nodes[id]?.type !== "component")
-      context.selected.forEach((id) => downstream.delete(id))
-      const incoming = downstream.size ? undefined : createIncomingAdjacency(context.completeGraph)
-      const focusNodeIds = downstream.size ? [...new Set([...context.selected, ...downstream])] : [...new Set([...context.selected, ...selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream", incoming)])])]
-      return { selectionItems, related, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }
+      const incoming = createIncomingAdjacency(context.completeGraph)
+      const selectionAncestorNodeIds = [...new Set(selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream", incoming)]))]
+      const selectionDescendentNodeIds = [...new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
+      const selectionDescendentIntersectNodeIds = findDownstreamIntersection(context.completeGraph, context.selected)
+      const focusNodeIds = [...new Set([...context.selected, ...selectionAncestorNodeIds, ...selectionDescendentNodeIds])]
+      return { selectionItems, selectionAncestorNodeIds, selectionDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }
     }),
     deriveSearchMatches: assign(({ context }) => ({ matches: context.query ? Object.values(context.completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(context.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(context.query.toLowerCase())).slice(0, 8) : [] })),
     recordDataFetchError: assign(({ event }) => {
       const error = (event as { error?: unknown }).error
       return { error: error instanceof Error ? error.message : "Unable to fetch token data." }
     }),
-    notifySelectionChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, related: context.related, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
-    notifyFilteredDataChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, related: context.related, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
+    notifySelectionChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
+    notifyFilteredDataChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
   },
 }).createMachine({
   id: "data",
