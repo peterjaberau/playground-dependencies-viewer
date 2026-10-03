@@ -4,20 +4,20 @@ import { createFlowElements, type SpectrumFlowNode } from "../lib/flow-elements"
 import { EMPTY_GRAPH, type GraphState } from "../lib/graph-types"
 import { layoutGraphActor } from "../lib/layout-graph-actor"
 
-export type VisualizerContext = { graph: GraphState; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; related: string[]; error: string; graphEvents: any }
+export type VisualizerContext = { graph: GraphState; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; related: string[]; focusNodeIds: string[]; focusRequest: number; error: string; graphEvents: any }
 export type VisualizerInput = { graphEvents: any }
-type VisualizerEvent = { type: "graph.updated"; graph: GraphState; selected: string[]; related: string[] } | { type: "viewport.changed"; viewport: Viewport } | { type: "node.moved"; id: string; position: { x: number; y: number } } | { type: "view.reset" }
+type VisualizerEvent = { type: "graph.updated"; graph: GraphState; selected: string[]; related: string[]; focusNodeIds: string[] } | { type: "viewport.changed"; viewport: Viewport } | { type: "node.moved"; id: string; position: { x: number; y: number } } | { type: "view.reset" }
 
-const initialContext = ({ input }: { input: VisualizerInput }): VisualizerContext => ({ graph: EMPTY_GRAPH, nodes: [], edges: [], viewport: { x: 380, y: 130, zoom: .7 }, selected: [], related: [], error: "", graphEvents: input.graphEvents })
+const initialContext = ({ input }: { input: VisualizerInput }): VisualizerContext => ({ graph: EMPTY_GRAPH, nodes: [], edges: [], viewport: { x: 380, y: 130, zoom: .7 }, selected: [], related: [], focusNodeIds: [], focusRequest: 0, error: "", graphEvents: input.graphEvents })
 
 export const visualizerMachine = setup({
   types: {} as { context: VisualizerContext; input: VisualizerInput; events: VisualizerEvent },
   actors: { layoutGraph: layoutGraphActor },
   actions: {
-    stageGraph: assign(({ event }) => event.type === "graph.updated" ? { graph: event.graph, selected: event.selected, related: event.related, error: "" } : {}),
+    stageGraph: assign(({ event }) => event.type === "graph.updated" ? { graph: event.graph, selected: event.selected, related: event.related, focusNodeIds: event.focusNodeIds, error: "" } : {}),
     applyLayout: assign(({ context, event }) => {
       const graph = (event as unknown as { output: GraphState }).output
-      return { graph, ...createFlowElements(graph, context.selected, context.related) }
+      return { graph, ...createFlowElements(graph, context.selected, context.related), focusRequest: context.focusNodeIds.length ? context.focusRequest + 1 : context.focusRequest }
     }),
     updateViewport: assign(({ event }) => event.type === "viewport.changed" ? { viewport: event.viewport } : {}),
     persistNodePosition: assign(({ context, event }) => {

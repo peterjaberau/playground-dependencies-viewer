@@ -10,12 +10,12 @@ export const graphEventsMachine = setup({
     publish: enqueueActions(({ context, event, enqueue }) => {
       if (event.type !== "displayGraph.published") return
       enqueue.assign({ latest: event.event })
-      for (const subscriber of context.subscribers) enqueue.sendTo(subscriber, { type: "graph.updated", graph: event.event.graph, selected: event.event.selected, related: event.event.related } as any)
+      for (const subscriber of context.subscribers) enqueue.sendTo(subscriber, { type: "graph.updated", graph: event.event.graph, selected: event.event.selected, related: event.event.related, focusNodeIds: event.event.focusNodeIds } as any)
     }),
     subscribe: enqueueActions(({ context, event, enqueue }) => {
       if (event.type !== "displayGraph.subscribed") return
       enqueue.assign({ subscribers: [...context.subscribers, event.subscriber] })
-      if (context.latest) enqueue.sendTo(event.subscriber, { type: "graph.updated", graph: context.latest.graph, selected: context.latest.selected, related: context.latest.related } as any)
+      if (context.latest) enqueue.sendTo(event.subscriber, { type: "graph.updated", graph: context.latest.graph, selected: context.latest.selected, related: context.latest.related, focusNodeIds: context.latest.focusNodeIds } as any)
     }),
   },
 }).createMachine({

@@ -5,11 +5,11 @@ import { EMPTY_GRAPH, type GraphNode, type GraphState } from "../lib/graph-types
 import { findRelated } from "../lib/graph-traversal"
 import { loadGraph } from "../lib/load-graph"
 
-export type DataContext = { completeGraph: GraphState; displayGraph: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; related: string[]; query: string; matches: GraphNode[]; error: string; graphEvents: any }
+export type DataContext = { completeGraph: GraphState; displayGraph: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; related: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graphEvents: any }
 type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "node.toggled"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string }
 type LoadedGraph = { graph: GraphState; components: string[] }
 
-const initialContext = ({ input }: { input: { graphEvents: any } }): DataContext => ({ completeGraph: EMPTY_GRAPH, displayGraph: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], related: [], query: "", matches: [], error: "", graphEvents: input.graphEvents })
+const initialContext = ({ input }: { input: { graphEvents: any } }): DataContext => ({ completeGraph: EMPTY_GRAPH, displayGraph: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], related: [], focusNodeIds: [], query: "", matches: [], error: "", graphEvents: input.graphEvents })
 
 export const dataMachine = setup({
   types: {} as { context: DataContext; input: { graphEvents: any }; events: DataEvent },
@@ -22,8 +22,14 @@ export const dataMachine = setup({
       const selected = context.selected.filter((id) => completeGraph.nodes[id])
       const selectionItems = selected.map((id) => completeGraph.nodes[id]).filter((node): node is GraphNode => Boolean(node)).sort((left, right) => Number(left.type !== "component") - Number(right.type !== "component")).map((node) => ({ id: node.id, type: node.type }))
       const related = [...new Set(selected.flatMap((id) => [...findRelated(completeGraph, id, "downstream")]))]
+      const selectedTokens = selected.filter((id) => completeGraph.nodes[id]?.type !== "component")
+      const downstream = new Set(selected.flatMap((id) => [...findRelated(completeGraph, id, "downstream")]))
+      selected.forEach((id) => downstream.delete(id))
+      const focusNodeIds = downstream.size
+        ? [...downstream]
+        : [...new Set([...selected, ...selectedTokens.flatMap((id) => [...findRelated(completeGraph, id, "upstream")])])]
       const matches = context.query ? Object.values(completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(context.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(context.query.toLowerCase())).slice(0, 8) : []
-      return { completeGraph, components: output.components, selected, selectionItems, related, displayGraph: createDisplayGraph(completeGraph, selected), matches, error: "" }
+      return { completeGraph, components: output.components, selected, selectionItems, related, focusNodeIds, displayGraph: createDisplayGraph(completeGraph, selected), matches, error: "" }
     }),
     recordLoadError: assign(({ event }) => {
       const error = (event as { error?: unknown }).error
@@ -34,11 +40,17 @@ export const dataMachine = setup({
       const selected = context.selected.includes(event.id) ? context.selected.filter((id) => id !== event.id) : [...context.selected, event.id]
       const selectionItems = selected.map((id) => context.completeGraph.nodes[id]).filter((node): node is GraphNode => Boolean(node)).sort((left, right) => Number(left.type !== "component") - Number(right.type !== "component")).map((node) => ({ id: node.id, type: node.type }))
       const related = [...new Set(selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
-      return { selected, selectionItems, related, displayGraph: createDisplayGraph(context.completeGraph, selected) }
+      const selectedTokens = selected.filter((id) => context.completeGraph.nodes[id]?.type !== "component")
+      const downstream = new Set(selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))
+      selected.forEach((id) => downstream.delete(id))
+      const focusNodeIds = downstream.size
+        ? [...downstream]
+        : [...new Set([...selected, ...selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream")])])]
+      return { selected, selectionItems, related, focusNodeIds, displayGraph: createDisplayGraph(context.completeGraph, selected) }
     }),
-    clearSelection: assign(({ context }) => ({ selected: [], selectionItems: [], related: [], displayGraph: createDisplayGraph(context.completeGraph, []) })),
+    clearSelection: assign(({ context }) => ({ selected: [], selectionItems: [], related: [], focusNodeIds: [], displayGraph: createDisplayGraph(context.completeGraph, []) })),
     updateQuery: assign(({ context, event }) => event.type === "query.changed" ? { query: event.query, matches: event.query ? Object.values(context.completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(event.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(event.query.toLowerCase())).slice(0, 8) : [] } : {}),
-    notifyDisplayGraphChanged: sendTo(({ context }) => context.graphEvents, ({ context }) => ({ type: "displayGraph.published", event: { type: "displayGraph.changed", graph: context.displayGraph, selected: context.selected, related: context.related } as DisplayGraphChangedEvent })),
+    notifyDisplayGraphChanged: sendTo(({ context }) => context.graphEvents, ({ context }) => ({ type: "displayGraph.published", event: { type: "displayGraph.changed", graph: context.displayGraph, selected: context.selected, related: context.related, focusNodeIds: context.focusNodeIds } as DisplayGraphChangedEvent })),
   },
 }).createMachine({
   id: "data",
