@@ -14,10 +14,11 @@ export const GRAPH_NODE_COLORS = {
 
 export const GRAPH_EDGE_COLORS = {
   selectionConnection: "#f97316",
+  selectedChildDescendentPath: "#d8b4fe",
   // ancestorPath: "#a855f7",
   // descendentPath: "#ec4899",
   // default: "#94a3b8",
-  ancestorPath: "#e4e4e7",
+  ancestorPath: "#000000",
   descendentPath: "#e4e4e7",
   default: "#e4e4e7",
 } as const
@@ -29,4 +30,6 @@ export const GRAPH_EDGE_STYLE = {
   color: "#e4e4e7",
   strokeWidth: 2,
   fadedOpacity: 1,
+  normalZIndex: 0,
+  highlightedZIndex: 2,
 } as const

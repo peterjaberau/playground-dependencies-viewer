@@ -8,10 +8,10 @@ import { createIncomingAdjacency, findDownstreamIntersection, findRelated } from
 const valuePathSplitter = ":^;"
 const valuesListSplitter = ":*;"
 
-export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
+export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
 type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "selection.changed"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string }
 
-const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
+const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectedChildDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
 
 export const dataMachine = setup({
   types: {} as { context: DataContext; input: { graph: any }; events: DataEvent },
@@ -79,17 +79,18 @@ export const dataMachine = setup({
       const incoming = createIncomingAdjacency(context.completeGraph)
       const selectionAncestorNodeIds = [...new Set(selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream", incoming)]))]
       const selectionDescendentNodeIds = [...new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
+      const selectedChildDescendentNodeIds = [...new Set(selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
       const selectionDescendentIntersectNodeIds = findDownstreamIntersection(context.completeGraph, context.selected)
       const focusNodeIds = [...new Set([...context.selected, ...selectionAncestorNodeIds, ...selectionDescendentNodeIds])]
-      return { selectionItems, selectionAncestorNodeIds, selectionDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }
+      return { selectionItems, selectionAncestorNodeIds, selectionDescendentNodeIds, selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }
     }),
     deriveSearchMatches: assign(({ context }) => ({ matches: context.query ? Object.values(context.completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(context.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(context.query.toLowerCase())).slice(0, 8) : [] })),
     recordDataFetchError: assign(({ event }) => {
       const error = (event as { error?: unknown }).error
       return { error: error instanceof Error ? error.message : "Unable to fetch token data." }
     }),
-    notifySelectionChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
-    notifyFilteredDataChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
+    notifySelectionChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectedChildDescendentNodeIds: context.selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
+    notifyFilteredDataChanged: sendTo(({ context }) => context.graph, ({ context }) => ({ type: "graphData.published", event: { type: "graphData.changed", graph: context.graphData, selected: context.selected, selectionAncestorNodeIds: context.selectionAncestorNodeIds, selectionDescendentNodeIds: context.selectionDescendentNodeIds, selectedChildDescendentNodeIds: context.selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds: context.selectionDescendentIntersectNodeIds, focusNodeIds: context.focusNodeIds } as GraphDataChangedEvent })),
   },
 }).createMachine({
   id: "data",

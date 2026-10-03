@@ -5,10 +5,11 @@ import type { GraphNode, GraphState } from "./graph-types"
 export type SpectrumFlowNodeData = { graphNode: GraphNode; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
 export type SpectrumFlowNode = Node<SpectrumFlowNodeData, "spectrumToken">
 
-export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
+export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectedChildDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
   const selectedIds = new Set(selected)
   const ancestorIds = new Set(selectionAncestorNodeIds)
   const descendentIds = new Set(selectionDescendentNodeIds)
+  const selectedChildDescendentIds = new Set(selectedChildDescendentNodeIds)
   const descendentIntersectIds = new Set(selectionDescendentIntersectNodeIds)
   const focusIds = new Set([
     ...selectionAncestorNodeIds.filter((id) => descendentIds.has(id)),
@@ -32,9 +33,12 @@ export function createFlowElements(graph: GraphState, selected: string[], select
   const edges: Edge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => targets.map((target) => {
     const isOnAncestorPath = ancestorIds.has(source) && ancestorIds.has(target)
     const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
+    const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
     const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
     const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
-    const stroke = isSelectionConnection
+    const stroke = isOnSelectedChildDescendentPath
+      ? GRAPH_EDGE_COLORS.selectedChildDescendentPath
+      : isSelectionConnection
       ? GRAPH_EDGE_COLORS.selectionConnection
       : isOnAncestorPath
         ? GRAPH_EDGE_COLORS.ancestorPath
@@ -46,6 +50,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
       source,
       target,
       type: "default",
+      zIndex: isSelectionConnection ? GRAPH_EDGE_STYLE.highlightedZIndex : GRAPH_EDGE_STYLE.normalZIndex,
       style: { stroke, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: isFaded ? GRAPH_EDGE_STYLE.fadedOpacity : 1 },
     }
   }))

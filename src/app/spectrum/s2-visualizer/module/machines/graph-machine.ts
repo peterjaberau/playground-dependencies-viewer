@@ -94,11 +94,11 @@ function calculateLayout(source: GraphState): GraphState {
   return graph
 }
 
-export type GraphContext = { graph: GraphState; latestGraphData?: GraphDataChangedEvent; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; focusRequest: number; error: string }
+export type GraphContext = { graph: GraphState; latestGraphData?: GraphDataChangedEvent; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; focusRequest: number; error: string }
 export type GraphInput = Record<string, never>
 type GraphEvent = { type: "graphData.published"; event: GraphDataChangedEvent } | { type: "viewport.changed"; viewport: Viewport } | { type: "node.moved"; id: string; position: { x: number; y: number } } | { type: "view.reset" }
 
-const initialContext = (): GraphContext => ({ graph: EMPTY_GRAPH, nodes: [], edges: [], viewport: { x: 380, y: 130, zoom: .7 }, selected: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], focusRequest: 0, error: "" })
+const initialContext = (): GraphContext => ({ graph: EMPTY_GRAPH, nodes: [], edges: [], viewport: { x: 380, y: 130, zoom: .7 }, selected: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectedChildDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], focusRequest: 0, error: "" })
 
 export const graphMachine = setup({
   types: {} as { context: GraphContext; input: GraphInput; events: GraphEvent },
@@ -107,8 +107,8 @@ export const graphMachine = setup({
     calculateGraphLayout: assign(({ event }) => event.type === "graphData.published" ? { graph: calculateLayout(event.event.graph), error: "" } : {}),
     createGraphFlow: assign(({ context, event }) => {
       if (event.type !== "graphData.published") return {}
-      const { selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds } = event.event
-      return { selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, ...createFlowElements(context.graph, selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectionDescendentIntersectNodeIds), focusRequest: focusNodeIds.length ? context.focusRequest + 1 : context.focusRequest }
+      const { selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds } = event.event
+      return { selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, ...createFlowElements(context.graph, selected, selectionAncestorNodeIds, selectionDescendentNodeIds, selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds), focusRequest: focusNodeIds.length ? context.focusRequest + 1 : context.focusRequest }
     }),
     updateViewport: assign(({ event }) => event.type === "viewport.changed" ? { viewport: event.viewport } : {}),
     persistNodePosition: assign(({ context, event }) => {
