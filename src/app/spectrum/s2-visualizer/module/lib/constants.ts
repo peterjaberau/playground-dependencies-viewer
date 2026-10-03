@@ -14,12 +14,19 @@ export const GRAPH_NODE_COLORS = {
 
 export const GRAPH_EDGE_COLORS = {
   selectionConnection: "#f97316",
-  ancestorPath: "#a855f7",
-  descendentPath: "#ec4899",
-  default: "#94a3b8",
+  // ancestorPath: "#a855f7",
+  // descendentPath: "#ec4899",
+  // default: "#94a3b8",
+  ancestorPath: "#e4e4e7",
+  descendentPath: "#e4e4e7",
+  default: "#e4e4e7",
 } as const
+// #f4f4f5
 
 export const GRAPH_EDGE_STYLE = {
+  // Set a CSS color here to override only normal/default edges. When omitted,
+  // GRAPH_EDGE_COLORS.default remains the fallback.
+  color: "#e4e4e7",
   strokeWidth: 2,
-  fadedOpacity: 0.3,
+  fadedOpacity: 1,
 } as const

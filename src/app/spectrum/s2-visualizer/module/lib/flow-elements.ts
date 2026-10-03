@@ -16,6 +16,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
   ].filter((id) => !selectedIds.has(id)))
   const focusedOrSelectedIds = new Set([...focusIds, ...selectedIds])
   const isFocusMode = focusIds.size > 0
+  const defaultEdgeColor = GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.default
   const nodes: SpectrumFlowNode[] = Object.values(graph.nodes).map((graphNode) => ({
     id: graphNode.id,
     type: "spectrumToken",
@@ -39,7 +40,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
         ? GRAPH_EDGE_COLORS.ancestorPath
         : isOnDescendentPath
           ? GRAPH_EDGE_COLORS.descendentPath
-          : GRAPH_EDGE_COLORS.default
+          : defaultEdgeColor
     return {
       id: `${source}->${target}`,
       source,
