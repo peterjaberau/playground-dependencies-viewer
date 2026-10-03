@@ -1,8 +1,18 @@
 import type { Edge, Viewport } from "@xyflow/react"
-import { assign, sendTo, setup } from "xstate"
+import { assign, fromPromise, sendTo, setup } from "xstate"
 import { createFlowElements, type SpectrumFlowNode } from "../lib/flow-elements"
 import { EMPTY_GRAPH, type GraphState } from "../lib/graph-types"
-import { layoutGraphActor } from "../lib/layout-graph-actor"
+
+// Layout is owned by this machine. The worker is deliberately only the
+// execution boundary so this expensive traversal never blocks React Flow.
+const layoutGraph = fromPromise(async ({ input }: { input: GraphState }) => {
+  const worker = new Worker(new URL("../workers/graph-layout.ts", import.meta.url))
+  return new Promise<GraphState>((resolve, reject) => {
+    worker.onmessage = (event: MessageEvent<GraphState>) => { worker.terminate(); resolve(event.data) }
+    worker.onerror = () => { worker.terminate(); reject(new Error("The graph layout worker could not start.")) }
+    worker.postMessage(input)
+  })
+})
 
 export type VisualizerContext = { graph: GraphState; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; related: string[]; focusNodeIds: string[]; focusRequest: number; error: string; graphEvents: any }
 export type VisualizerInput = { graphEvents: any }
@@ -12,7 +22,7 @@ const initialContext = ({ input }: { input: VisualizerInput }): VisualizerContex
 
 export const visualizerMachine = setup({
   types: {} as { context: VisualizerContext; input: VisualizerInput; events: VisualizerEvent },
-  actors: { layoutGraph: layoutGraphActor },
+  actors: { layoutGraph },
   actions: {
     stageGraph: assign(({ event }) => event.type === "graph.updated" ? { graph: event.graph, selected: event.selected, related: event.related, focusNodeIds: event.focusNodeIds, error: "" } : {}),
     applyLayout: assign(({ context, event }) => {
