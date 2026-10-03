@@ -1,9 +1,7 @@
 {
-  "edges": [],
-  "error": "",
   "graph": {
     "width": 0,
-    "height": 4374,
+    "height": 4397,
     "nodes": {
       "user-card": {
         "type": "component",
@@ -986,7 +984,6 @@
     },
     "adjacencyList": {}
   },
-  "graphEvents": [],
   "nodes": [
     {
       "id": "user-card",
@@ -1003,7 +1000,9 @@
           "y": 2592
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1021,7 +1020,9 @@
           "y": 2538
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1039,7 +1040,9 @@
           "y": 2511
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1057,7 +1060,9 @@
           "y": 2484
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1075,7 +1080,9 @@
           "y": 2457
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1093,7 +1100,9 @@
           "y": 2430
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1111,7 +1120,9 @@
           "y": 2403
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1129,7 +1140,9 @@
           "y": 2376
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1147,7 +1160,9 @@
           "y": 2349
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1165,7 +1180,9 @@
           "y": 2322
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1183,7 +1200,9 @@
           "y": 2295
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1201,7 +1220,9 @@
           "y": 2268
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1219,7 +1240,9 @@
           "y": 2214
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1237,7 +1260,9 @@
           "y": 2241
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1255,7 +1280,9 @@
           "y": 2187
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1273,7 +1300,9 @@
           "y": 2160
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1291,7 +1320,9 @@
           "y": 2133
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1309,7 +1340,9 @@
           "y": 2079
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1327,7 +1360,9 @@
           "y": 2106
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1345,7 +1380,9 @@
           "y": 2052
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1363,7 +1400,9 @@
           "y": 2025
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1381,7 +1420,9 @@
           "y": 1998
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1399,7 +1440,9 @@
           "y": 1971
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1417,7 +1460,9 @@
           "y": 1944
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1435,7 +1480,9 @@
           "y": 1917
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1453,7 +1500,9 @@
           "y": 1890
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1471,7 +1520,9 @@
           "y": 1863
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1489,7 +1540,9 @@
           "y": 1836
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1507,7 +1560,9 @@
           "y": 1809
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1525,7 +1580,9 @@
           "y": 1782
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1543,7 +1600,9 @@
           "y": 1755
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1561,7 +1620,9 @@
           "y": 1728
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1579,7 +1640,9 @@
           "y": 1701
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1597,7 +1660,9 @@
           "y": 1674
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1615,7 +1680,9 @@
           "y": 1647
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1633,7 +1700,9 @@
           "y": 1620
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1651,7 +1720,9 @@
           "y": 1593
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1669,7 +1740,9 @@
           "y": 1566
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1687,7 +1760,9 @@
           "y": 1539
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1705,7 +1780,9 @@
           "y": 1512
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1723,7 +1800,9 @@
           "y": 1485
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1741,7 +1820,9 @@
           "y": 1458
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1759,7 +1840,9 @@
           "y": 945
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1777,7 +1860,9 @@
           "y": 162
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1795,7 +1880,9 @@
           "y": 2619
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1813,7 +1900,9 @@
           "y": 81
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1831,7 +1920,9 @@
           "y": 189
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1849,7 +1940,9 @@
           "y": 216
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1867,7 +1960,9 @@
           "y": 486
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1885,7 +1980,9 @@
           "y": 513
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1903,7 +2000,9 @@
           "y": 864
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1921,7 +2020,9 @@
           "y": 891
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1939,7 +2040,9 @@
           "y": 1053
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1957,7 +2060,9 @@
           "y": 1215
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1975,7 +2080,9 @@
           "y": 1431
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -1993,7 +2100,9 @@
           "y": 2565
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2011,7 +2120,9 @@
           "y": 1404
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2029,7 +2140,9 @@
           "y": 1377
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2047,7 +2160,9 @@
           "y": 1350
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2065,7 +2180,9 @@
           "y": 1323
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2083,7 +2200,9 @@
           "y": 1296
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2101,7 +2220,9 @@
           "y": 1269
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2119,7 +2240,9 @@
           "y": 1242
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2137,7 +2260,9 @@
           "y": 1188
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2155,7 +2280,9 @@
           "y": 1161
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2173,7 +2300,9 @@
           "y": 1107
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2191,7 +2320,9 @@
           "y": 1134
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2209,7 +2340,9 @@
           "y": 1080
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2227,7 +2360,9 @@
           "y": 1026
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2245,7 +2380,9 @@
           "y": 999
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2263,7 +2400,9 @@
           "y": 972
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2281,7 +2420,9 @@
           "y": 918
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2299,7 +2440,9 @@
           "y": 837
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2317,7 +2460,9 @@
           "y": 810
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2335,7 +2480,9 @@
           "y": 783
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2353,7 +2500,9 @@
           "y": 756
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2371,7 +2520,9 @@
           "y": 729
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2389,7 +2540,9 @@
           "y": 702
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2407,7 +2560,9 @@
           "y": 675
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2425,7 +2580,9 @@
           "y": 648
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2443,7 +2600,9 @@
           "y": 621
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2461,7 +2620,9 @@
           "y": 594
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2479,7 +2640,9 @@
           "y": 567
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2497,7 +2660,9 @@
           "y": 540
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2515,7 +2680,9 @@
           "y": 459
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2533,7 +2700,9 @@
           "y": 405
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2551,7 +2720,9 @@
           "y": 432
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2569,7 +2740,9 @@
           "y": 378
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2587,7 +2760,9 @@
           "y": 351
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2605,7 +2780,9 @@
           "y": 324
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2623,7 +2800,9 @@
           "y": 297
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2641,7 +2820,9 @@
           "y": 243
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2659,7 +2840,9 @@
           "y": 270
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2677,7 +2860,9 @@
           "y": 135
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2695,7 +2880,9 @@
           "y": 108
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2713,7 +2900,9 @@
           "y": 54
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2731,7 +2920,9 @@
           "y": 27
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2749,7 +2940,9 @@
           "y": 0
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2767,7 +2960,9 @@
           "y": 2997
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2785,7 +2980,9 @@
           "y": 3024
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2803,7 +3000,9 @@
           "y": 3132
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2821,7 +3020,9 @@
           "y": 3564
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2839,7 +3040,9 @@
           "y": 4131
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2857,7 +3060,9 @@
           "y": 2646
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2875,7 +3080,9 @@
           "y": 3456
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2893,7 +3100,9 @@
           "y": 3510
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2911,7 +3120,9 @@
           "y": 3672
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2929,7 +3140,9 @@
           "y": 3726
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2947,7 +3160,9 @@
           "y": 3888
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2965,7 +3180,9 @@
           "y": 2673
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -2983,7 +3200,9 @@
           "y": 2700
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3001,7 +3220,9 @@
           "y": 2754
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3019,7 +3240,9 @@
           "y": 2781
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3037,7 +3260,9 @@
           "y": 2835
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3055,7 +3280,9 @@
           "y": 2916
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3073,7 +3300,9 @@
           "y": 3051
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3091,7 +3320,9 @@
           "y": 3078
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3109,7 +3340,9 @@
           "y": 3186
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3127,7 +3360,9 @@
           "y": 3213
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3145,7 +3380,9 @@
           "y": 3240
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3163,7 +3400,9 @@
           "y": 3267
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3181,7 +3420,9 @@
           "y": 3321
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3199,7 +3440,9 @@
           "y": 3348
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3217,7 +3460,9 @@
           "y": 3429
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3235,7 +3480,9 @@
           "y": 3537
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3253,7 +3500,9 @@
           "y": 3591
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3271,7 +3520,9 @@
           "y": 3645
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3289,7 +3540,9 @@
           "y": 3834
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3307,7 +3560,9 @@
           "y": 3996
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3325,7 +3580,9 @@
           "y": 4050
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3343,7 +3600,9 @@
           "y": 4266
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3361,7 +3620,9 @@
           "y": 4293
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3379,7 +3640,9 @@
           "y": 4320
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3397,7 +3660,9 @@
           "y": 4347
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3415,7 +3680,9 @@
           "y": 2862
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3433,7 +3700,9 @@
           "y": 2889
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3451,7 +3720,9 @@
           "y": 2943
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3469,7 +3740,9 @@
           "y": 2970
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3487,7 +3760,9 @@
           "y": 3105
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3505,7 +3780,9 @@
           "y": 3294
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3523,7 +3800,9 @@
           "y": 3375
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3541,7 +3820,9 @@
           "y": 3483
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3559,7 +3840,9 @@
           "y": 3618
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3577,7 +3860,9 @@
           "y": 3861
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3595,7 +3880,9 @@
           "y": 3915
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3613,7 +3900,9 @@
           "y": 3969
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3631,7 +3920,9 @@
           "y": 4023
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3649,7 +3940,9 @@
           "y": 4104
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3667,7 +3960,9 @@
           "y": 4212
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3685,7 +3980,9 @@
           "y": 4239
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3703,7 +4000,9 @@
           "y": 4374
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3721,7 +4020,9 @@
           "y": 2727
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3739,7 +4040,9 @@
           "y": 2808
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3757,7 +4060,9 @@
           "y": 3159
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3775,7 +4080,9 @@
           "y": 3402
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3793,7 +4100,9 @@
           "y": 3699
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3811,7 +4120,9 @@
           "y": 3753
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3829,7 +4140,9 @@
           "y": 3780
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3847,7 +4160,9 @@
           "y": 3807
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3865,7 +4180,9 @@
           "y": 3942
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3883,7 +4200,9 @@
           "y": 4077
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3901,7 +4220,9 @@
           "y": 4158
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     },
     {
@@ -3919,16 +4240,1018 @@
           "y": 4185
         },
         "isSelected": false,
-        "isRelated": false
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
       }
     }
   ],
-  "related": [],
-  "selected": [],
+  "edges": [],
   "viewport": {
-    "x": 0,
-    "y": 0,
-    "width": 800,
-    "height": 600
+    "x": 380,
+    "y": 130,
+    "zoom": 0.7
+  },
+  "selected": [],
+  "selectionAncestorNodeIds": [],
+  "selectionDescendentNodeIds": [],
+  "selectedChildDescendentNodeIds": [],
+  "selectionDescendentIntersectNodeIds": [],
+  "focusNodeIds": [],
+  "focusRequest": 0,
+  "error": "",
+  "latestGraphData": {
+    "type": "graphData.changed",
+    "graph": {
+      "width": 0,
+      "height": 0,
+      "nodes": {
+        "user-card": {
+          "type": "component",
+          "id": "user-card",
+          "x": 0,
+          "y": 0
+        },
+        "triple-calendar": {
+          "type": "component",
+          "id": "triple-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "tree-view": {
+          "type": "component",
+          "id": "tree-view",
+          "x": 0,
+          "y": 0
+        },
+        "tray": {
+          "type": "component",
+          "id": "tray",
+          "x": 0,
+          "y": 0
+        },
+        "tooltip": {
+          "type": "component",
+          "id": "tooltip",
+          "x": 0,
+          "y": 0
+        },
+        "toast": {
+          "type": "component",
+          "id": "toast",
+          "x": 0,
+          "y": 0
+        },
+        "title": {
+          "type": "component",
+          "id": "title",
+          "x": 0,
+          "y": 0
+        },
+        "time-field": {
+          "type": "component",
+          "id": "time-field",
+          "x": 0,
+          "y": 0
+        },
+        "thumbnail": {
+          "type": "component",
+          "id": "thumbnail",
+          "x": 0,
+          "y": 0
+        },
+        "text-field": {
+          "type": "component",
+          "id": "text-field",
+          "x": 0,
+          "y": 0
+        },
+        "text-area": {
+          "type": "component",
+          "id": "text-area",
+          "x": 0,
+          "y": 0
+        },
+        "takeover-dialog": {
+          "type": "component",
+          "id": "takeover-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "tag": {
+          "type": "component",
+          "id": "tag",
+          "x": 0,
+          "y": 0
+        },
+        "tag-field": {
+          "type": "component",
+          "id": "tag-field",
+          "x": 0,
+          "y": 0
+        },
+        "tabs": {
+          "type": "component",
+          "id": "tabs",
+          "x": 0,
+          "y": 0
+        },
+        "table": {
+          "type": "component",
+          "id": "table",
+          "x": 0,
+          "y": 0
+        },
+        "switch": {
+          "type": "component",
+          "id": "switch",
+          "x": 0,
+          "y": 0
+        },
+        "swatch": {
+          "type": "component",
+          "id": "swatch",
+          "x": 0,
+          "y": 0
+        },
+        "swatch-group": {
+          "type": "component",
+          "id": "swatch-group",
+          "x": 0,
+          "y": 0
+        },
+        "steplist": {
+          "type": "component",
+          "id": "steplist",
+          "x": 0,
+          "y": 0
+        },
+        "status-light": {
+          "type": "component",
+          "id": "status-light",
+          "x": 0,
+          "y": 0
+        },
+        "standard-panel": {
+          "type": "component",
+          "id": "standard-panel",
+          "x": 0,
+          "y": 0
+        },
+        "standard-dialog": {
+          "type": "component",
+          "id": "standard-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "stack-item": {
+          "type": "component",
+          "id": "stack-item",
+          "x": 0,
+          "y": 0
+        },
+        "slider": {
+          "type": "component",
+          "id": "slider",
+          "x": 0,
+          "y": 0
+        },
+        "single-calendar": {
+          "type": "component",
+          "id": "single-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "side-navigation": {
+          "type": "component",
+          "id": "side-navigation",
+          "x": 0,
+          "y": 0
+        },
+        "select-box": {
+          "type": "component",
+          "id": "select-box",
+          "x": 0,
+          "y": 0
+        },
+        "segmented-text-field": {
+          "type": "component",
+          "id": "segmented-text-field",
+          "x": 0,
+          "y": 0
+        },
+        "segmented-control": {
+          "type": "component",
+          "id": "segmented-control",
+          "x": 0,
+          "y": 0
+        },
+        "search-field": {
+          "type": "component",
+          "id": "search-field",
+          "x": 0,
+          "y": 0
+        },
+        "rating": {
+          "type": "component",
+          "id": "rating",
+          "x": 0,
+          "y": 0
+        },
+        "radio-button": {
+          "type": "component",
+          "id": "radio-button",
+          "x": 0,
+          "y": 0
+        },
+        "progress-circle": {
+          "type": "component",
+          "id": "progress-circle",
+          "x": 0,
+          "y": 0
+        },
+        "progress-bar": {
+          "type": "component",
+          "id": "progress-bar",
+          "x": 0,
+          "y": 0
+        },
+        "popover": {
+          "type": "component",
+          "id": "popover",
+          "x": 0,
+          "y": 0
+        },
+        "picker": {
+          "type": "component",
+          "id": "picker",
+          "x": 0,
+          "y": 0
+        },
+        "opacity-checkerboard": {
+          "type": "component",
+          "id": "opacity-checkerboard",
+          "x": 0,
+          "y": 0
+        },
+        "number-field": {
+          "type": "component",
+          "id": "number-field",
+          "x": 0,
+          "y": 0
+        },
+        "meter": {
+          "type": "component",
+          "id": "meter",
+          "x": 0,
+          "y": 0
+        },
+        "menu": {
+          "type": "component",
+          "id": "menu",
+          "x": 0,
+          "y": 0
+        },
+        "list-view": {
+          "type": "component",
+          "id": "list-view",
+          "x": 0,
+          "y": 0
+        },
+        "date-picker": {
+          "type": "component",
+          "id": "date-picker",
+          "x": 0,
+          "y": 0
+        },
+        "alert-icon": {
+          "type": "component",
+          "id": "alert-icon",
+          "x": 0,
+          "y": 0
+        },
+        "validation-icon": {
+          "type": "component",
+          "id": "validation-icon",
+          "x": 0,
+          "y": 0
+        },
+        "add-icon": {
+          "type": "component",
+          "id": "add-icon",
+          "x": 0,
+          "y": 0
+        },
+        "arrow-icon": {
+          "type": "component",
+          "id": "arrow-icon",
+          "x": 0,
+          "y": 0
+        },
+        "asterisk-icon": {
+          "type": "component",
+          "id": "asterisk-icon",
+          "x": 0,
+          "y": 0
+        },
+        "checkmark-icon": {
+          "type": "component",
+          "id": "checkmark-icon",
+          "x": 0,
+          "y": 0
+        },
+        "chevron-icon": {
+          "type": "component",
+          "id": "chevron-icon",
+          "x": 0,
+          "y": 0
+        },
+        "cross-icon": {
+          "type": "component",
+          "id": "cross-icon",
+          "x": 0,
+          "y": 0
+        },
+        "dash-icon": {
+          "type": "component",
+          "id": "dash-icon",
+          "x": 0,
+          "y": 0
+        },
+        "drag-handle-icon": {
+          "type": "component",
+          "id": "drag-handle-icon",
+          "x": 0,
+          "y": 0
+        },
+        "gripper-icon": {
+          "type": "component",
+          "id": "gripper-icon",
+          "x": 0,
+          "y": 0
+        },
+        "link-out-icon": {
+          "type": "component",
+          "id": "link-out-icon",
+          "x": 0,
+          "y": 0
+        },
+        "ui-icon": {
+          "type": "component",
+          "id": "ui-icon",
+          "x": 0,
+          "y": 0
+        },
+        "in-line-alert": {
+          "type": "component",
+          "id": "in-line-alert",
+          "x": 0,
+          "y": 0
+        },
+        "in-field-progress-circle": {
+          "type": "component",
+          "id": "in-field-progress-circle",
+          "x": 0,
+          "y": 0
+        },
+        "in-field-button": {
+          "type": "component",
+          "id": "in-field-button",
+          "x": 0,
+          "y": 0
+        },
+        "illustrated-message": {
+          "type": "component",
+          "id": "illustrated-message",
+          "x": 0,
+          "y": 0
+        },
+        "icon": {
+          "type": "component",
+          "id": "icon",
+          "x": 0,
+          "y": 0
+        },
+        "help-text": {
+          "type": "component",
+          "id": "help-text",
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "type": "component",
+          "id": "heading",
+          "x": 0,
+          "y": 0
+        },
+        "form-item": {
+          "type": "component",
+          "id": "form-item",
+          "x": 0,
+          "y": 0
+        },
+        "floating-action-button": {
+          "type": "component",
+          "id": "floating-action-button",
+          "x": 0,
+          "y": 0
+        },
+        "field": {
+          "type": "component",
+          "id": "field",
+          "x": 0,
+          "y": 0
+        },
+        "field-label": {
+          "type": "component",
+          "id": "field-label",
+          "x": 0,
+          "y": 0
+        },
+        "drop-zone": {
+          "type": "component",
+          "id": "drop-zone",
+          "x": 0,
+          "y": 0
+        },
+        "double-calendar": {
+          "type": "component",
+          "id": "double-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "divider": {
+          "type": "component",
+          "id": "divider",
+          "x": 0,
+          "y": 0
+        },
+        "detail": {
+          "type": "component",
+          "id": "detail",
+          "x": 0,
+          "y": 0
+        },
+        "date-field": {
+          "type": "component",
+          "id": "date-field",
+          "x": 0,
+          "y": 0
+        },
+        "contextual-help": {
+          "type": "component",
+          "id": "contextual-help",
+          "x": 0,
+          "y": 0
+        },
+        "combo-box": {
+          "type": "component",
+          "id": "combo-box",
+          "x": 0,
+          "y": 0
+        },
+        "color-wheel": {
+          "type": "component",
+          "id": "color-wheel",
+          "x": 0,
+          "y": 0
+        },
+        "color-slider": {
+          "type": "component",
+          "id": "color-slider",
+          "x": 0,
+          "y": 0
+        },
+        "color-loupe": {
+          "type": "component",
+          "id": "color-loupe",
+          "x": 0,
+          "y": 0
+        },
+        "color-handle": {
+          "type": "component",
+          "id": "color-handle",
+          "x": 0,
+          "y": 0
+        },
+        "color-control": {
+          "type": "component",
+          "id": "color-control",
+          "x": 0,
+          "y": 0
+        },
+        "color-area": {
+          "type": "component",
+          "id": "color-area",
+          "x": 0,
+          "y": 0
+        },
+        "collection-card": {
+          "type": "component",
+          "id": "collection-card",
+          "x": 0,
+          "y": 0
+        },
+        "code": {
+          "type": "component",
+          "id": "code",
+          "x": 0,
+          "y": 0
+        },
+        "coach-mark": {
+          "type": "component",
+          "id": "coach-mark",
+          "x": 0,
+          "y": 0
+        },
+        "coach-indicator": {
+          "type": "component",
+          "id": "coach-indicator",
+          "x": 0,
+          "y": 0
+        },
+        "checkbox": {
+          "type": "component",
+          "id": "checkbox",
+          "x": 0,
+          "y": 0
+        },
+        "card": {
+          "type": "component",
+          "id": "card",
+          "x": 0,
+          "y": 0
+        },
+        "card-horizontal": {
+          "type": "component",
+          "id": "card-horizontal",
+          "x": 0,
+          "y": 0
+        },
+        "button": {
+          "type": "component",
+          "id": "button",
+          "x": 0,
+          "y": 0
+        },
+        "breadcrumbs": {
+          "type": "component",
+          "id": "breadcrumbs",
+          "x": 0,
+          "y": 0
+        },
+        "body": {
+          "type": "component",
+          "id": "body",
+          "x": 0,
+          "y": 0
+        },
+        "bar-panel": {
+          "type": "component",
+          "id": "bar-panel",
+          "x": 0,
+          "y": 0
+        },
+        "avatar": {
+          "type": "component",
+          "id": "avatar",
+          "x": 0,
+          "y": 0
+        },
+        "avatar-group": {
+          "type": "component",
+          "id": "avatar-group",
+          "x": 0,
+          "y": 0
+        },
+        "alert-dialog": {
+          "type": "component",
+          "id": "alert-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "alert-banner": {
+          "type": "component",
+          "id": "alert-banner",
+          "x": 0,
+          "y": 0
+        },
+        "action-button": {
+          "type": "component",
+          "id": "action-button",
+          "x": 0,
+          "y": 0
+        },
+        "action-bar": {
+          "type": "component",
+          "id": "action-bar",
+          "x": 0,
+          "y": 0
+        },
+        "accordion": {
+          "type": "component",
+          "id": "accordion",
+          "x": 0,
+          "y": 0
+        },
+        "cjk-*": {
+          "type": "orphan-category",
+          "id": "cjk-*",
+          "x": 0,
+          "y": 0
+        },
+        "component-*": {
+          "type": "orphan-category",
+          "id": "component-*",
+          "x": 0,
+          "y": 0
+        },
+        "default-*": {
+          "type": "orphan-category",
+          "id": "default-*",
+          "x": 0,
+          "y": 0
+        },
+        "line-*": {
+          "type": "orphan-category",
+          "id": "line-*",
+          "x": 0,
+          "y": 0
+        },
+        "text-*": {
+          "type": "orphan-category",
+          "id": "text-*",
+          "x": 0,
+          "y": 0
+        },
+        "accent-*": {
+          "type": "orphan-category",
+          "id": "accent-*",
+          "x": 0,
+          "y": 0
+        },
+        "icon-*": {
+          "type": "orphan-category",
+          "id": "icon-*",
+          "x": 0,
+          "y": 0
+        },
+        "informative-*": {
+          "type": "orphan-category",
+          "id": "informative-*",
+          "x": 0,
+          "y": 0
+        },
+        "negative-*": {
+          "type": "orphan-category",
+          "id": "negative-*",
+          "x": 0,
+          "y": 0
+        },
+        "notice-*": {
+          "type": "orphan-category",
+          "id": "notice-*",
+          "x": 0,
+          "y": 0
+        },
+        "positive-*": {
+          "type": "orphan-category",
+          "id": "positive-*",
+          "x": 0,
+          "y": 0
+        },
+        "accessory-*": {
+          "type": "orphan-category",
+          "id": "accessory-*",
+          "x": 0,
+          "y": 0
+        },
+        "android-*": {
+          "type": "orphan-category",
+          "id": "android-*",
+          "x": 0,
+          "y": 0
+        },
+        "banner-*": {
+          "type": "orphan-category",
+          "id": "banner-*",
+          "x": 0,
+          "y": 0
+        },
+        "base-*": {
+          "type": "orphan-category",
+          "id": "base-*",
+          "x": 0,
+          "y": 0
+        },
+        "border-*": {
+          "type": "orphan-category",
+          "id": "border-*",
+          "x": 0,
+          "y": 0
+        },
+        "character-*": {
+          "type": "orphan-category",
+          "id": "character-*",
+          "x": 0,
+          "y": 0
+        },
+        "container-*": {
+          "type": "orphan-category",
+          "id": "container-*",
+          "x": 0,
+          "y": 0
+        },
+        "corner-*": {
+          "type": "orphan-category",
+          "id": "corner-*",
+          "x": 0,
+          "y": 0
+        },
+        "disclosure-*": {
+          "type": "orphan-category",
+          "id": "disclosure-*",
+          "x": 0,
+          "y": 0
+        },
+        "drop-*": {
+          "type": "orphan-category",
+          "id": "drop-*",
+          "x": 0,
+          "y": 0
+        },
+        "field-*": {
+          "type": "orphan-category",
+          "id": "field-*",
+          "x": 0,
+          "y": 0
+        },
+        "focus-*": {
+          "type": "orphan-category",
+          "id": "focus-*",
+          "x": 0,
+          "y": 0
+        },
+        "gap-*": {
+          "type": "orphan-category",
+          "id": "gap-*",
+          "x": 0,
+          "y": 0
+        },
+        "gradient-*": {
+          "type": "orphan-category",
+          "id": "gradient-*",
+          "x": 0,
+          "y": 0
+        },
+        "group-*": {
+          "type": "orphan-category",
+          "id": "group-*",
+          "x": 0,
+          "y": 0
+        },
+        "label-*": {
+          "type": "orphan-category",
+          "id": "label-*",
+          "x": 0,
+          "y": 0
+        },
+        "list-*": {
+          "type": "orphan-category",
+          "id": "list-*",
+          "x": 0,
+          "y": 0
+        },
+        "navigational-*": {
+          "type": "orphan-category",
+          "id": "navigational-*",
+          "x": 0,
+          "y": 0
+        },
+        "padding-*": {
+          "type": "orphan-category",
+          "id": "padding-*",
+          "x": 0,
+          "y": 0
+        },
+        "side-*": {
+          "type": "orphan-category",
+          "id": "side-*",
+          "x": 0,
+          "y": 0
+        },
+        "spacing-*": {
+          "type": "orphan-category",
+          "id": "spacing-*",
+          "x": 0,
+          "y": 0
+        },
+        "vertical-*": {
+          "type": "orphan-category",
+          "id": "vertical-*",
+          "x": 0,
+          "y": 0
+        },
+        "visual-*": {
+          "type": "orphan-category",
+          "id": "visual-*",
+          "x": 0,
+          "y": 0
+        },
+        "window-*": {
+          "type": "orphan-category",
+          "id": "window-*",
+          "x": 0,
+          "y": 0
+        },
+        "workflow-*": {
+          "type": "orphan-category",
+          "id": "workflow-*",
+          "x": 0,
+          "y": 0
+        },
+        "brown-*": {
+          "type": "orphan-category",
+          "id": "brown-*",
+          "x": 0,
+          "y": 0
+        },
+        "celery-*": {
+          "type": "orphan-category",
+          "id": "celery-*",
+          "x": 0,
+          "y": 0
+        },
+        "chartreuse-*": {
+          "type": "orphan-category",
+          "id": "chartreuse-*",
+          "x": 0,
+          "y": 0
+        },
+        "cinnamon-*": {
+          "type": "orphan-category",
+          "id": "cinnamon-*",
+          "x": 0,
+          "y": 0
+        },
+        "cyan-*": {
+          "type": "orphan-category",
+          "id": "cyan-*",
+          "x": 0,
+          "y": 0
+        },
+        "fuchsia-*": {
+          "type": "orphan-category",
+          "id": "fuchsia-*",
+          "x": 0,
+          "y": 0
+        },
+        "gray-*": {
+          "type": "orphan-category",
+          "id": "gray-*",
+          "x": 0,
+          "y": 0
+        },
+        "indigo-*": {
+          "type": "orphan-category",
+          "id": "indigo-*",
+          "x": 0,
+          "y": 0
+        },
+        "magenta-*": {
+          "type": "orphan-category",
+          "id": "magenta-*",
+          "x": 0,
+          "y": 0
+        },
+        "pink-*": {
+          "type": "orphan-category",
+          "id": "pink-*",
+          "x": 0,
+          "y": 0
+        },
+        "purple-*": {
+          "type": "orphan-category",
+          "id": "purple-*",
+          "x": 0,
+          "y": 0
+        },
+        "seafoam-*": {
+          "type": "orphan-category",
+          "id": "seafoam-*",
+          "x": 0,
+          "y": 0
+        },
+        "silver-*": {
+          "type": "orphan-category",
+          "id": "silver-*",
+          "x": 0,
+          "y": 0
+        },
+        "static-*": {
+          "type": "orphan-category",
+          "id": "static-*",
+          "x": 0,
+          "y": 0
+        },
+        "transparent-*": {
+          "type": "orphan-category",
+          "id": "transparent-*",
+          "x": 0,
+          "y": 0
+        },
+        "turquoise-*": {
+          "type": "orphan-category",
+          "id": "turquoise-*",
+          "x": 0,
+          "y": 0
+        },
+        "yellow-*": {
+          "type": "orphan-category",
+          "id": "yellow-*",
+          "x": 0,
+          "y": 0
+        },
+        "background-*": {
+          "type": "orphan-category",
+          "id": "background-*",
+          "x": 0,
+          "y": 0
+        },
+        "blue-*": {
+          "type": "orphan-category",
+          "id": "blue-*",
+          "x": 0,
+          "y": 0
+        },
+        "disabled-*": {
+          "type": "orphan-category",
+          "id": "disabled-*",
+          "x": 0,
+          "y": 0
+        },
+        "green-*": {
+          "type": "orphan-category",
+          "id": "green-*",
+          "x": 0,
+          "y": 0
+        },
+        "neutral-*": {
+          "type": "orphan-category",
+          "id": "neutral-*",
+          "x": 0,
+          "y": 0
+        },
+        "opacity-*": {
+          "type": "orphan-category",
+          "id": "opacity-*",
+          "x": 0,
+          "y": 0
+        },
+        "orange-*": {
+          "type": "orphan-category",
+          "id": "orange-*",
+          "x": 0,
+          "y": 0
+        },
+        "overlay-*": {
+          "type": "orphan-category",
+          "id": "overlay-*",
+          "x": 0,
+          "y": 0
+        },
+        "red-*": {
+          "type": "orphan-category",
+          "id": "red-*",
+          "x": 0,
+          "y": 0
+        },
+        "stack-*": {
+          "type": "orphan-category",
+          "id": "stack-*",
+          "x": 0,
+          "y": 0
+        },
+        "title-*": {
+          "type": "orphan-category",
+          "id": "title-*",
+          "x": 0,
+          "y": 0
+        },
+        "track-*": {
+          "type": "orphan-category",
+          "id": "track-*",
+          "x": 0,
+          "y": 0
+        }
+      },
+      "adjacencyList": {}
+    },
+    "selected": [],
+    "selectionAncestorNodeIds": [],
+    "selectionDescendentNodeIds": [],
+    "selectedChildDescendentNodeIds": [],
+    "selectionDescendentIntersectNodeIds": [],
+    "focusNodeIds": []
   }
 }

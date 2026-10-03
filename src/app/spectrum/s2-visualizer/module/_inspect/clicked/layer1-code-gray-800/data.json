@@ -55605,9 +55605,501 @@
         "id": "track-*",
         "x": 0,
         "y": 0
+      },
+      "code-cjk-emphasized-font-style": {
+        "type": "token",
+        "id": "code-cjk-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-cjk-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-family": {
+        "type": "token",
+        "id": "code-cjk-font-family",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-style": {
+        "type": "token",
+        "id": "code-cjk-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-weight": {
+        "type": "token",
+        "id": "code-cjk-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-line-height": {
+        "type": "token",
+        "id": "code-cjk-line-height",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-l": {
+        "type": "token",
+        "id": "code-cjk-size-l",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-m": {
+        "type": "token",
+        "id": "code-cjk-size-m",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-s": {
+        "type": "token",
+        "id": "code-cjk-size-s",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-xl": {
+        "type": "token",
+        "id": "code-cjk-size-xl",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-xs": {
+        "type": "token",
+        "id": "code-cjk-size-xs",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-emphasized-font-style": {
+        "type": "token",
+        "id": "code-cjk-strong-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-cjk-strong-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-font-style": {
+        "type": "token",
+        "id": "code-cjk-strong-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-font-weight": {
+        "type": "token",
+        "id": "code-cjk-strong-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-color": {
+        "type": "token",
+        "id": "code-color",
+        "x": 0,
+        "y": 0
+      },
+      "code-emphasized-font-style": {
+        "type": "token",
+        "id": "code-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-font-family": {
+        "type": "token",
+        "id": "code-font-family",
+        "x": 0,
+        "y": 0,
+        "value": "Source Code Pro"
+      },
+      "code-font-style": {
+        "type": "token",
+        "id": "code-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-font-weight": {
+        "type": "token",
+        "id": "code-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-line-height": {
+        "type": "token",
+        "id": "code-line-height",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-l": {
+        "type": "token",
+        "id": "code-size-l",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-m": {
+        "type": "token",
+        "id": "code-size-m",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-s": {
+        "type": "token",
+        "id": "code-size-s",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-xl": {
+        "type": "token",
+        "id": "code-size-xl",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-xs": {
+        "type": "token",
+        "id": "code-size-xs",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-emphasized-font-style": {
+        "type": "token",
+        "id": "code-strong-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-strong-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-font-style": {
+        "type": "token",
+        "id": "code-strong-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-font-weight": {
+        "type": "token",
+        "id": "code-strong-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "default-font-style": {
+        "type": "token",
+        "id": "default-font-style",
+        "x": 0,
+        "y": 0,
+        "value": "normal"
+      },
+      "bold-font-weight": {
+        "type": "token",
+        "id": "bold-font-weight",
+        "x": 0,
+        "y": 0,
+        "value": "bold"
+      },
+      "regular-font-weight": {
+        "type": "token",
+        "id": "regular-font-weight",
+        "x": 0,
+        "y": 0,
+        "value": "regular"
+      },
+      "cjk-line-height-200": {
+        "type": "token",
+        "id": "cjk-line-height-200",
+        "x": 0,
+        "y": 0,
+        "value": "1.7"
+      },
+      "gray-800": {
+        "type": "token",
+        "id": "gray-800",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(41, 41, 41):^;light"
+      },
+      "italic-font-style": {
+        "type": "token",
+        "id": "italic-font-style",
+        "x": 0,
+        "y": 0,
+        "value": "italic"
+      },
+      "line-height-200": {
+        "type": "token",
+        "id": "line-height-200",
+        "x": 0,
+        "y": 0,
+        "value": "1.5"
+      },
+      "font-size-300": {
+        "type": "token",
+        "id": "font-size-300",
+        "x": 0,
+        "y": 0,
+        "value": "18px:^;desktop"
+      },
+      "font-size-200": {
+        "type": "token",
+        "id": "font-size-200",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "font-size-100": {
+        "type": "token",
+        "id": "font-size-100",
+        "x": 0,
+        "y": 0,
+        "value": "14px:^;desktop"
+      },
+      "font-size-400": {
+        "type": "token",
+        "id": "font-size-400",
+        "x": 0,
+        "y": 0,
+        "value": "20px:^;desktop"
+      },
+      "font-size-75": {
+        "type": "token",
+        "id": "font-size-75",
+        "x": 0,
+        "y": 0,
+        "value": "12px:^;desktop"
+      },
+      "thumbnail-border-color": {
+        "type": "token",
+        "id": "thumbnail-border-color",
+        "x": 0,
+        "y": 0
+      },
+      "standard-panel-gripper-color-drag": {
+        "type": "token",
+        "id": "standard-panel-gripper-color-drag",
+        "x": 0,
+        "y": 0
+      },
+      "select-box-selected-border-color": {
+        "type": "token",
+        "id": "select-box-selected-border-color",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-background-color-default": {
+        "type": "token",
+        "id": "neutral-background-color-default",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-background-color-selected-default": {
+        "type": "token",
+        "id": "neutral-background-color-selected-default",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-content-color-default": {
+        "type": "token",
+        "id": "neutral-content-color-default",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-content-color-selected-default": {
+        "type": "token",
+        "id": "neutral-content-color-selected-default",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-subdued-background-color-down": {
+        "type": "token",
+        "id": "neutral-subdued-background-color-down",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "gray-800": "light"
+        }
+      },
+      "neutral-subdued-background-color-hover": {
+        "type": "token",
+        "id": "neutral-subdued-background-color-hover",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "gray-800": "light"
+        }
+      },
+      "neutral-subdued-background-color-key-focus": {
+        "type": "token",
+        "id": "neutral-subdued-background-color-key-focus",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "gray-800": "light"
+        }
+      },
+      "neutral-subdued-content-color-down": {
+        "type": "token",
+        "id": "neutral-subdued-content-color-down",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-subdued-content-color-hover": {
+        "type": "token",
+        "id": "neutral-subdued-content-color-hover",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-subdued-content-color-key-focus": {
+        "type": "token",
+        "id": "neutral-subdued-content-color-key-focus",
+        "x": 0,
+        "y": 0
+      },
+      "body-color": {
+        "type": "token",
+        "id": "body-color",
+        "x": 0,
+        "y": 0
+      },
+      "bar-panel-gripper-color-drag": {
+        "type": "token",
+        "id": "bar-panel-gripper-color-drag",
+        "x": 0,
+        "y": 0
+      },
+      "table-selected-row-background-color-non-emphasized": {
+        "type": "token",
+        "id": "table-selected-row-background-color-non-emphasized",
+        "x": 0,
+        "y": 0
+      },
+      "icon-color-primary-default": {
+        "type": "token",
+        "id": "icon-color-primary-default",
+        "x": 0,
+        "y": 0
+      },
+      "neutral-subdued-content-color-selected": {
+        "type": "token",
+        "id": "neutral-subdued-content-color-selected",
+        "x": 0,
+        "y": 0
       }
     },
-    "adjacencyList": {}
+    "adjacencyList": {
+      "thumbnail": ["thumbnail-border-color"],
+      "table": ["table-selected-row-background-color-non-emphasized"],
+      "standard-panel": ["standard-panel-gripper-color-drag"],
+      "select-box": ["select-box-selected-border-color"],
+      "icon": ["icon-color-primary-default"],
+      "code": [
+        "code-cjk-emphasized-font-style",
+        "code-cjk-emphasized-font-weight",
+        "code-cjk-font-family",
+        "code-cjk-font-style",
+        "code-cjk-font-weight",
+        "code-cjk-line-height",
+        "code-cjk-size-l",
+        "code-cjk-size-m",
+        "code-cjk-size-s",
+        "code-cjk-size-xl",
+        "code-cjk-size-xs",
+        "code-cjk-strong-emphasized-font-style",
+        "code-cjk-strong-emphasized-font-weight",
+        "code-cjk-strong-font-style",
+        "code-cjk-strong-font-weight",
+        "code-color",
+        "code-emphasized-font-style",
+        "code-emphasized-font-weight",
+        "code-font-family",
+        "code-font-style",
+        "code-font-weight",
+        "code-line-height",
+        "code-size-l",
+        "code-size-m",
+        "code-size-s",
+        "code-size-xl",
+        "code-size-xs",
+        "code-strong-emphasized-font-style",
+        "code-strong-emphasized-font-weight",
+        "code-strong-font-style",
+        "code-strong-font-weight"
+      ],
+      "body": ["body-color"],
+      "bar-panel": ["bar-panel-gripper-color-drag"],
+      "icon-*": ["icon-color-primary-default"],
+      "gray-*": ["gray-800"],
+      "neutral-*": [
+        "neutral-background-color-default",
+        "neutral-background-color-selected-default",
+        "neutral-content-color-default",
+        "neutral-content-color-selected-default",
+        "neutral-subdued-background-color-down",
+        "neutral-subdued-background-color-hover",
+        "neutral-subdued-background-color-key-focus",
+        "neutral-subdued-content-color-down",
+        "neutral-subdued-content-color-hover",
+        "neutral-subdued-content-color-key-focus",
+        "neutral-subdued-content-color-selected"
+      ],
+      "code-cjk-emphasized-font-style": ["default-font-style"],
+      "code-cjk-emphasized-font-weight": ["bold-font-weight"],
+      "code-cjk-font-family": ["code-font-family"],
+      "code-cjk-font-style": ["default-font-style"],
+      "code-cjk-font-weight": ["regular-font-weight"],
+      "code-cjk-line-height": ["cjk-line-height-200"],
+      "code-cjk-size-l": ["code-size-l"],
+      "code-cjk-size-m": ["code-size-m"],
+      "code-cjk-size-s": ["code-size-s"],
+      "code-cjk-size-xl": ["code-size-xl"],
+      "code-cjk-size-xs": ["code-size-xs"],
+      "code-cjk-strong-emphasized-font-style": ["default-font-style"],
+      "code-cjk-strong-emphasized-font-weight": ["bold-font-weight"],
+      "code-cjk-strong-font-style": ["default-font-style"],
+      "code-cjk-strong-font-weight": ["bold-font-weight"],
+      "code-color": ["gray-800"],
+      "code-emphasized-font-style": ["italic-font-style"],
+      "code-emphasized-font-weight": ["regular-font-weight"],
+      "code-font-style": ["default-font-style"],
+      "code-font-weight": ["regular-font-weight"],
+      "code-line-height": ["line-height-200"],
+      "code-size-l": ["font-size-300"],
+      "code-size-m": ["font-size-200"],
+      "code-size-s": ["font-size-100"],
+      "code-size-xl": ["font-size-400"],
+      "code-size-xs": ["font-size-75"],
+      "code-strong-emphasized-font-style": ["italic-font-style"],
+      "code-strong-emphasized-font-weight": ["bold-font-weight"],
+      "code-strong-font-style": ["default-font-style"],
+      "code-strong-font-weight": ["bold-font-weight"],
+      "thumbnail-border-color": ["gray-800"],
+      "standard-panel-gripper-color-drag": ["gray-800"],
+      "select-box-selected-border-color": ["gray-800"],
+      "neutral-background-color-default": ["gray-800"],
+      "neutral-background-color-selected-default": ["gray-800"],
+      "neutral-content-color-default": ["gray-800"],
+      "neutral-content-color-selected-default": ["gray-800"],
+      "neutral-subdued-background-color-down": ["gray-800"],
+      "neutral-subdued-background-color-hover": ["gray-800"],
+      "neutral-subdued-background-color-key-focus": ["gray-800"],
+      "neutral-subdued-content-color-down": ["gray-800"],
+      "neutral-subdued-content-color-hover": ["gray-800"],
+      "neutral-subdued-content-color-key-focus": ["gray-800"],
+      "body-color": ["gray-800"],
+      "bar-panel-gripper-color-drag": ["gray-800"],
+      "table-selected-row-background-color-non-emphasized": ["neutral-background-color-selected-default"],
+      "icon-color-primary-default": ["neutral-content-color-default"],
+      "neutral-subdued-content-color-selected": ["neutral-subdued-content-color-down"]
+    }
   },
   "components": [
     "accordion",
@@ -55710,13 +56202,172 @@
     "validation-icon"
   ],
   "filters": ["spectrum", "light", "desktop"],
-  "selected": [],
-  "selectionItems": [],
-  "selectionAncestorNodeIds": [],
-  "selectionDescendentNodeIds": [],
-  "selectedChildDescendentNodeIds": [],
-  "selectionDescendentIntersectNodeIds": [],
-  "focusNodeIds": [],
+  "selected": ["code", "gray-800"],
+  "selectionItems": [
+    {
+      "id": "code",
+      "type": "component"
+    },
+    {
+      "id": "gray-800",
+      "type": "token"
+    }
+  ],
+  "selectionAncestorNodeIds": [
+    "gray-800",
+    "thumbnail-border-color",
+    "standard-panel-gripper-color-drag",
+    "select-box-selected-border-color",
+    "neutral-background-color-default",
+    "neutral-background-color-selected-default",
+    "neutral-content-color-default",
+    "neutral-content-color-selected-default",
+    "neutral-subdued-background-color-down",
+    "neutral-subdued-background-color-hover",
+    "neutral-subdued-background-color-key-focus",
+    "neutral-subdued-content-color-down",
+    "neutral-subdued-content-color-hover",
+    "neutral-subdued-content-color-key-focus",
+    "code-color",
+    "body-color",
+    "bar-panel-gripper-color-drag",
+    "gray-*",
+    "thumbnail",
+    "standard-panel",
+    "select-box",
+    "neutral-*",
+    "table-selected-row-background-color-non-emphasized",
+    "icon-color-primary-default",
+    "neutral-subdued-content-color-selected",
+    "code",
+    "body",
+    "bar-panel",
+    "table",
+    "icon",
+    "icon-*"
+  ],
+  "selectionDescendentNodeIds": [
+    "code",
+    "code-cjk-emphasized-font-style",
+    "code-cjk-emphasized-font-weight",
+    "code-cjk-font-family",
+    "code-cjk-font-style",
+    "code-cjk-font-weight",
+    "code-cjk-line-height",
+    "code-cjk-size-l",
+    "code-cjk-size-m",
+    "code-cjk-size-s",
+    "code-cjk-size-xl",
+    "code-cjk-size-xs",
+    "code-cjk-strong-emphasized-font-style",
+    "code-cjk-strong-emphasized-font-weight",
+    "code-cjk-strong-font-style",
+    "code-cjk-strong-font-weight",
+    "code-color",
+    "code-emphasized-font-style",
+    "code-emphasized-font-weight",
+    "code-font-family",
+    "code-font-style",
+    "code-font-weight",
+    "code-line-height",
+    "code-size-l",
+    "code-size-m",
+    "code-size-s",
+    "code-size-xl",
+    "code-size-xs",
+    "code-strong-emphasized-font-style",
+    "code-strong-emphasized-font-weight",
+    "code-strong-font-style",
+    "code-strong-font-weight",
+    "default-font-style",
+    "bold-font-weight",
+    "regular-font-weight",
+    "cjk-line-height-200",
+    "gray-800",
+    "italic-font-style",
+    "line-height-200",
+    "font-size-300",
+    "font-size-200",
+    "font-size-100",
+    "font-size-400",
+    "font-size-75"
+  ],
+  "selectedChildDescendentNodeIds": ["gray-800"],
+  "selectionDescendentIntersectNodeIds": ["gray-800"],
+  "focusNodeIds": [
+    "code",
+    "gray-800",
+    "thumbnail-border-color",
+    "standard-panel-gripper-color-drag",
+    "select-box-selected-border-color",
+    "neutral-background-color-default",
+    "neutral-background-color-selected-default",
+    "neutral-content-color-default",
+    "neutral-content-color-selected-default",
+    "neutral-subdued-background-color-down",
+    "neutral-subdued-background-color-hover",
+    "neutral-subdued-background-color-key-focus",
+    "neutral-subdued-content-color-down",
+    "neutral-subdued-content-color-hover",
+    "neutral-subdued-content-color-key-focus",
+    "code-color",
+    "body-color",
+    "bar-panel-gripper-color-drag",
+    "gray-*",
+    "thumbnail",
+    "standard-panel",
+    "select-box",
+    "neutral-*",
+    "table-selected-row-background-color-non-emphasized",
+    "icon-color-primary-default",
+    "neutral-subdued-content-color-selected",
+    "body",
+    "bar-panel",
+    "table",
+    "icon",
+    "icon-*",
+    "code-cjk-emphasized-font-style",
+    "code-cjk-emphasized-font-weight",
+    "code-cjk-font-family",
+    "code-cjk-font-style",
+    "code-cjk-font-weight",
+    "code-cjk-line-height",
+    "code-cjk-size-l",
+    "code-cjk-size-m",
+    "code-cjk-size-s",
+    "code-cjk-size-xl",
+    "code-cjk-size-xs",
+    "code-cjk-strong-emphasized-font-style",
+    "code-cjk-strong-emphasized-font-weight",
+    "code-cjk-strong-font-style",
+    "code-cjk-strong-font-weight",
+    "code-emphasized-font-style",
+    "code-emphasized-font-weight",
+    "code-font-family",
+    "code-font-style",
+    "code-font-weight",
+    "code-line-height",
+    "code-size-l",
+    "code-size-m",
+    "code-size-s",
+    "code-size-xl",
+    "code-size-xs",
+    "code-strong-emphasized-font-style",
+    "code-strong-emphasized-font-weight",
+    "code-strong-font-style",
+    "code-strong-font-weight",
+    "default-font-style",
+    "bold-font-weight",
+    "regular-font-weight",
+    "cjk-line-height-200",
+    "italic-font-style",
+    "line-height-200",
+    "font-size-300",
+    "font-size-200",
+    "font-size-100",
+    "font-size-400",
+    "font-size-75"
+  ],
   "query": "",
   "matches": [],
   "error": "",

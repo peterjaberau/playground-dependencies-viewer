@@ -55605,9 +55605,374 @@
         "id": "track-*",
         "x": 0,
         "y": 0
+      },
+      "accent-color-900": {
+        "type": "token",
+        "id": "accent-color-900",
+        "x": 0,
+        "y": 0
+      },
+      "accent-background-color-default": {
+        "type": "token",
+        "id": "accent-background-color-default",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-900": "light"
+        }
+      },
+      "accent-content-color-default": {
+        "type": "token",
+        "id": "accent-content-color-default",
+        "x": 0,
+        "y": 0
+      },
+      "stack-item-selected-background-color-emphasized": {
+        "type": "token",
+        "id": "stack-item-selected-background-color-emphasized",
+        "x": 0,
+        "y": 0
+      },
+      "stack-item-selected-background-color-highlight": {
+        "type": "token",
+        "id": "stack-item-selected-background-color-highlight",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-100": {
+        "type": "token",
+        "id": "accent-color-100",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1000": {
+        "type": "token",
+        "id": "accent-color-1000",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1100": {
+        "type": "token",
+        "id": "accent-color-1100",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1200": {
+        "type": "token",
+        "id": "accent-color-1200",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1300": {
+        "type": "token",
+        "id": "accent-color-1300",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1400": {
+        "type": "token",
+        "id": "accent-color-1400",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1500": {
+        "type": "token",
+        "id": "accent-color-1500",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-1600": {
+        "type": "token",
+        "id": "accent-color-1600",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-200": {
+        "type": "token",
+        "id": "accent-color-200",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-300": {
+        "type": "token",
+        "id": "accent-color-300",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-400": {
+        "type": "token",
+        "id": "accent-color-400",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-500": {
+        "type": "token",
+        "id": "accent-color-500",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-600": {
+        "type": "token",
+        "id": "accent-color-600",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-700": {
+        "type": "token",
+        "id": "accent-color-700",
+        "x": 0,
+        "y": 0
+      },
+      "accent-color-800": {
+        "type": "token",
+        "id": "accent-color-800",
+        "x": 0,
+        "y": 0
+      },
+      "accent-subtle-background-color-default": {
+        "type": "token",
+        "id": "accent-subtle-background-color-default",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-200": "light"
+        }
+      },
+      "accent-background-color-down": {
+        "type": "token",
+        "id": "accent-background-color-down",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-1000": "light"
+        }
+      },
+      "accent-background-color-hover": {
+        "type": "token",
+        "id": "accent-background-color-hover",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-1000": "light"
+        }
+      },
+      "accent-background-color-key-focus": {
+        "type": "token",
+        "id": "accent-background-color-key-focus",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-1000": "light"
+        }
+      },
+      "accent-content-color-down": {
+        "type": "token",
+        "id": "accent-content-color-down",
+        "x": 0,
+        "y": 0
+      },
+      "accent-content-color-hover": {
+        "type": "token",
+        "id": "accent-content-color-hover",
+        "x": 0,
+        "y": 0
+      },
+      "accent-content-color-key-focus": {
+        "type": "token",
+        "id": "accent-content-color-key-focus",
+        "x": 0,
+        "y": 0
+      },
+      "accent-content-color-selected": {
+        "type": "token",
+        "id": "accent-content-color-selected",
+        "x": 0,
+        "y": 0
+      },
+      "accent-visual-color": {
+        "type": "token",
+        "id": "accent-visual-color",
+        "x": 0,
+        "y": 0,
+        "adjacencyLabels": {
+          "accent-color-800": "light"
+        }
+      },
+      "blue-900": {
+        "type": "token",
+        "id": "blue-900",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(59, 99, 251):^;light"
+      },
+      "blue-100": {
+        "type": "token",
+        "id": "blue-100",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(245, 249, 255):^;light"
+      },
+      "blue-1000": {
+        "type": "token",
+        "id": "blue-1000",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(39, 77, 234):^;light"
+      },
+      "blue-1100": {
+        "type": "token",
+        "id": "blue-1100",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(29, 62, 207):^;light"
+      },
+      "blue-1200": {
+        "type": "token",
+        "id": "blue-1200",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(21, 50, 173):^;light"
+      },
+      "blue-1300": {
+        "type": "token",
+        "id": "blue-1300",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(16, 40, 140):^;light"
+      },
+      "blue-1400": {
+        "type": "token",
+        "id": "blue-1400",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(12, 31, 105):^;light"
+      },
+      "blue-1500": {
+        "type": "token",
+        "id": "blue-1500",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(14, 24, 67):^;light"
+      },
+      "blue-1600": {
+        "type": "token",
+        "id": "blue-1600",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(7, 11, 30):^;light"
+      },
+      "blue-200": {
+        "type": "token",
+        "id": "blue-200",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(229, 240, 254):^;light"
+      },
+      "blue-300": {
+        "type": "token",
+        "id": "blue-300",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(203, 226, 254):^;light"
+      },
+      "blue-400": {
+        "type": "token",
+        "id": "blue-400",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(172, 207, 253):^;light"
+      },
+      "blue-500": {
+        "type": "token",
+        "id": "blue-500",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(142, 185, 252):^;light"
+      },
+      "blue-600": {
+        "type": "token",
+        "id": "blue-600",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(114, 158, 253):^;light"
+      },
+      "blue-700": {
+        "type": "token",
+        "id": "blue-700",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(93, 137, 255):^;light"
+      },
+      "blue-800": {
+        "type": "token",
+        "id": "blue-800",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(75, 117, 255):^;light"
       }
     },
-    "adjacencyList": {}
+    "adjacencyList": {
+      "stack-item": ["stack-item-selected-background-color-emphasized"],
+      "accent-*": [
+        "accent-color-100",
+        "accent-color-1000",
+        "accent-color-1100",
+        "accent-color-1200",
+        "accent-color-1300",
+        "accent-color-1400",
+        "accent-color-1500",
+        "accent-color-1600",
+        "accent-color-200",
+        "accent-color-300",
+        "accent-color-400",
+        "accent-color-500",
+        "accent-color-600",
+        "accent-color-700",
+        "accent-color-800",
+        "accent-color-900",
+        "accent-subtle-background-color-default",
+        "accent-background-color-default",
+        "accent-background-color-down",
+        "accent-background-color-hover",
+        "accent-background-color-key-focus",
+        "accent-content-color-default",
+        "accent-content-color-down",
+        "accent-content-color-hover",
+        "accent-content-color-key-focus",
+        "accent-content-color-selected",
+        "accent-visual-color"
+      ],
+      "stack-*": ["stack-item-selected-background-color-emphasized", "stack-item-selected-background-color-highlight"],
+      "accent-color-900": ["blue-900"],
+      "accent-background-color-default": ["accent-color-900"],
+      "accent-content-color-default": ["accent-color-900"],
+      "stack-item-selected-background-color-emphasized": ["accent-background-color-default"],
+      "stack-item-selected-background-color-highlight": ["accent-background-color-default"],
+      "accent-color-100": ["blue-100"],
+      "accent-color-1000": ["blue-1000"],
+      "accent-color-1100": ["blue-1100"],
+      "accent-color-1200": ["blue-1200"],
+      "accent-color-1300": ["blue-1300"],
+      "accent-color-1400": ["blue-1400"],
+      "accent-color-1500": ["blue-1500"],
+      "accent-color-1600": ["blue-1600"],
+      "accent-color-200": ["blue-200"],
+      "accent-color-300": ["blue-300"],
+      "accent-color-400": ["blue-400"],
+      "accent-color-500": ["blue-500"],
+      "accent-color-600": ["blue-600"],
+      "accent-color-700": ["blue-700"],
+      "accent-color-800": ["blue-800"],
+      "accent-subtle-background-color-default": ["accent-color-200"],
+      "accent-background-color-down": ["accent-color-1000"],
+      "accent-background-color-hover": ["accent-color-1000"],
+      "accent-background-color-key-focus": ["accent-color-1000"],
+      "accent-content-color-down": ["accent-color-1000"],
+      "accent-content-color-hover": ["accent-color-1000"],
+      "accent-content-color-key-focus": ["accent-color-1000"],
+      "accent-content-color-selected": ["accent-content-color-down"],
+      "accent-visual-color": ["accent-color-800"]
+    }
   },
   "components": [
     "accordion",
@@ -55710,13 +56075,170 @@
     "validation-icon"
   ],
   "filters": ["spectrum", "light", "desktop"],
-  "selected": [],
-  "selectionItems": [],
-  "selectionAncestorNodeIds": [],
-  "selectionDescendentNodeIds": [],
-  "selectedChildDescendentNodeIds": [],
-  "selectionDescendentIntersectNodeIds": [],
-  "focusNodeIds": [],
+  "selected": ["accent-*", "accent-color-900"],
+  "selectionItems": [
+    {
+      "id": "accent-*",
+      "type": "orphan-category"
+    },
+    {
+      "id": "accent-color-900",
+      "type": "token"
+    }
+  ],
+  "selectionAncestorNodeIds": [
+    "accent-*",
+    "accent-color-900",
+    "accent-background-color-default",
+    "accent-content-color-default",
+    "stack-item-selected-background-color-emphasized",
+    "stack-item-selected-background-color-highlight",
+    "stack-item",
+    "stack-*"
+  ],
+  "selectionDescendentNodeIds": [
+    "accent-*",
+    "accent-color-100",
+    "accent-color-1000",
+    "accent-color-1100",
+    "accent-color-1200",
+    "accent-color-1300",
+    "accent-color-1400",
+    "accent-color-1500",
+    "accent-color-1600",
+    "accent-color-200",
+    "accent-color-300",
+    "accent-color-400",
+    "accent-color-500",
+    "accent-color-600",
+    "accent-color-700",
+    "accent-color-800",
+    "accent-color-900",
+    "accent-subtle-background-color-default",
+    "accent-background-color-default",
+    "accent-background-color-down",
+    "accent-background-color-hover",
+    "accent-background-color-key-focus",
+    "accent-content-color-default",
+    "accent-content-color-down",
+    "accent-content-color-hover",
+    "accent-content-color-key-focus",
+    "accent-content-color-selected",
+    "accent-visual-color",
+    "blue-100",
+    "blue-1000",
+    "blue-1100",
+    "blue-1200",
+    "blue-1300",
+    "blue-1400",
+    "blue-1500",
+    "blue-1600",
+    "blue-200",
+    "blue-300",
+    "blue-400",
+    "blue-500",
+    "blue-600",
+    "blue-700",
+    "blue-800",
+    "blue-900"
+  ],
+  "selectedChildDescendentNodeIds": [
+    "accent-*",
+    "accent-color-100",
+    "accent-color-1000",
+    "accent-color-1100",
+    "accent-color-1200",
+    "accent-color-1300",
+    "accent-color-1400",
+    "accent-color-1500",
+    "accent-color-1600",
+    "accent-color-200",
+    "accent-color-300",
+    "accent-color-400",
+    "accent-color-500",
+    "accent-color-600",
+    "accent-color-700",
+    "accent-color-800",
+    "accent-color-900",
+    "accent-subtle-background-color-default",
+    "accent-background-color-default",
+    "accent-background-color-down",
+    "accent-background-color-hover",
+    "accent-background-color-key-focus",
+    "accent-content-color-default",
+    "accent-content-color-down",
+    "accent-content-color-hover",
+    "accent-content-color-key-focus",
+    "accent-content-color-selected",
+    "accent-visual-color",
+    "blue-100",
+    "blue-1000",
+    "blue-1100",
+    "blue-1200",
+    "blue-1300",
+    "blue-1400",
+    "blue-1500",
+    "blue-1600",
+    "blue-200",
+    "blue-300",
+    "blue-400",
+    "blue-500",
+    "blue-600",
+    "blue-700",
+    "blue-800",
+    "blue-900"
+  ],
+  "selectionDescendentIntersectNodeIds": ["accent-color-900", "blue-900"],
+  "focusNodeIds": [
+    "accent-*",
+    "accent-color-900",
+    "accent-background-color-default",
+    "accent-content-color-default",
+    "stack-item-selected-background-color-emphasized",
+    "stack-item-selected-background-color-highlight",
+    "stack-item",
+    "stack-*",
+    "accent-color-100",
+    "accent-color-1000",
+    "accent-color-1100",
+    "accent-color-1200",
+    "accent-color-1300",
+    "accent-color-1400",
+    "accent-color-1500",
+    "accent-color-1600",
+    "accent-color-200",
+    "accent-color-300",
+    "accent-color-400",
+    "accent-color-500",
+    "accent-color-600",
+    "accent-color-700",
+    "accent-color-800",
+    "accent-subtle-background-color-default",
+    "accent-background-color-down",
+    "accent-background-color-hover",
+    "accent-background-color-key-focus",
+    "accent-content-color-down",
+    "accent-content-color-hover",
+    "accent-content-color-key-focus",
+    "accent-content-color-selected",
+    "accent-visual-color",
+    "blue-100",
+    "blue-1000",
+    "blue-1100",
+    "blue-1200",
+    "blue-1300",
+    "blue-1400",
+    "blue-1500",
+    "blue-1600",
+    "blue-200",
+    "blue-300",
+    "blue-400",
+    "blue-500",
+    "blue-600",
+    "blue-700",
+    "blue-800",
+    "blue-900"
+  ],
   "query": "",
   "matches": [],
   "error": "",

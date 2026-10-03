@@ -55605,9 +55605,770 @@
         "id": "track-*",
         "x": 0,
         "y": 0
+      },
+      "accordion-bottom-to-text-compact-extra-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-compact-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-bottom-to-text-compact-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-compact-large",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-bottom-to-text-compact-medium": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-compact-medium",
+        "x": 0,
+        "y": 0,
+        "value": "5px:^;desktop"
+      },
+      "accordion-bottom-to-text-compact-small": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-compact-small",
+        "x": 0,
+        "y": 0,
+        "value": "2px:^;desktop"
+      },
+      "accordion-bottom-to-text-extra-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "12px:^;desktop"
+      },
+      "accordion-bottom-to-text-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-large",
+        "x": 0,
+        "y": 0,
+        "value": "11px:^;desktop"
+      },
+      "accordion-bottom-to-text-medium": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-medium",
+        "x": 0,
+        "y": 0,
+        "value": "9px:^;desktop"
+      },
+      "accordion-bottom-to-text-regular-extra-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-regular-extra-large",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-bottom-to-text-regular-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-regular-large",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-bottom-to-text-regular-medium": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-regular-medium",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-bottom-to-text-regular-small": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-regular-small",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-bottom-to-text-small": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-small",
+        "x": 0,
+        "y": 0,
+        "value": "7px:^;desktop"
+      },
+      "accordion-bottom-to-text-spacious-extra-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-spacious-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "accordion-bottom-to-text-spacious-large": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-spacious-large",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "accordion-bottom-to-text-spacious-medium": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-spacious-medium",
+        "x": 0,
+        "y": 0,
+        "value": "13px:^;desktop"
+      },
+      "accordion-bottom-to-text-spacious-small": {
+        "type": "token",
+        "id": "accordion-bottom-to-text-spacious-small",
+        "x": 0,
+        "y": 0,
+        "value": "11px:^;desktop"
+      },
+      "accordion-content-area-bottom-to-content": {
+        "type": "token",
+        "id": "accordion-content-area-bottom-to-content",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "accordion-content-area-edge-to-content-extra-large": {
+        "type": "token",
+        "id": "accordion-content-area-edge-to-content-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "15px:^;desktop"
+      },
+      "accordion-content-area-edge-to-content-large": {
+        "type": "token",
+        "id": "accordion-content-area-edge-to-content-large",
+        "x": 0,
+        "y": 0,
+        "value": "12px:^;desktop"
+      },
+      "accordion-content-area-edge-to-content-medium": {
+        "type": "token",
+        "id": "accordion-content-area-edge-to-content-medium",
+        "x": 0,
+        "y": 0,
+        "value": "9px:^;desktop"
+      },
+      "accordion-content-area-edge-to-content-small": {
+        "type": "token",
+        "id": "accordion-content-area-edge-to-content-small",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-content-area-top-to-content": {
+        "type": "token",
+        "id": "accordion-content-area-top-to-content",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-disclosure-indicator-to-text": {
+        "type": "token",
+        "id": "accordion-disclosure-indicator-to-text",
+        "x": 0,
+        "y": 0,
+        "value": "0px"
+      },
+      "accordion-disclosure-indicator-to-text-extra-large": {
+        "type": "token",
+        "id": "accordion-disclosure-indicator-to-text-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "17px:^;desktop"
+      },
+      "accordion-disclosure-indicator-to-text-large": {
+        "type": "token",
+        "id": "accordion-disclosure-indicator-to-text-large",
+        "x": 0,
+        "y": 0,
+        "value": "14px:^;desktop"
+      },
+      "accordion-disclosure-indicator-to-text-medium": {
+        "type": "token",
+        "id": "accordion-disclosure-indicator-to-text-medium",
+        "x": 0,
+        "y": 0,
+        "value": "11px:^;desktop"
+      },
+      "accordion-disclosure-indicator-to-text-small": {
+        "type": "token",
+        "id": "accordion-disclosure-indicator-to-text-small",
+        "x": 0,
+        "y": 0,
+        "value": "7px:^;desktop"
+      },
+      "accordion-edge-to-content-area-extra-large": {
+        "type": "token",
+        "id": "accordion-edge-to-content-area-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "17px"
+      },
+      "accordion-edge-to-content-area-large": {
+        "type": "token",
+        "id": "accordion-edge-to-content-area-large",
+        "x": 0,
+        "y": 0,
+        "value": "14px"
+      },
+      "accordion-edge-to-content-area-medium": {
+        "type": "token",
+        "id": "accordion-edge-to-content-area-medium",
+        "x": 0,
+        "y": 0,
+        "value": "11px"
+      },
+      "accordion-edge-to-content-area-small": {
+        "type": "token",
+        "id": "accordion-edge-to-content-area-small",
+        "x": 0,
+        "y": 0,
+        "value": "7px"
+      },
+      "accordion-edge-to-disclosure-indicator": {
+        "type": "token",
+        "id": "accordion-edge-to-disclosure-indicator",
+        "x": 0,
+        "y": 0,
+        "value": "0px"
+      },
+      "accordion-edge-to-text": {
+        "type": "token",
+        "id": "accordion-edge-to-text",
+        "x": 0,
+        "y": 0,
+        "value": "0px"
+      },
+      "accordion-focus-indicator-gap": {
+        "type": "token",
+        "id": "accordion-focus-indicator-gap",
+        "x": 0,
+        "y": 0,
+        "value": "2px"
+      },
+      "accordion-item-to-divider": {
+        "type": "token",
+        "id": "accordion-item-to-divider",
+        "x": 0,
+        "y": 0,
+        "value": "0px"
+      },
+      "accordion-minimum-width": {
+        "type": "token",
+        "id": "accordion-minimum-width",
+        "x": 0,
+        "y": 0,
+        "value": "200px:^;desktop"
+      },
+      "accordion-small-top-to-text-spacious": {
+        "type": "token",
+        "id": "accordion-small-top-to-text-spacious",
+        "x": 0,
+        "y": 0,
+        "value": "9px:^;desktop"
+      },
+      "accordion-top-to-text-compact-extra-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-compact-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-top-to-text-compact-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-compact-large",
+        "x": 0,
+        "y": 0,
+        "value": "8px:^;desktop"
+      },
+      "accordion-top-to-text-compact-medium": {
+        "type": "token",
+        "id": "accordion-top-to-text-compact-medium",
+        "x": 0,
+        "y": 0,
+        "value": "5px"
+      },
+      "accordion-top-to-text-compact-small": {
+        "type": "token",
+        "id": "accordion-top-to-text-compact-small",
+        "x": 0,
+        "y": 0,
+        "value": "3px:^;desktop"
+      },
+      "accordion-top-to-text-extra-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "13px:^;desktop"
+      },
+      "accordion-top-to-text-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-large",
+        "x": 0,
+        "y": 0,
+        "value": "12px:^;desktop"
+      },
+      "accordion-top-to-text-medium": {
+        "type": "token",
+        "id": "accordion-top-to-text-medium",
+        "x": 0,
+        "y": 0,
+        "value": "9px:^;desktop"
+      },
+      "accordion-top-to-text-regular-extra-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-regular-extra-large",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-top-to-text-regular-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-regular-large",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-top-to-text-regular-medium": {
+        "type": "token",
+        "id": "accordion-top-to-text-regular-medium",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-top-to-text-regular-small": {
+        "type": "token",
+        "id": "accordion-top-to-text-regular-small",
+        "x": 0,
+        "y": 0
+      },
+      "accordion-top-to-text-small": {
+        "type": "token",
+        "id": "accordion-top-to-text-small",
+        "x": 0,
+        "y": 0,
+        "value": "7px:^;desktop"
+      },
+      "accordion-top-to-text-spacious-extra-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-spacious-extra-large",
+        "x": 0,
+        "y": 0,
+        "value": "17px:^;desktop"
+      },
+      "accordion-top-to-text-spacious-large": {
+        "type": "token",
+        "id": "accordion-top-to-text-spacious-large",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "accordion-top-to-text-spacious-medium": {
+        "type": "token",
+        "id": "accordion-top-to-text-spacious-medium",
+        "x": 0,
+        "y": 0,
+        "value": "13px:^;desktop"
+      },
+      "accordion-top-to-text-spacious-small": {
+        "type": "token",
+        "id": "accordion-top-to-text-spacious-small",
+        "x": 0,
+        "y": 0,
+        "value": "11px:^;desktop"
+      },
+      "code-cjk-emphasized-font-style": {
+        "type": "token",
+        "id": "code-cjk-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-cjk-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-family": {
+        "type": "token",
+        "id": "code-cjk-font-family",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-style": {
+        "type": "token",
+        "id": "code-cjk-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-font-weight": {
+        "type": "token",
+        "id": "code-cjk-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-line-height": {
+        "type": "token",
+        "id": "code-cjk-line-height",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-l": {
+        "type": "token",
+        "id": "code-cjk-size-l",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-m": {
+        "type": "token",
+        "id": "code-cjk-size-m",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-s": {
+        "type": "token",
+        "id": "code-cjk-size-s",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-xl": {
+        "type": "token",
+        "id": "code-cjk-size-xl",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-size-xs": {
+        "type": "token",
+        "id": "code-cjk-size-xs",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-emphasized-font-style": {
+        "type": "token",
+        "id": "code-cjk-strong-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-cjk-strong-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-font-style": {
+        "type": "token",
+        "id": "code-cjk-strong-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-cjk-strong-font-weight": {
+        "type": "token",
+        "id": "code-cjk-strong-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-color": {
+        "type": "token",
+        "id": "code-color",
+        "x": 0,
+        "y": 0
+      },
+      "code-emphasized-font-style": {
+        "type": "token",
+        "id": "code-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-font-family": {
+        "type": "token",
+        "id": "code-font-family",
+        "x": 0,
+        "y": 0,
+        "value": "Source Code Pro"
+      },
+      "code-font-style": {
+        "type": "token",
+        "id": "code-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-font-weight": {
+        "type": "token",
+        "id": "code-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-line-height": {
+        "type": "token",
+        "id": "code-line-height",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-l": {
+        "type": "token",
+        "id": "code-size-l",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-m": {
+        "type": "token",
+        "id": "code-size-m",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-s": {
+        "type": "token",
+        "id": "code-size-s",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-xl": {
+        "type": "token",
+        "id": "code-size-xl",
+        "x": 0,
+        "y": 0
+      },
+      "code-size-xs": {
+        "type": "token",
+        "id": "code-size-xs",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-emphasized-font-style": {
+        "type": "token",
+        "id": "code-strong-emphasized-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-emphasized-font-weight": {
+        "type": "token",
+        "id": "code-strong-emphasized-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-font-style": {
+        "type": "token",
+        "id": "code-strong-font-style",
+        "x": 0,
+        "y": 0
+      },
+      "code-strong-font-weight": {
+        "type": "token",
+        "id": "code-strong-font-weight",
+        "x": 0,
+        "y": 0
+      },
+      "default-font-style": {
+        "type": "token",
+        "id": "default-font-style",
+        "x": 0,
+        "y": 0,
+        "value": "normal"
+      },
+      "bold-font-weight": {
+        "type": "token",
+        "id": "bold-font-weight",
+        "x": 0,
+        "y": 0,
+        "value": "bold"
+      },
+      "regular-font-weight": {
+        "type": "token",
+        "id": "regular-font-weight",
+        "x": 0,
+        "y": 0,
+        "value": "regular"
+      },
+      "cjk-line-height-200": {
+        "type": "token",
+        "id": "cjk-line-height-200",
+        "x": 0,
+        "y": 0,
+        "value": "1.7"
+      },
+      "gray-800": {
+        "type": "token",
+        "id": "gray-800",
+        "x": 0,
+        "y": 0,
+        "value": "rgb(41, 41, 41):^;light"
+      },
+      "italic-font-style": {
+        "type": "token",
+        "id": "italic-font-style",
+        "x": 0,
+        "y": 0,
+        "value": "italic"
+      },
+      "line-height-200": {
+        "type": "token",
+        "id": "line-height-200",
+        "x": 0,
+        "y": 0,
+        "value": "1.5"
+      },
+      "font-size-300": {
+        "type": "token",
+        "id": "font-size-300",
+        "x": 0,
+        "y": 0,
+        "value": "18px:^;desktop"
+      },
+      "font-size-200": {
+        "type": "token",
+        "id": "font-size-200",
+        "x": 0,
+        "y": 0,
+        "value": "16px:^;desktop"
+      },
+      "font-size-100": {
+        "type": "token",
+        "id": "font-size-100",
+        "x": 0,
+        "y": 0,
+        "value": "14px:^;desktop"
+      },
+      "font-size-400": {
+        "type": "token",
+        "id": "font-size-400",
+        "x": 0,
+        "y": 0,
+        "value": "20px:^;desktop"
+      },
+      "font-size-75": {
+        "type": "token",
+        "id": "font-size-75",
+        "x": 0,
+        "y": 0,
+        "value": "12px:^;desktop"
       }
     },
-    "adjacencyList": {}
+    "adjacencyList": {
+      "code": [
+        "code-cjk-emphasized-font-style",
+        "code-cjk-emphasized-font-weight",
+        "code-cjk-font-family",
+        "code-cjk-font-style",
+        "code-cjk-font-weight",
+        "code-cjk-line-height",
+        "code-cjk-size-l",
+        "code-cjk-size-m",
+        "code-cjk-size-s",
+        "code-cjk-size-xl",
+        "code-cjk-size-xs",
+        "code-cjk-strong-emphasized-font-style",
+        "code-cjk-strong-emphasized-font-weight",
+        "code-cjk-strong-font-style",
+        "code-cjk-strong-font-weight",
+        "code-color",
+        "code-emphasized-font-style",
+        "code-emphasized-font-weight",
+        "code-font-family",
+        "code-font-style",
+        "code-font-weight",
+        "code-line-height",
+        "code-size-l",
+        "code-size-m",
+        "code-size-s",
+        "code-size-xl",
+        "code-size-xs",
+        "code-strong-emphasized-font-style",
+        "code-strong-emphasized-font-weight",
+        "code-strong-font-style",
+        "code-strong-font-weight"
+      ],
+      "accordion": [
+        "accordion-bottom-to-text-compact-extra-large",
+        "accordion-bottom-to-text-compact-large",
+        "accordion-bottom-to-text-compact-medium",
+        "accordion-bottom-to-text-compact-small",
+        "accordion-bottom-to-text-extra-large",
+        "accordion-bottom-to-text-large",
+        "accordion-bottom-to-text-medium",
+        "accordion-bottom-to-text-regular-extra-large",
+        "accordion-bottom-to-text-regular-large",
+        "accordion-bottom-to-text-regular-medium",
+        "accordion-bottom-to-text-regular-small",
+        "accordion-bottom-to-text-small",
+        "accordion-bottom-to-text-spacious-extra-large",
+        "accordion-bottom-to-text-spacious-large",
+        "accordion-bottom-to-text-spacious-medium",
+        "accordion-bottom-to-text-spacious-small",
+        "accordion-content-area-bottom-to-content",
+        "accordion-content-area-edge-to-content-extra-large",
+        "accordion-content-area-edge-to-content-large",
+        "accordion-content-area-edge-to-content-medium",
+        "accordion-content-area-edge-to-content-small",
+        "accordion-content-area-top-to-content",
+        "accordion-disclosure-indicator-to-text",
+        "accordion-disclosure-indicator-to-text-extra-large",
+        "accordion-disclosure-indicator-to-text-large",
+        "accordion-disclosure-indicator-to-text-medium",
+        "accordion-disclosure-indicator-to-text-small",
+        "accordion-edge-to-content-area-extra-large",
+        "accordion-edge-to-content-area-large",
+        "accordion-edge-to-content-area-medium",
+        "accordion-edge-to-content-area-small",
+        "accordion-edge-to-disclosure-indicator",
+        "accordion-edge-to-text",
+        "accordion-focus-indicator-gap",
+        "accordion-item-to-divider",
+        "accordion-minimum-width",
+        "accordion-small-top-to-text-spacious",
+        "accordion-top-to-text-compact-extra-large",
+        "accordion-top-to-text-compact-large",
+        "accordion-top-to-text-compact-medium",
+        "accordion-top-to-text-compact-small",
+        "accordion-top-to-text-extra-large",
+        "accordion-top-to-text-large",
+        "accordion-top-to-text-medium",
+        "accordion-top-to-text-regular-extra-large",
+        "accordion-top-to-text-regular-large",
+        "accordion-top-to-text-regular-medium",
+        "accordion-top-to-text-regular-small",
+        "accordion-top-to-text-small",
+        "accordion-top-to-text-spacious-extra-large",
+        "accordion-top-to-text-spacious-large",
+        "accordion-top-to-text-spacious-medium",
+        "accordion-top-to-text-spacious-small"
+      ],
+      "accordion-bottom-to-text-regular-extra-large": ["accordion-bottom-to-text-extra-large"],
+      "accordion-bottom-to-text-regular-large": ["accordion-bottom-to-text-large"],
+      "accordion-bottom-to-text-regular-medium": ["accordion-bottom-to-text-medium"],
+      "accordion-bottom-to-text-regular-small": ["accordion-bottom-to-text-small"],
+      "accordion-top-to-text-regular-extra-large": ["accordion-top-to-text-extra-large"],
+      "accordion-top-to-text-regular-large": ["accordion-top-to-text-large"],
+      "accordion-top-to-text-regular-medium": ["accordion-top-to-text-medium"],
+      "accordion-top-to-text-regular-small": ["accordion-top-to-text-small"],
+      "code-cjk-emphasized-font-style": ["default-font-style"],
+      "code-cjk-emphasized-font-weight": ["bold-font-weight"],
+      "code-cjk-font-family": ["code-font-family"],
+      "code-cjk-font-style": ["default-font-style"],
+      "code-cjk-font-weight": ["regular-font-weight"],
+      "code-cjk-line-height": ["cjk-line-height-200"],
+      "code-cjk-size-l": ["code-size-l"],
+      "code-cjk-size-m": ["code-size-m"],
+      "code-cjk-size-s": ["code-size-s"],
+      "code-cjk-size-xl": ["code-size-xl"],
+      "code-cjk-size-xs": ["code-size-xs"],
+      "code-cjk-strong-emphasized-font-style": ["default-font-style"],
+      "code-cjk-strong-emphasized-font-weight": ["bold-font-weight"],
+      "code-cjk-strong-font-style": ["default-font-style"],
+      "code-cjk-strong-font-weight": ["bold-font-weight"],
+      "code-color": ["gray-800"],
+      "code-emphasized-font-style": ["italic-font-style"],
+      "code-emphasized-font-weight": ["regular-font-weight"],
+      "code-font-style": ["default-font-style"],
+      "code-font-weight": ["regular-font-weight"],
+      "code-line-height": ["line-height-200"],
+      "code-size-l": ["font-size-300"],
+      "code-size-m": ["font-size-200"],
+      "code-size-s": ["font-size-100"],
+      "code-size-xl": ["font-size-400"],
+      "code-size-xs": ["font-size-75"],
+      "code-strong-emphasized-font-style": ["italic-font-style"],
+      "code-strong-emphasized-font-weight": ["bold-font-weight"],
+      "code-strong-font-style": ["default-font-style"],
+      "code-strong-font-weight": ["bold-font-weight"]
+    }
   },
   "components": [
     "accordion",
@@ -55710,13 +56471,220 @@
     "validation-icon"
   ],
   "filters": ["spectrum", "light", "desktop"],
-  "selected": [],
-  "selectionItems": [],
+  "selected": ["accordion", "code"],
+  "selectionItems": [
+    {
+      "id": "accordion",
+      "type": "component"
+    },
+    {
+      "id": "code",
+      "type": "component"
+    }
+  ],
   "selectionAncestorNodeIds": [],
-  "selectionDescendentNodeIds": [],
+  "selectionDescendentNodeIds": [
+    "accordion",
+    "accordion-bottom-to-text-compact-extra-large",
+    "accordion-bottom-to-text-compact-large",
+    "accordion-bottom-to-text-compact-medium",
+    "accordion-bottom-to-text-compact-small",
+    "accordion-bottom-to-text-extra-large",
+    "accordion-bottom-to-text-large",
+    "accordion-bottom-to-text-medium",
+    "accordion-bottom-to-text-regular-extra-large",
+    "accordion-bottom-to-text-regular-large",
+    "accordion-bottom-to-text-regular-medium",
+    "accordion-bottom-to-text-regular-small",
+    "accordion-bottom-to-text-small",
+    "accordion-bottom-to-text-spacious-extra-large",
+    "accordion-bottom-to-text-spacious-large",
+    "accordion-bottom-to-text-spacious-medium",
+    "accordion-bottom-to-text-spacious-small",
+    "accordion-content-area-bottom-to-content",
+    "accordion-content-area-edge-to-content-extra-large",
+    "accordion-content-area-edge-to-content-large",
+    "accordion-content-area-edge-to-content-medium",
+    "accordion-content-area-edge-to-content-small",
+    "accordion-content-area-top-to-content",
+    "accordion-disclosure-indicator-to-text",
+    "accordion-disclosure-indicator-to-text-extra-large",
+    "accordion-disclosure-indicator-to-text-large",
+    "accordion-disclosure-indicator-to-text-medium",
+    "accordion-disclosure-indicator-to-text-small",
+    "accordion-edge-to-content-area-extra-large",
+    "accordion-edge-to-content-area-large",
+    "accordion-edge-to-content-area-medium",
+    "accordion-edge-to-content-area-small",
+    "accordion-edge-to-disclosure-indicator",
+    "accordion-edge-to-text",
+    "accordion-focus-indicator-gap",
+    "accordion-item-to-divider",
+    "accordion-minimum-width",
+    "accordion-small-top-to-text-spacious",
+    "accordion-top-to-text-compact-extra-large",
+    "accordion-top-to-text-compact-large",
+    "accordion-top-to-text-compact-medium",
+    "accordion-top-to-text-compact-small",
+    "accordion-top-to-text-extra-large",
+    "accordion-top-to-text-large",
+    "accordion-top-to-text-medium",
+    "accordion-top-to-text-regular-extra-large",
+    "accordion-top-to-text-regular-large",
+    "accordion-top-to-text-regular-medium",
+    "accordion-top-to-text-regular-small",
+    "accordion-top-to-text-small",
+    "accordion-top-to-text-spacious-extra-large",
+    "accordion-top-to-text-spacious-large",
+    "accordion-top-to-text-spacious-medium",
+    "accordion-top-to-text-spacious-small",
+    "code",
+    "code-cjk-emphasized-font-style",
+    "code-cjk-emphasized-font-weight",
+    "code-cjk-font-family",
+    "code-cjk-font-style",
+    "code-cjk-font-weight",
+    "code-cjk-line-height",
+    "code-cjk-size-l",
+    "code-cjk-size-m",
+    "code-cjk-size-s",
+    "code-cjk-size-xl",
+    "code-cjk-size-xs",
+    "code-cjk-strong-emphasized-font-style",
+    "code-cjk-strong-emphasized-font-weight",
+    "code-cjk-strong-font-style",
+    "code-cjk-strong-font-weight",
+    "code-color",
+    "code-emphasized-font-style",
+    "code-emphasized-font-weight",
+    "code-font-family",
+    "code-font-style",
+    "code-font-weight",
+    "code-line-height",
+    "code-size-l",
+    "code-size-m",
+    "code-size-s",
+    "code-size-xl",
+    "code-size-xs",
+    "code-strong-emphasized-font-style",
+    "code-strong-emphasized-font-weight",
+    "code-strong-font-style",
+    "code-strong-font-weight",
+    "default-font-style",
+    "bold-font-weight",
+    "regular-font-weight",
+    "cjk-line-height-200",
+    "gray-800",
+    "italic-font-style",
+    "line-height-200",
+    "font-size-300",
+    "font-size-200",
+    "font-size-100",
+    "font-size-400",
+    "font-size-75"
+  ],
   "selectedChildDescendentNodeIds": [],
   "selectionDescendentIntersectNodeIds": [],
-  "focusNodeIds": [],
+  "focusNodeIds": [
+    "accordion",
+    "code",
+    "accordion-bottom-to-text-compact-extra-large",
+    "accordion-bottom-to-text-compact-large",
+    "accordion-bottom-to-text-compact-medium",
+    "accordion-bottom-to-text-compact-small",
+    "accordion-bottom-to-text-extra-large",
+    "accordion-bottom-to-text-large",
+    "accordion-bottom-to-text-medium",
+    "accordion-bottom-to-text-regular-extra-large",
+    "accordion-bottom-to-text-regular-large",
+    "accordion-bottom-to-text-regular-medium",
+    "accordion-bottom-to-text-regular-small",
+    "accordion-bottom-to-text-small",
+    "accordion-bottom-to-text-spacious-extra-large",
+    "accordion-bottom-to-text-spacious-large",
+    "accordion-bottom-to-text-spacious-medium",
+    "accordion-bottom-to-text-spacious-small",
+    "accordion-content-area-bottom-to-content",
+    "accordion-content-area-edge-to-content-extra-large",
+    "accordion-content-area-edge-to-content-large",
+    "accordion-content-area-edge-to-content-medium",
+    "accordion-content-area-edge-to-content-small",
+    "accordion-content-area-top-to-content",
+    "accordion-disclosure-indicator-to-text",
+    "accordion-disclosure-indicator-to-text-extra-large",
+    "accordion-disclosure-indicator-to-text-large",
+    "accordion-disclosure-indicator-to-text-medium",
+    "accordion-disclosure-indicator-to-text-small",
+    "accordion-edge-to-content-area-extra-large",
+    "accordion-edge-to-content-area-large",
+    "accordion-edge-to-content-area-medium",
+    "accordion-edge-to-content-area-small",
+    "accordion-edge-to-disclosure-indicator",
+    "accordion-edge-to-text",
+    "accordion-focus-indicator-gap",
+    "accordion-item-to-divider",
+    "accordion-minimum-width",
+    "accordion-small-top-to-text-spacious",
+    "accordion-top-to-text-compact-extra-large",
+    "accordion-top-to-text-compact-large",
+    "accordion-top-to-text-compact-medium",
+    "accordion-top-to-text-compact-small",
+    "accordion-top-to-text-extra-large",
+    "accordion-top-to-text-large",
+    "accordion-top-to-text-medium",
+    "accordion-top-to-text-regular-extra-large",
+    "accordion-top-to-text-regular-large",
+    "accordion-top-to-text-regular-medium",
+    "accordion-top-to-text-regular-small",
+    "accordion-top-to-text-small",
+    "accordion-top-to-text-spacious-extra-large",
+    "accordion-top-to-text-spacious-large",
+    "accordion-top-to-text-spacious-medium",
+    "accordion-top-to-text-spacious-small",
+    "code-cjk-emphasized-font-style",
+    "code-cjk-emphasized-font-weight",
+    "code-cjk-font-family",
+    "code-cjk-font-style",
+    "code-cjk-font-weight",
+    "code-cjk-line-height",
+    "code-cjk-size-l",
+    "code-cjk-size-m",
+    "code-cjk-size-s",
+    "code-cjk-size-xl",
+    "code-cjk-size-xs",
+    "code-cjk-strong-emphasized-font-style",
+    "code-cjk-strong-emphasized-font-weight",
+    "code-cjk-strong-font-style",
+    "code-cjk-strong-font-weight",
+    "code-color",
+    "code-emphasized-font-style",
+    "code-emphasized-font-weight",
+    "code-font-family",
+    "code-font-style",
+    "code-font-weight",
+    "code-line-height",
+    "code-size-l",
+    "code-size-m",
+    "code-size-s",
+    "code-size-xl",
+    "code-size-xs",
+    "code-strong-emphasized-font-style",
+    "code-strong-emphasized-font-weight",
+    "code-strong-font-style",
+    "code-strong-font-weight",
+    "default-font-style",
+    "bold-font-weight",
+    "regular-font-weight",
+    "cjk-line-height-200",
+    "gray-800",
+    "italic-font-style",
+    "line-height-200",
+    "font-size-300",
+    "font-size-200",
+    "font-size-100",
+    "font-size-400",
+    "font-size-75"
+  ],
   "query": "",
   "matches": [],
   "error": "",

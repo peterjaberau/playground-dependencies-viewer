@@ -8,6 +8,7 @@ import { useEffect } from "react"
 import { SpectrumTokenNode } from "./components/spectrum-token-node"
 import { useDataActor } from "./hooks/use-data-actor"
 import { useGraphActor } from "./hooks/use-graph-actor"
+import { useRootActor } from "./hooks/use-root-actor"
 import { RootProvider } from "./providers/root-provider"
 import type { SpectrumFlowNode, SpectrumFlowNodeData } from "./lib/flow-elements"
 
@@ -18,6 +19,7 @@ export function S2Visualizer() {
 }
 
 function S2VisualizerContent() {
+  const rootActor = useRootActor()
   const { dataActor, dataContext: data, completeNodeCount, selectionItems } = useDataActor()
   const { graphActor, graphContext: graph } = useGraphActor()
   const busy = completeNodeCount === 0 || graph.nodes.length === 0
@@ -33,7 +35,7 @@ function S2VisualizerContent() {
         {data.query && <Box position="absolute" top="10" left="0" right="0" bg="white" borderWidth="1px" borderColor="gray.300" borderRadius="md" overflow="hidden" zIndex="5">{data.matches.map((node) => <Button key={node.id} variant="ghost" justifyContent="flex-start" width="100%" size="sm" borderRadius="0" onClick={() => dataActor.send({ type: "selection.changed", id: node.id })}><Text truncate>{node.id}</Text></Button>)}</Box>}
       </Box>
       <Text fontSize="xs" fontWeight="bold" mb="2" color="gray.600">TOKEN SETS</Text><Stack gap="2" mb="6">{["spectrum", "light", "dark", "desktop", "mobile"].map((filter) => <Checkbox.Root key={filter} checked={data.filters.includes(filter)} onCheckedChange={(details) => dataActor.send({ type: "filters.changed", filters: details.checked ? [...data.filters, filter] : data.filters.filter((item) => item !== filter) })}><Checkbox.HiddenInput /><Checkbox.Control /><Checkbox.Label textTransform="capitalize">{filter}</Checkbox.Label></Checkbox.Root>)}</Stack>
-      <Stack gap="2" mb="6"><Button size="sm" variant="outline" onClick={() => console.log("S2 data machine context", data)}>Data</Button><Button size="sm" variant="outline" onClick={() => console.log("S2 latest graph-data event", graph.latestGraphData)}>Graph Events</Button><Button size="sm" variant="outline" onClick={() => console.log("S2 graph machine context", graph)}>Visualizer</Button></Stack>
+      <Stack gap="2" mb="6"><Button size="sm" variant="outline" onClick={() => console.log("S2 root machine context", rootActor.getSnapshot().context)}>Root</Button><Button size="sm" variant="outline" onClick={() => console.log("S2 graph machine context", graph)}>Graph</Button><Button size="sm" variant="outline" onClick={() => console.log("S2 data machine context", data)}>Data</Button></Stack>
       <Text fontSize="xs" fontWeight="bold" mb="2" color="gray.600">SELECTED</Text><Stack gap="1">{data.selected.length ? data.selected.map((id) => <HStack key={id} justify="space-between"><Text fontSize="xs" truncate>{id}</Text><IconButton aria-label={`Remove ${id}`} size="2xs" variant="ghost" onClick={() => dataActor.send({ type: "selection.changed", id })}><X size={13} /></IconButton></HStack>) : <Text fontSize="xs" color="gray.500">Click a node to inspect its dependencies.</Text>}</Stack>
     </Box>
     <Box flex="1" position="relative" minWidth="0" bg="gray.50">
