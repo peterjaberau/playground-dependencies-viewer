@@ -3,7 +3,7 @@ import { GRAPH_EDGE_STYLE } from "./constants"
 import { resolveGraphEdgeVisual } from "./graph-color-resolvers"
 import type { GraphNode, GraphState } from "./graph-types"
 
-export type SpectrumFlowNodeData = { graphNode: GraphNode; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
+export type SpectrumFlowNodeData = { graphNode: GraphNode; hasDownstream: boolean; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
 export type SpectrumFlowNode = Node<SpectrumFlowNodeData, "spectrumToken">
 
 export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectedChildDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
@@ -24,6 +24,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
     position: { x: graphNode.x, y: graphNode.y },
     data: {
       graphNode,
+      hasDownstream: (graph.adjacencyList[graphNode.id] ?? []).length > 0,
       isSelected: selectedIds.has(graphNode.id),
       isSelectionAncestor: ancestorIds.has(graphNode.id),
       isSelectionDescendent: descendentIds.has(graphNode.id),
@@ -36,14 +37,15 @@ export function createFlowElements(graph: GraphState, selected: string[], select
     const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
     const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
     const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
-    const visual = resolveGraphEdgeVisual({ isOnSelectedChildDescendentPath, isSelectionConnection, isOnAncestorPath, isOnDescendentPath })
+    const isHighlighted = isSelectionConnection || isOnAncestorPath || isOnSelectedChildDescendentPath
+    const visual = resolveGraphEdgeVisual({ isOnSelectedChildDescendentPath, isSelectionConnection, isOnAncestorPath, isOnDescendentPath, isFaded, isHighlighted })
     return {
       id: `${source}->${target}`,
       source,
       target,
       type: "default",
       zIndex: visual.zIndex,
-      style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: isFaded ? GRAPH_EDGE_STYLE.fadedOpacity : 1 },
+      style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: 1 },
     }
   }))
   return { nodes, edges }

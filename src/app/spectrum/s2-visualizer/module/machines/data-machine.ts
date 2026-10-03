@@ -76,10 +76,11 @@ export const dataMachine = setup({
     deriveSelectionData: assign(({ context }) => {
       const selectionItems = context.selected.map((id) => context.completeGraph.nodes[id]).filter((node): node is GraphNode => Boolean(node)).sort((left, right) => Number(left.type !== "component") - Number(right.type !== "component")).map((node) => ({ id: node.id, type: node.type }))
       const selectedTokens = context.selected.filter((id) => context.completeGraph.nodes[id]?.type !== "component")
+      const selectedChildTokens = context.selected.filter((id) => context.completeGraph.nodes[id]?.type === "token")
       const incoming = createIncomingAdjacency(context.completeGraph)
       const selectionAncestorNodeIds = [...new Set(selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream", incoming)]))]
       const selectionDescendentNodeIds = [...new Set(context.selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
-      const selectedChildDescendentNodeIds = [...new Set(selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
+      const selectedChildDescendentNodeIds = [...new Set(selectedChildTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))]
       const selectionDescendentIntersectNodeIds = findDownstreamIntersection(context.completeGraph, context.selected)
       const focusNodeIds = [...new Set([...context.selected, ...selectionAncestorNodeIds, ...selectionDescendentNodeIds])]
       return { selectionItems, selectionAncestorNodeIds, selectionDescendentNodeIds, selectedChildDescendentNodeIds, selectionDescendentIntersectNodeIds, focusNodeIds, graphData: createDisplayGraph(context.completeGraph, context.selected) }

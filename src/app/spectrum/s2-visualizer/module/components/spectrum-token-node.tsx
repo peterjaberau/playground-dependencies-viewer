@@ -3,14 +3,15 @@
 import { Box, HStack, Stack, Text } from "@chakra-ui/react"
 import { Handle, Position, type NodeProps } from "@xyflow/react"
 import { memo } from "react"
-import { resolveGraphNodeColor } from "../lib/graph-color-resolvers"
+import { resolveGraphNodeVisual } from "../lib/graph-color-resolvers"
 import { valuesFor } from "../lib/node-values"
 import type { SpectrumFlowNode } from "../lib/flow-elements"
 
 export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeProps<SpectrumFlowNode>) {
-  const { graphNode, isSelected, isSelectionAncestor, isSelectionDescendent, isSelectionDescendentIntersect } = data
-  const color = resolveGraphNodeColor({
+  const { graphNode, hasDownstream, isSelected, isSelectionAncestor, isSelectionDescendent, isSelectionDescendentIntersect } = data
+  const visual = resolveGraphNodeVisual({
     type: graphNode.type,
+    hasDownstream,
     isSelected,
     isSelectionAncestor,
     isSelectionDescendent,
@@ -25,16 +26,17 @@ export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeP
       minHeight={`${height}px`}
       display="flex"
       alignItems="center"
-      bg={`${color}.100`}
+      // bg={`${visual.color}.${visual.fillShade}`}
+      bg={`${visual.color}`}
       borderWidth="1px"
-      borderColor={isSelected ? "yellow.500" : `${color}.400`}
+      borderColor={visual.borderColor}
       borderRadius="sm"
       cursor="pointer"
       userSelect="none"
-      boxShadow="sm"
+      // boxShadow="sm"
     >
       <Handle type="target" position={Position.Left} style={{ opacity: 0 }} />
-      <Text pl="26px" fontSize="12px" fontWeight="bold" color="gray.800">
+      <Text pl="26px" fontSize="12px" fontWeight="bold" color={visual.labelTextColor}>
         {graphNode.id}
       </Text>
       <Stack position="absolute" right="3px" top="3px" gap="2px" align="end" className="nodrag">
@@ -44,8 +46,8 @@ export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeP
               px="5px"
               height="16px"
               lineHeight="16px"
-              bg={isSelected ? "yellow.200" : "gray.200"}
-              color="gray.800"
+              bg={visual.valuePathBackground}
+              color={visual.labelTextColor}
               borderLeftRadius="2px"
             >
               {item.path || "*"}
@@ -56,8 +58,8 @@ export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeP
               lineHeight="16px"
               maxWidth="260px"
               truncate
-              bg="gray.700"
-              color="white"
+              bg={visual.valueBackground}
+              color={visual.valueTextColor}
               borderRightRadius="2px"
             >
               {item.value}
