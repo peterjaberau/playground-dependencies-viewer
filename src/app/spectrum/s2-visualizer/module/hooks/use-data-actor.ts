@@ -8,7 +8,7 @@ export function useDataActor() {
   const selected = useSelector(dataActor, (dataState) => ({
     dataState,
     dataContext: dataState.context,
-    displayNodeCount: Object.keys(dataState.context.displayGraph.nodes).length,
+    graphDataNodeCount: Object.keys(dataState.context.graphData.nodes).length,
     completeNodeCount: Object.keys(dataState.context.completeGraph.nodes).length,
     related: dataState.context.related,
     selectionItems: dataState.context.selectionItems,
