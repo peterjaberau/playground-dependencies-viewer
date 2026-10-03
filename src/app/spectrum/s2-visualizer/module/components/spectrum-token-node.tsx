@@ -3,25 +3,19 @@
 import { Box, HStack, Stack, Text } from "@chakra-ui/react"
 import { Handle, Position, type NodeProps } from "@xyflow/react"
 import { memo } from "react"
-import { GRAPH_NODE_COLORS } from "../lib/constants"
+import { resolveGraphNodeColor } from "../lib/graph-color-resolvers"
 import { valuesFor } from "../lib/node-values"
 import type { SpectrumFlowNode } from "../lib/flow-elements"
 
 export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeProps<SpectrumFlowNode>) {
   const { graphNode, isSelected, isSelectionAncestor, isSelectionDescendent, isSelectionDescendentIntersect } = data
-  const color = isSelected
-    ? GRAPH_NODE_COLORS.selected
-    : isSelectionDescendentIntersect || (isSelectionAncestor && isSelectionDescendent)
-      ? GRAPH_NODE_COLORS.selectionConnection
-      : isSelectionDescendent
-        ? GRAPH_NODE_COLORS.descendentPath
-        : isSelectionAncestor
-          ? GRAPH_NODE_COLORS.ancestorPath
-      : graphNode.type === "component"
-        ? GRAPH_NODE_COLORS.component
-        : graphNode.type === "orphan-category"
-          ? GRAPH_NODE_COLORS.orphanCategory
-          : GRAPH_NODE_COLORS.token
+  const color = resolveGraphNodeColor({
+    type: graphNode.type,
+    isSelected,
+    isSelectionAncestor,
+    isSelectionDescendent,
+    isSelectionDescendentIntersect,
+  })
   const values = valuesFor(graphNode)
   const height = Math.max(values.length, 1) * 18 + 6
 
