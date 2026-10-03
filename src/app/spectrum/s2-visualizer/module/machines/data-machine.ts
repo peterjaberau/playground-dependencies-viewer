@@ -26,7 +26,7 @@ export const dataMachine = setup({
       const downstream = new Set(selected.flatMap((id) => [...findRelated(completeGraph, id, "downstream")]))
       selected.forEach((id) => downstream.delete(id))
       const focusNodeIds = downstream.size
-        ? [...downstream]
+        ? [...new Set([...selected, ...downstream])]
         : [...new Set([...selected, ...selectedTokens.flatMap((id) => [...findRelated(completeGraph, id, "upstream")])])]
       const matches = context.query ? Object.values(completeGraph.nodes).filter((node) => node.id.toLowerCase().includes(context.query.toLowerCase()) || (node.value ?? "").toLowerCase().includes(context.query.toLowerCase())).slice(0, 8) : []
       return { completeGraph, components: output.components, selected, selectionItems, related, focusNodeIds, displayGraph: createDisplayGraph(completeGraph, selected), matches, error: "" }
@@ -44,7 +44,7 @@ export const dataMachine = setup({
       const downstream = new Set(selected.flatMap((id) => [...findRelated(context.completeGraph, id, "downstream")]))
       selected.forEach((id) => downstream.delete(id))
       const focusNodeIds = downstream.size
-        ? [...downstream]
+        ? [...new Set([...selected, ...downstream])]
         : [...new Set([...selected, ...selectedTokens.flatMap((id) => [...findRelated(context.completeGraph, id, "upstream")])])]
       return { selected, selectionItems, related, focusNodeIds, displayGraph: createDisplayGraph(context.completeGraph, selected) }
     }),

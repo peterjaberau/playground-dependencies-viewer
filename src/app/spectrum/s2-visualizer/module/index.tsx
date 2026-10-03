@@ -22,7 +22,7 @@ function S2VisualizerContent() {
   const { dataActor, dataContext: data, completeNodeCount, selectionItems } = useDataActor()
   const { graphEventsContext } = useGraphEventsActor()
   const { visualizerActor, visualizerContext: visualizer, visualizerState } = useVisualizerActor()
-  const busy = completeNodeCount === 0 || (visualizerState.matches("layout") && visualizer.nodes.length === 0)
+  const busy = completeNodeCount === 0 || visualizer.nodes.length === 0
 
   const onNodeClick: NodeMouseHandler = (_, node) => dataActor.send({ type: "node.toggled", id: node.id })
   const onNodeDragStop: OnNodeDrag = (_, node) => visualizerActor.send({ type: "node.moved", id: node.id, position: node.position })
