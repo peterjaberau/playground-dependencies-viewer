@@ -1,4 +1,5 @@
 import type { Edge, Node } from "@xyflow/react"
+import { GRAPH_EDGE_COLORS, GRAPH_EDGE_STYLE } from "./constants"
 import type { GraphNode, GraphState } from "./graph-types"
 
 export type SpectrumFlowNodeData = { graphNode: GraphNode; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
@@ -32,13 +33,19 @@ export function createFlowElements(graph: GraphState, selected: string[], select
     const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
     const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
     const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
-    const stroke = isSelectionConnection ? "#f97316" : isOnAncestorPath ? "#a855f7" : isOnDescendentPath ? "#ec4899" : "#94a3b8"
+    const stroke = isSelectionConnection
+      ? GRAPH_EDGE_COLORS.selectionConnection
+      : isOnAncestorPath
+        ? GRAPH_EDGE_COLORS.ancestorPath
+        : isOnDescendentPath
+          ? GRAPH_EDGE_COLORS.descendentPath
+          : GRAPH_EDGE_COLORS.default
     return {
       id: `${source}->${target}`,
       source,
       target,
       type: "default",
-      style: { stroke, strokeWidth: 2, opacity: isFaded ? .3 : 1 },
+      style: { stroke, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: isFaded ? GRAPH_EDGE_STYLE.fadedOpacity : 1 },
     }
   }))
   return { nodes, edges }
