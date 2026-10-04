@@ -1,4 +1,4 @@
-import { GRAPH_EDGE_COLORS, GRAPH_EDGE_STYLE, GRAPH_NODE_COLORS, GRAPH_NODE_STYLE } from "./constants"
+import { GRAPH_EDGE_COLORS, GRAPH_EDGE_STYLE, GRAPH_NODE_COLORS, GRAPH_NODE_VALUE_COLORS } from "./constants"
 import type { GraphNode } from "./graph-types"
 
 export type GraphNodeColorRole = keyof typeof GRAPH_NODE_COLORS
@@ -19,8 +19,8 @@ type NodeColorInput = {
  */
 export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColorRole {
   if (input.isSelected) return "selected"
-  if (input.type === "component") return "component"
-  if (input.type === "orphan-category") return "orphanCategory"
+  if (input.type === "component") return input.hasDownstream ? "componentWithDownstream" : "component"
+  if (input.type === "orphan-category") return input.hasDownstream ? "orphanCategoryWithDownstream" : "orphanCategory"
   // From this point the source implementation is inside `type === "token"`.
   if (input.isSelectionDescendentIntersect || (input.isSelectionAncestor && input.isSelectionDescendent)) return "selectionConnection"
   if (input.isSelectionDescendent) return "descendentPath"
@@ -30,23 +30,15 @@ export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColor
 
 export function resolveGraphNodeVisual(input: NodeColorInput) {
   const role = resolveGraphNodeColorRole(input)
-  const isStructuralNode = input.type === "component" || input.type === "orphan-category"
-  const fillShade = role === "selected"
-    ? GRAPH_NODE_STYLE.selectedFillShade
-    : role === "selectionConnection"
-      ? GRAPH_NODE_STYLE.selectionConnectionFillShade
-      : isStructuralNode && input.hasDownstream
-        ? GRAPH_NODE_STYLE.structuralNodeWithDownstreamFillShade
-        : GRAPH_NODE_STYLE.defaultFillShade
+  const palette = GRAPH_NODE_COLORS[role]
   return {
     role,
-    color: GRAPH_NODE_COLORS[role],
-    fillShade,
-    borderColor: `${GRAPH_NODE_COLORS[role]}.${input.isSelected ? GRAPH_NODE_STYLE.selectedBorderShade : GRAPH_NODE_STYLE.borderShade}`,
-    labelTextColor: GRAPH_NODE_STYLE.labelTextColor,
-    valuePathBackground: input.isSelected ? GRAPH_NODE_STYLE.selectedValuePathBackground : GRAPH_NODE_STYLE.defaultValuePathBackground,
-    valueBackground: GRAPH_NODE_STYLE.valueBackground,
-    valueTextColor: GRAPH_NODE_STYLE.valueTextColor,
+    fillColor: palette.fill,
+    borderColor: palette.border,
+    labelTextColor: palette.label,
+    valuePathBackground: input.isSelected ? GRAPH_NODE_VALUE_COLORS.selectedPathBackground : GRAPH_NODE_VALUE_COLORS.defaultPathBackground,
+    valueBackground: GRAPH_NODE_VALUE_COLORS.background,
+    valueTextColor: GRAPH_NODE_VALUE_COLORS.text,
   }
 }
 
