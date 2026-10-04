@@ -31,22 +31,26 @@ export function createFlowElements(graph: GraphState, selected: string[], select
       isSelectionDescendentIntersect: descendentIntersectIds.has(graphNode.id),
     },
   }))
-  const edges: Edge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => targets.map((target) => {
-    const isOnAncestorPath = ancestorIds.has(source) && ancestorIds.has(target)
-    const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
-    const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
-    const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
-    const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
-    const isHighlighted = isSelectionConnection || isOnAncestorPath || isOnSelectedChildDescendentPath
-    const visual = resolveGraphEdgeVisual({ isOnSelectedChildDescendentPath, isSelectionConnection, isOnAncestorPath, isOnDescendentPath, isFaded, isHighlighted })
-    return {
-      id: `${source}->${target}`,
-      source,
-      target,
-      type: "default",
-      zIndex: visual.zIndex,
-      style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: 1 },
-    }
-  }))
+  const edges: Edge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => {
+    const sourceNode = graph.nodes[source]
+    if (!sourceNode) return []
+    return targets.map((target): Edge => {
+      const isOnAncestorPath = ancestorIds.has(source) && ancestorIds.has(target)
+      const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
+      const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
+      const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
+      const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
+      const isHighlighted = isSelectionConnection || isOnAncestorPath || isOnSelectedChildDescendentPath
+      const visual = resolveGraphEdgeVisual({ sourceType: sourceNode.type, isOnSelectedChildDescendentPath, isSelectionConnection, isOnAncestorPath, isOnDescendentPath, isFaded, isHighlighted })
+      return {
+        id: `${source}->${target}`,
+        source,
+        target,
+        type: "default",
+        zIndex: visual.zIndex,
+        style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: 1 },
+      }
+    })
+  })
   return { nodes, edges }
 }

@@ -34,13 +34,13 @@ export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColor
 
   if (input.type === "orphan-category") {
     if (input.isSelected) {
-      if (input.isSelectionAncestor || input.hasDownstream) return "nodeOrphanSelectedUpstream"
+      if (input.isSelectionAncestor) return "nodeOrphanSelectedUpstream"
       if (input.isSelectionDescendent) return "nodeOrphanSelectedDownstream"
       return "nodeOrphanSelected"
     }
-    if (input.isSelectionAncestor || input.hasDownstream) return "nodeOrphanUpstream"
+    if (input.isSelectionAncestor) return "nodeOrphanUpstream"
     if (input.isSelectionDescendent) return "nodeOrphanDownstream"
-    return "nodeOrphanLeaf"
+    return input.hasDownstream ? "nodeOrphan" : "nodeOrphanLeaf"
   }
 
   // From this point the source implementation is inside `type === "token"`.
@@ -70,6 +70,7 @@ export function resolveGraphNodeVisual(input: NodeColorInput) {
 }
 
 type EdgeColorInput = {
+  sourceType: GraphNode["type"]
   isOnSelectedChildDescendentPath: boolean
   isSelectionConnection: boolean
   isOnAncestorPath: boolean
@@ -80,11 +81,17 @@ type EdgeColorInput = {
 
 /** Edge-role precedence is centralized so color and z-index cannot diverge. */
 export function resolveGraphEdgeColorRole(input: EdgeColorInput): GraphEdgeColorRole {
-  if (input.isOnSelectedChildDescendentPath) return "edgeSelectedTokenDownstream"
-  if (input.isSelectionConnection) return "edgeSelectedRoute"
-  if (input.isOnAncestorPath) return "edgeSelectedTokenUpstream"
-  if (input.isOnDescendentPath) return "edgeSelectionDownstream"
-  return "edge"
+  const family = input.sourceType === "component"
+    ? "node"
+    : input.sourceType === "orphan-category"
+      ? "nodeOrphan"
+      : "nodeAtl"
+
+  if (input.isOnSelectedChildDescendentPath) return `${family}SelectedDownstream` as GraphEdgeColorRole
+  if (input.isSelectionConnection) return `${family}SelectedRoute` as GraphEdgeColorRole
+  if (input.isOnAncestorPath) return `${family}SelectedUpstream` as GraphEdgeColorRole
+  if (input.isOnDescendentPath) return `${family}Downstream` as GraphEdgeColorRole
+  return family
 }
 
 export function resolveGraphEdgeVisual(input: EdgeColorInput) {
@@ -92,9 +99,10 @@ export function resolveGraphEdgeVisual(input: EdgeColorInput) {
   const state = input.isHighlighted ? "highlighted" : input.isFaded ? "faded" : "base"
   // Upstream edges retain their visual highlight, but remain below nodes and
   // other elevated selection routes so they do not obscure the graph.
-  const shouldElevate = input.isHighlighted && role !== "edgeSelectedTokenUpstream"
-  const color = role === "edge" && state === "base"
-    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.edge.base
+  const shouldElevate = input.isHighlighted && !role.endsWith("SelectedUpstream")
+  const isBaseEdge = role === "node" || role === "nodeAtl" || role === "nodeOrphan"
+  const color = isBaseEdge && state === "base"
+    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS[role].base
     : GRAPH_EDGE_COLORS[role][state]
   return {
     role,

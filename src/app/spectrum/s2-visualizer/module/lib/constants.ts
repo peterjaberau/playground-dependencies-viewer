@@ -39,8 +39,8 @@ export const GRAPH_NODE_COLORS = {
   /** Terminal token outside the selected downstream graph. */
   nodeAtlLeaf: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
 
-  /** Orphan-category root with no visible downstream graph. */
-  nodeOrphan: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
+  /** Orphan-category root with visible children outside a selected route. */
+  nodeOrphan: { fill: "#d8b4fe", border: "#d8b4fe", label: "#9333ea" },
   /** Orphan-category root in a selected downstream route. */
   nodeOrphanDownstream: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
   /** Orphan-category root with visible children or on an upstream route. */
@@ -59,23 +59,50 @@ export const GRAPH_NODE_COLORS = {
 /**
  * Palette for graph edges. Every role supplies base, faded, and highlighted variants.
  *
- * - edge: an edge outside every selection-related route.
- * - edgeSelectedRoute: an edge in the shared selected upstream/downstream route.
- * - edgeSelectedTokenDownstream: an edge from a directly selected token to descendants.
- * - edgeSelectedTokenUpstream: an edge from a selected token to its component/root.
- * - edgeSelectionDownstream: a downstream edge in selected scope, but not direct selection descent.
+ * Edge names use the same source-family convention as nodes: `node` for
+ * components, `nodeAtl` for tokens, and `nodeOrphan` for orphan categories.
+ * The suffix identifies the route the edge belongs to. Base keys (`node`,
+ * `nodeAtl`, `nodeOrphan`) are used when an edge belongs to no selected route.
  */
 export const GRAPH_EDGE_COLORS = {
-  /** Edge outside any selection-related route. */
-  edge: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
-  /** Edge in the shared selected upstream/downstream route. */
-  edgeSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
-  /** Edge from a directly selected token to its descendants. */
-  edgeSelectedTokenDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
-  /** Edge from a selected token toward its component/root. */
-  edgeSelectedTokenUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
-  /** Other downstream edge within the selected graph scope. */
-  edgeSelectionDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
+  /** Component-origin edge outside a selected route. */
+  node: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
+  /** Component-origin edge in a downstream route. */
+  nodeDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
+  /** Component-origin edge in an upstream route. */
+  nodeUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Component-origin edge in selected downstream graph. */
+  nodeSelectedDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
+  /** Component-origin edge in selected upstream graph. */
+  nodeSelectedUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Component-origin edge in a shared selected route. */
+  nodeSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
+
+  /** Token-origin edge outside a selected route. */
+  nodeAtl: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
+  /** Token-origin edge in a downstream route. */
+  nodeAtlDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
+  /** Token-origin edge in an upstream route. */
+  nodeAtlUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Token-origin edge in selected downstream graph. */
+  nodeAtlSelectedDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
+  /** Token-origin edge in selected upstream graph. */
+  nodeAtlSelectedUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Token-origin edge in a shared selected route. */
+  nodeAtlSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
+
+  /** Orphan-category-origin edge outside a selected route. */
+  nodeOrphan: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
+  /** Orphan-category-origin edge in a downstream route. */
+  nodeOrphanDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
+  /** Orphan-category-origin edge in an upstream route. */
+  nodeOrphanUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Orphan-category-origin edge in selected downstream graph. */
+  nodeOrphanSelectedDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
+  /** Orphan-category-origin edge in selected upstream graph. */
+  nodeOrphanSelectedUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Orphan-category-origin edge in a shared selected route. */
+  nodeOrphanSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
 } as const
 
 
@@ -101,7 +128,7 @@ export const GRAPH_NODE_VALUE_COLORS = {
 
 export const GRAPH_EDGE_STYLE = {
   // Set a CSS color here to override only normal/default edges. When omitted,
-  // GRAPH_EDGE_COLORS.edge remains the fallback.
+  // GRAPH_EDGE_COLORS.node, nodeAtl, or nodeOrphan remains the fallback.
   color: "#e4e4e7",
   strokeWidth: 2,
   normalZIndex: 0,
