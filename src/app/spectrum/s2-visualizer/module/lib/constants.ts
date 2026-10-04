@@ -1,76 +1,81 @@
 /**
  * Visual palette for graph nodes. All graph colors are explicit CSS hex.
  *
- * - componentNode: component with no visible children.
- * - directlySelectedNode: any node chosen directly by the user.
- * - sharedSelectedRouteToken: token in the overlapping upstream/downstream selected route.
- * - downstreamToken: token reachable downstream from the selection.
- * - componentNodeWithVisibleChildren: component whose children are visible.
- * - orphanCategoryNode: orphan-category root with no visible children.
- * - orphanCategoryNodeWithVisibleChildren: orphan-category root whose children are visible.
- * - nonDownstreamToken: token outside selection downstream, including upstream tokens.
- *
- * node (componentNode)
- * nodeDownstream
- * nodeUpstream (componentNodeWithVisibleChildren)
- * nodeSelected (directlySelectedNode)
- * nodeSelectedDownstream
- * nodeSelectedUpstream
- * nodeAtl (downstreamToken)
- * nodeAtlDownstream
- * nodeAtlUpstream (orphanCategoryNodeWithVisibleChildren)
- * nodeAtlSelected
- * nodeAtlSelectedDownstream
- * nodeAtlSelectedUpstream
- * nodeAtlLeaf (nonDownstreamToken)
- * nodeOrphan (componentNode)
- * nodeOrphanDownstream
- * nodeOrphanUpstream
- * nodeOrphanSelected
- * nodeOrphanSelectedDownstream
- * nodeOrphanSelectedUpstream
- * nodeOrphanLeaf
+ * Naming is type-first: `node` is a component, `nodeAtl` is a token, and
+ * `nodeOrphan` is an orphan category. `Upstream` denotes an upstream route
+ * (or a root with visible children), `Downstream` denotes a selection-descendant
+ * route (or visible downstream graph), `Selected` is direct user selection,
+ * `SelectedRoute` is an overlapping selected route, and `Leaf` denotes a
+ * terminal node.
  */
 export const GRAPH_NODE_COLORS = {
-  /** A component node with no currently visible child graph. */
-  componentNode: { fill: "#f4f4f5", border: "#f4f4f5", label: "#3f3f46" },
-  /** Any node directly chosen by the user, regardless of its graph type. */
-  directlySelectedNode: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
-  /** A token where selected-node upstream and downstream routes overlap. */
-  sharedSelectedRouteToken: { fill: "#eab308", border: "#eab308", label: "#3f3f46" },
-  /** A token reachable downstream from the current selection. */
-  downstreamToken: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
-  /** A component node whose child graph is currently visible. */
-  componentNodeWithVisibleChildren: { fill: "#e4e4e7", border: "#e4e4e7", label: "#3f3f46" },
-  /** An orphan-category root with no currently visible child graph. */
-  orphanCategoryNode: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
-  /** An orphan-category root whose child graph is currently visible. */
-  orphanCategoryNodeWithVisibleChildren: { fill: "#d8b4fe", border: "#d8b4fe", label: "#9333ea" },
-  /** A token outside the current selection's downstream graph, including upstream tokens. */
-  nonDownstreamToken: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
+  /** Component with no selected route or visible downstream graph. */
+  node: { fill: "#f4f4f5", border: "#f4f4f5", label: "#3f3f46" },
+  /** Component in a selected downstream route. */
+  nodeDownstream: { fill: "#f4f4f5", border: "#f4f4f5", label: "#3f3f46" },
+  /** Component/root with visible children or on a selected upstream route. */
+  nodeUpstream: { fill: "#e4e4e7", border: "#e4e4e7", label: "#3f3f46" },
+  /** Directly selected component without an upstream/downstream route variant. */
+  nodeSelected: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Directly selected component in a downstream route. */
+  nodeSelectedDownstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Directly selected component with visible children or an upstream route. */
+  nodeSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+
+  /** Token in the selected downstream graph. */
+  nodeAtl: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
+  /** Token with visible descendants in the selected downstream graph. */
+  nodeAtlDownstream: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
+  /** Token on the selected upstream graph. */
+  nodeAtlUpstream: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
+  /** Directly selected token with no directional route variant. */
+  nodeAtlSelected: { fill: "#eab308", border: "#eab308", label: "#3f3f46" },
+  /** Directly selected token with visible downstream descendants. */
+  nodeAtlSelectedDownstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Directly selected token on an upstream route. */
+  nodeAtlSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Token in the overlap of selected upstream and downstream routes. */
+  nodeAtlSelectedRoute: { fill: "#eab308", border: "#eab308", label: "#3f3f46" },
+  /** Terminal token outside the selected downstream graph. */
+  nodeAtlLeaf: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
+
+  /** Orphan-category root with no visible downstream graph. */
+  nodeOrphan: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
+  /** Orphan-category root in a selected downstream route. */
+  nodeOrphanDownstream: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
+  /** Orphan-category root with visible children or on an upstream route. */
+  nodeOrphanUpstream: { fill: "#d8b4fe", border: "#d8b4fe", label: "#9333ea" },
+  /** Directly selected orphan-category root with no directional route variant. */
+  nodeOrphanSelected: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Directly selected orphan-category root in a downstream route. */
+  nodeOrphanSelectedDownstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Directly selected orphan-category root with visible children or an upstream route. */
+  nodeOrphanSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
+  /** Terminal orphan-category root with no visible children. */
+  nodeOrphanLeaf: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
 } as const
 
 
 /**
  * Palette for graph edges. Every role supplies base, faded, and highlighted variants.
  *
- * - sharedSelectedRoute: an edge in the overlap of selected upstream/downstream routes.
- * - directlySelectedTokenDownstream: an edge from a directly selected token to its descendants.
- * - selectedTokenUpstream: an edge from a selected token toward its component/root.
- * - selectedScopeDownstream: another downstream edge within the selected graph scope.
- * - unrelated: an edge outside every selection-related route.
+ * - edge: an edge outside every selection-related route.
+ * - edgeSelectedRoute: an edge in the shared selected upstream/downstream route.
+ * - edgeSelectedTokenDownstream: an edge from a directly selected token to descendants.
+ * - edgeSelectedTokenUpstream: an edge from a selected token to its component/root.
+ * - edgeSelectionDownstream: a downstream edge in selected scope, but not direct selection descent.
  */
 export const GRAPH_EDGE_COLORS = {
-  /** An edge on the shared portion of selected nodes' upstream/downstream routes. */
-  sharedSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
-  /** An edge flowing down from a directly selected token to its descendants. */
-  directlySelectedTokenDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
-  /** An edge flowing upstream from a selected token toward its component/root. */
-  selectedTokenUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
-  /** A downstream edge in the selected scope that is not directly selected-token descent. */
-  selectedScopeDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
-  /** An edge outside all selection-related routes. */
-  unrelated: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
+  /** Edge outside any selection-related route. */
+  edge: { base: "#94a3b8", faded: "#cbd5e1", highlighted: "#64748b" },
+  /** Edge in the shared selected upstream/downstream route. */
+  edgeSelectedRoute: { base: "#f97316", faded: "#fdba74", highlighted: "#eab308" },
+  /** Edge from a directly selected token to its descendants. */
+  edgeSelectedTokenDownstream: { base: "#d8b4fe", faded: "#ede9fe", highlighted: "#dbeafe" },
+  /** Edge from a selected token toward its component/root. */
+  edgeSelectedTokenUpstream: { base: "#a855f7", faded: "#e9d5ff", highlighted: "#eff6ff" },
+  /** Other downstream edge within the selected graph scope. */
+  edgeSelectionDownstream: { base: "#dbeafe", faded: "#eff6ff", highlighted: "#be185d" },
 } as const
 
 
@@ -96,7 +101,7 @@ export const GRAPH_NODE_VALUE_COLORS = {
 
 export const GRAPH_EDGE_STYLE = {
   // Set a CSS color here to override only normal/default edges. When omitted,
-  // GRAPH_EDGE_COLORS.unrelated remains the fallback.
+  // GRAPH_EDGE_COLORS.edge remains the fallback.
   color: "#e4e4e7",
   strokeWidth: 2,
   normalZIndex: 0,

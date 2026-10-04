@@ -18,14 +18,41 @@ type NodeColorInput = {
  * ordering here rather than duplicating it in the React node component.
  */
 export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColorRole {
-  if (input.isSelected) return "directlySelectedNode"
-  if (input.type === "component") return input.hasDownstream ? "componentNodeWithVisibleChildren" : "componentNode"
-  if (input.type === "orphan-category") return input.hasDownstream ? "orphanCategoryNodeWithVisibleChildren" : "orphanCategoryNode"
+  const isSharedSelectedRoute = input.isSelectionDescendentIntersect
+    || (input.isSelectionAncestor && input.isSelectionDescendent)
+
+  if (input.type === "component") {
+    if (input.isSelected) {
+      if (input.isSelectionAncestor || input.hasDownstream) return "nodeSelectedUpstream"
+      if (input.isSelectionDescendent) return "nodeSelectedDownstream"
+      return "nodeSelected"
+    }
+    if (input.isSelectionAncestor || input.hasDownstream) return "nodeUpstream"
+    if (input.isSelectionDescendent) return "nodeDownstream"
+    return "node"
+  }
+
+  if (input.type === "orphan-category") {
+    if (input.isSelected) {
+      if (input.isSelectionAncestor || input.hasDownstream) return "nodeOrphanSelectedUpstream"
+      if (input.isSelectionDescendent) return "nodeOrphanSelectedDownstream"
+      return "nodeOrphanSelected"
+    }
+    if (input.isSelectionAncestor || input.hasDownstream) return "nodeOrphanUpstream"
+    if (input.isSelectionDescendent) return "nodeOrphanDownstream"
+    return "nodeOrphanLeaf"
+  }
+
   // From this point the source implementation is inside `type === "token"`.
-  if (input.isSelectionDescendentIntersect || (input.isSelectionAncestor && input.isSelectionDescendent)) return "sharedSelectedRouteToken"
-  if (input.isSelectionDescendent) return "downstreamToken"
-  // Non-descendant tokens—including upstream ancestors—are purple.
-  return "nonDownstreamToken"
+  if (input.isSelected) {
+    if (input.isSelectionAncestor || isSharedSelectedRoute) return "nodeAtlSelectedUpstream"
+    if (input.isSelectionDescendent || input.hasDownstream) return "nodeAtlSelectedDownstream"
+    return "nodeAtlSelected"
+  }
+  if (isSharedSelectedRoute) return "nodeAtlSelectedRoute"
+  if (input.isSelectionAncestor) return "nodeAtlUpstream"
+  if (input.isSelectionDescendent) return input.hasDownstream ? "nodeAtlDownstream" : "nodeAtl"
+  return "nodeAtlLeaf"
 }
 
 export function resolveGraphNodeVisual(input: NodeColorInput) {
@@ -53,11 +80,11 @@ type EdgeColorInput = {
 
 /** Edge-role precedence is centralized so color and z-index cannot diverge. */
 export function resolveGraphEdgeColorRole(input: EdgeColorInput): GraphEdgeColorRole {
-  if (input.isOnSelectedChildDescendentPath) return "directlySelectedTokenDownstream"
-  if (input.isSelectionConnection) return "sharedSelectedRoute"
-  if (input.isOnAncestorPath) return "selectedTokenUpstream"
-  if (input.isOnDescendentPath) return "selectedScopeDownstream"
-  return "unrelated"
+  if (input.isOnSelectedChildDescendentPath) return "edgeSelectedTokenDownstream"
+  if (input.isSelectionConnection) return "edgeSelectedRoute"
+  if (input.isOnAncestorPath) return "edgeSelectedTokenUpstream"
+  if (input.isOnDescendentPath) return "edgeSelectionDownstream"
+  return "edge"
 }
 
 export function resolveGraphEdgeVisual(input: EdgeColorInput) {
@@ -65,9 +92,9 @@ export function resolveGraphEdgeVisual(input: EdgeColorInput) {
   const state = input.isHighlighted ? "highlighted" : input.isFaded ? "faded" : "base"
   // Upstream edges retain their visual highlight, but remain below nodes and
   // other elevated selection routes so they do not obscure the graph.
-  const shouldElevate = input.isHighlighted && role !== "selectedTokenUpstream"
-  const color = role === "unrelated" && state === "base"
-    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.unrelated.base
+  const shouldElevate = input.isHighlighted && role !== "edgeSelectedTokenUpstream"
+  const color = role === "edge" && state === "base"
+    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.edge.base
     : GRAPH_EDGE_COLORS[role][state]
   return {
     role,
