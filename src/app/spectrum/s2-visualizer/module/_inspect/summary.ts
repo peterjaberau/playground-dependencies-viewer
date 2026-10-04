@@ -222,6 +222,180 @@ const summary = {
   },
 }
 
+const understand = {
+  // "component-s-bold", "component-s-medium",
+  tokens: [
+    "font-size-100",
+    "notice-color-400",
+    "corner-radius-1000",
+    "title-size-s",
+    "title-size-m",
+    "heading-size-xxs",
+    "detail-size-m",
+    "code-size-s",
+    "body-size-s",
+  ],
+  components: ["title", "heading", "code"],
+
+  nodes: [
+    {
+      id: "title",
+      type: "component",
+    },
+    {
+      id: "heading",
+      type: "component",
+    },
+    {
+      id: "code",
+      type: "component",
+    },
+
+    {
+      id: "title-size-s",
+      type: "token",
+    },
+    {
+      id: "title-size-m",
+      type: "token",
+    },
+    {
+      id: "title-color",
+      type: "token",
+    },
+
+    {
+      id: "heading-size-xxs",
+      type: "token",
+    },
+    {
+      id: "heading-size-xs",
+      type: "token",
+    },
+
+    {
+      id: "code-size-s",
+      type: "token",
+    },
+    {
+      id: "code-size-m",
+      type: "token",
+    },
+
+    {
+      id: "font-size-100",
+      type: "token",
+    },
+    {
+      id: "font-size-200",
+      type: "token",
+    },
+    {
+      id: "font-size-300",
+      type: "token",
+    },
+
+    {
+      id: "gray-900",
+      type: "token",
+    },
+    {
+      id: "neutral-background-color-down",
+      type: "token",
+    },
+    {
+      id: "neutral-background-color-hover",
+      type: "token",
+    },
+  ],
+  relations: [
+    {
+      from: "title",
+      to: "title-size-s",
+      type: "assign-token",
+    },
+    {
+      from: "title",
+      to: "title-size-m",
+      type: "assign-token",
+    },
+    {
+      from: "title-size-s",
+      to: "font-size-100",
+      type: "value",
+    },
+    {
+      from: "title-size-m",
+      to: "font-size-200",
+      type: "value",
+    },
+    {
+      from: "title-color",
+      to: "gray-900",
+      type: "value",
+    },
+
+    {
+      from: "heading",
+      to: "heading-size-xxs",
+      type: "assign-token",
+    },
+    {
+      from: "heading",
+      to: "heading-size-xs",
+      type: "assign-token",
+    },
+    {
+      from: "heading-size-xxs",
+      to: "font-size-200",
+      type: "value",
+    },
+    {
+      from: "heading-size-xs",
+      to: "font-size-300",
+      type: "value",
+    },
+
+    {
+      from: "code",
+      to: "code-size-s",
+      type: "assign-token",
+    },
+    {
+      from: "code",
+      to: "code-size-m",
+      type: "assign-token",
+    },
+    {
+      from: "code-size-s",
+      to: "font-size-100",
+      type: "value",
+    },
+    {
+      from: "code-size-m",
+      to: "font-size-200",
+      type: "value",
+    },
+
+    {
+      from: "gray-900",
+      to: "rgb(19, 19, 19)",
+      type: "value",
+    },
+    {
+      from: "neutral-background-color-down",
+      to: "gray-900",
+      type: "value",
+    },
+    {
+      from: "neutral-background-color-hover",
+      to: "gray-900",
+      type: "value",
+    }
+  ],
+}
+
+
 
 /*
 

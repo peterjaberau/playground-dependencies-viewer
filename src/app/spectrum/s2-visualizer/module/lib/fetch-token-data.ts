@@ -6,7 +6,9 @@ const sourcePath = "https://raw.githubusercontent.com/adobe/spectrum-design-data
 /** Fetches source records only. Graph construction belongs to dataMachine. */
 export async function fetchTokenData(): Promise<RawTokens> {
   const manifest = await fetch(`${sourcePath}manifest.json`).then(assertOk).then((response) => response.json() as Promise<string[]>)
+
   const files = await Promise.all(manifest.map((file) => fetch(`${sourcePath}${file}`).then(assertOk).then((response) => response.json() as Promise<RawTokens>)))
+
   return Object.assign({}, ...files) as RawTokens
 }
 
