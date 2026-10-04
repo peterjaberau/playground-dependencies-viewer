@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Button, Checkbox, Flex, Heading, HStack, IconButton, Input, Spinner, Stack, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, HStack, IconButton, Input, Spinner, Stack, Text } from "@chakra-ui/react"
 import {
   Background,
   Controls,
@@ -108,27 +108,6 @@ function S2VisualizerContent() {
             </Box>
           )}
         </Box>
-        <Text fontSize="xs" fontWeight="bold" mb="2" color="gray.600">
-          TOKEN SETS
-        </Text>
-        <Stack gap="2" mb="6">
-          {["spectrum", "light", "dark", "desktop", "mobile"].map((filter) => (
-            <Checkbox.Root
-              key={filter}
-              checked={data.filters.includes(filter)}
-              onCheckedChange={(details) =>
-                dataActor.send({
-                  type: "filters.changed",
-                  filters: details.checked ? [...data.filters, filter] : data.filters.filter((item) => item !== filter),
-                })
-              }
-            >
-              <Checkbox.HiddenInput />
-              <Checkbox.Control />
-              <Checkbox.Label textTransform="capitalize">{filter}</Checkbox.Label>
-            </Checkbox.Root>
-          ))}
-        </Stack>
         <Stack gap="2" mb="6">
           <Button
             size="sm"
@@ -142,16 +121,6 @@ function S2VisualizerContent() {
           </Button>
           <Button size="sm" variant="outline" onClick={() => console.log("S2 data machine context", data)}>
             Data
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => {
-              dataActor.send({ type: "meta.generate" })
-              console.log("S2 data machine meta", dataActor.getSnapshot().context.meta)
-            }}
-          >
-            Meta
           </Button>
         </Stack>
         <Text fontSize="xs" fontWeight="bold" mb="2" color="gray.600">
@@ -263,7 +232,7 @@ function S2VisualizerContent() {
             minZoom={0.15}
             maxZoom={2}
           >
-            <SelectionFocus focusRequest={graph.focusRequest} nodeIds={graph.focusNodeIds} nodes={graph.nodes} />
+            <SelectionFocus focusRequest={graph.focusRequest} nodeIds={data.focusNodeIds} nodes={graph.nodes} />
             <Background gap={20} size={1} color="#d9e2ec" />
             <Controls showInteractive={false} />
             <MiniMap
@@ -282,11 +251,6 @@ function S2VisualizerContent() {
               <Text>Loading and laying out token graph…</Text>
             </Stack>
           </Flex>
-        )}
-        {data.error && (
-          <Box position="absolute" top="16" left="4" bg="red.100" p="4" borderRadius="md" zIndex="5">
-            <Text>{data.error}</Text>
-          </Box>
         )}
         {graph.error && (
           <Box position="absolute" top="16" left="4" bg="red.100" p="4" borderRadius="md" zIndex="5">
