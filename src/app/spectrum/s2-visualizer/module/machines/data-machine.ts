@@ -8,10 +8,11 @@ import { createIncomingAdjacency, findDownstreamIntersection, findRelated } from
 const valuePathSplitter = ":^;"
 const valuesListSplitter = ":*;"
 
-export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
-type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "selection.changed"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string }
+export type GraphMeta = { tokens: string[]; components: string[]; relations: Array<{ from: string; to: string }> }
+export type DataContext = { rawTokenData: RawTokens; completeGraph: GraphState; graphData: GraphState; components: string[]; meta: GraphMeta; filters: string[]; selected: string[]; selectionItems: Array<{ id: string; type: GraphNode["type"] }>; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; query: string; matches: GraphNode[]; error: string; graph: any }
+type DataEvent = { type: "filters.changed"; filters: string[] } | { type: "selection.changed"; id: string } | { type: "selection.cleared" } | { type: "query.changed"; query: string } | { type: "meta.generate" }
 
-const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectedChildDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
+const initialContext = ({ input }: { input: { graph: any } }): DataContext => ({ rawTokenData: {}, completeGraph: EMPTY_GRAPH, graphData: EMPTY_GRAPH, components: [], meta: { tokens: [], components: [], relations: [] }, filters: ["spectrum", "light", "desktop"], selected: [], selectionItems: [], selectionAncestorNodeIds: [], selectionDescendentNodeIds: [], selectedChildDescendentNodeIds: [], selectionDescendentIntersectNodeIds: [], focusNodeIds: [], query: "", matches: [], error: "", graph: input.graph })
 
 export const dataMachine = setup({
   types: {} as { context: DataContext; input: { graph: any }; events: DataEvent },
@@ -21,6 +22,20 @@ export const dataMachine = setup({
     captureSelectionChange: assign(({ context, event }) => event.type === "selection.changed" ? { selected: context.selected.includes(event.id) ? context.selected.filter((id) => id !== event.id) : [...context.selected, event.id] } : {}),
     clearSelectionCriteria: assign({ selected: () => [] }),
     captureSearchQuery: assign(({ event }) => event.type === "query.changed" ? { query: event.query } : {}),
+    generateMeta: assign(({ context }) => {
+      const tokens: string[] = []
+      const components: string[] = []
+      for (const [id, node] of Object.entries(context.completeGraph.nodes)) {
+        if (node.type === "token") tokens.push(id)
+        if (node.type === "component") components.push(id)
+      }
+      const relations: GraphMeta["relations"] = []
+      for (const [from, adjacency] of Object.entries(context.completeGraph.adjacencyList)) {
+        const targets = Array.isArray(adjacency) ? adjacency : [adjacency]
+        for (const to of targets) relations.push({ from, to })
+      }
+      return { meta: { tokens, components, relations } }
+    }),
     storeFetchedData: assign(({ event }) => ({ rawTokenData: (event as unknown as { output: RawTokens }).output, error: "" })),
     buildGraphFromData: assign(({ context }) => {
       const graph: GraphState = { width: 0, height: 0, nodes: {}, adjacencyList: {} }
@@ -70,6 +85,8 @@ export const dataMachine = setup({
         addNode({ type: "orphan-category", id: categoryId, x: 0, y: 0 })
         for (const id of tokenIdsByCategory.get(category) ?? []) connect(categoryId, id)
       }
+      console.log({ completeGraph: graph, components: [...componentIds].sort() })
+
       return { completeGraph: graph, components: [...componentIds].sort() }
     }),
     reconcileSelectionData: assign(({ context }) => ({ selected: context.selected.filter((id) => context.completeGraph.nodes[id]) })),
@@ -104,6 +121,7 @@ export const dataMachine = setup({
       "selection.changed": { actions: ["captureSelectionChange", "deriveSelectionData", "notifySelectionChanged"] },
       "selection.cleared": { actions: ["clearSelectionCriteria", "deriveSelectionData", "notifySelectionChanged"] },
       "query.changed": { actions: ["captureSearchQuery", "deriveSearchMatches"] },
+      "meta.generate": { actions: "generateMeta" },
     } },
     failure: { on: { "filters.changed": { target: "fetching", actions: "captureFilterCriteria" } } },
   },

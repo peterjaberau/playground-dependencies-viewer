@@ -143,6 +143,16 @@ function S2VisualizerContent() {
           <Button size="sm" variant="outline" onClick={() => console.log("S2 data machine context", data)}>
             Data
           </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => {
+              dataActor.send({ type: "meta.generate" })
+              console.log("S2 data machine meta", dataActor.getSnapshot().context.meta)
+            }}
+          >
+            Meta
+          </Button>
         </Stack>
         <Text fontSize="xs" fontWeight="bold" mb="2" color="gray.600">
           SELECTED
