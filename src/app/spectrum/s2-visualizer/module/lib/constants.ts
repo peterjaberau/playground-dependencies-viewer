@@ -22,10 +22,10 @@ export const GRAPH_NODE_COLORS = {
   /** Directly selected component with visible children or an upstream route. */
   nodeSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
 
-  /** Token in the selected downstream graph. */
+  /** Root token, regardless of whether its children are currently visible. */
   nodeAtl: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
   /** Token with visible descendants in the selected downstream graph. */
-  nodeAtlDownstream: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
+  nodeAtlDownstream: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
   /** Token on the selected upstream graph. */
   nodeAtlUpstream: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
   /** Directly selected token with no directional route variant. */
@@ -36,13 +36,13 @@ export const GRAPH_NODE_COLORS = {
   nodeAtlSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
   /** Token in the overlap of selected upstream and downstream routes. */
   nodeAtlSelectedRoute: { fill: "#eab308", border: "#eab308", label: "#3f3f46" },
-  /** Terminal token outside the selected downstream graph. */
-  nodeAtlLeaf: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
+  /** Terminal token child in a route. */
+  nodeAtlLeaf: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
 
-  /** Orphan-category root with visible children outside a selected route. */
-  nodeOrphan: { fill: "#d8b4fe", border: "#d8b4fe", label: "#9333ea" },
+  /** Orphan-category root, regardless of whether its children are currently visible. */
+  nodeOrphan: { fill: "#dbeafe", border: "#dbeafe", label: "#173da6" },
   /** Orphan-category root in a selected downstream route. */
-  nodeOrphanDownstream: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
+  nodeOrphanDownstream: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
   /** Orphan-category root with visible children or on an upstream route. */
   nodeOrphanUpstream: { fill: "#d8b4fe", border: "#d8b4fe", label: "#9333ea" },
   /** Directly selected orphan-category root with no directional route variant. */
@@ -51,8 +51,8 @@ export const GRAPH_NODE_COLORS = {
   nodeOrphanSelectedDownstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
   /** Directly selected orphan-category root with visible children or an upstream route. */
   nodeOrphanSelectedUpstream: { fill: "#eab308", border: "#eab308", label: "#fef08a" },
-  /** Terminal orphan-category root with no visible children. */
-  nodeOrphanLeaf: { fill: "#e9d5ff", border: "#e9d5ff", label: "#9333ea" },
+  /** Terminal orphan-category child in a route. */
+  nodeOrphanLeaf: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
 } as const
 
 

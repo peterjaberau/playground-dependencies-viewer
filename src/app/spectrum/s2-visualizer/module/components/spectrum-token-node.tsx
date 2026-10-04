@@ -8,10 +8,11 @@ import { valuesFor } from "../lib/node-values"
 import type { SpectrumFlowNode } from "../lib/flow-elements"
 
 export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeProps<SpectrumFlowNode>) {
-  const { graphNode, hasDownstream, isSelected, isSelectionAncestor, isSelectionDescendent, isSelectionDescendentIntersect } = data
+  const { graphNode, hasDownstream, isRoot, isSelected, isSelectionAncestor, isSelectionDescendent, isSelectionDescendentIntersect } = data
   const visual = resolveGraphNodeVisual({
     type: graphNode.type,
     hasDownstream,
+    isRoot,
     isSelected,
     isSelectionAncestor,
     isSelectionDescendent,

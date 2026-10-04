@@ -3,7 +3,7 @@ import { GRAPH_EDGE_STYLE } from "./constants"
 import { resolveGraphEdgeVisual } from "./graph-color-resolvers"
 import type { GraphNode, GraphState } from "./graph-types"
 
-export type SpectrumFlowNodeData = { graphNode: GraphNode; hasDownstream: boolean; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
+export type SpectrumFlowNodeData = { graphNode: GraphNode; hasDownstream: boolean; isRoot: boolean; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
 export type SpectrumFlowNode = Node<SpectrumFlowNodeData, "spectrumToken">
 
 export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectedChildDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
@@ -18,6 +18,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
   ].filter((id) => !selectedIds.has(id)))
   const focusedOrSelectedIds = new Set([...focusIds, ...selectedIds])
   const isFocusMode = focusIds.size > 0
+  const nodeIdsWithIncomingEdges = new Set(Object.values(graph.adjacencyList).flat())
   const nodes: SpectrumFlowNode[] = Object.values(graph.nodes).map((graphNode) => ({
     id: graphNode.id,
     type: "spectrumToken",
@@ -25,6 +26,7 @@ export function createFlowElements(graph: GraphState, selected: string[], select
     data: {
       graphNode,
       hasDownstream: (graph.adjacencyList[graphNode.id] ?? []).length > 0,
+      isRoot: !nodeIdsWithIncomingEdges.has(graphNode.id),
       isSelected: selectedIds.has(graphNode.id),
       isSelectionAncestor: ancestorIds.has(graphNode.id),
       isSelectionDescendent: descendentIds.has(graphNode.id),

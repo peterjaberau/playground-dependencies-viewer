@@ -7,6 +7,7 @@ export type GraphEdgeColorRole = keyof typeof GRAPH_EDGE_COLORS
 type NodeColorInput = {
   type: GraphNode["type"]
   isSelected: boolean
+  isRoot: boolean
   isSelectionAncestor: boolean
   isSelectionDescendent: boolean
   isSelectionDescendentIntersect: boolean
@@ -40,7 +41,8 @@ export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColor
     }
     if (input.isSelectionAncestor) return "nodeOrphanUpstream"
     if (input.isSelectionDescendent) return "nodeOrphanDownstream"
-    return input.hasDownstream ? "nodeOrphan" : "nodeOrphanLeaf"
+    if (input.isRoot) return "nodeOrphan"
+    return input.hasDownstream ? "nodeOrphanDownstream" : "nodeOrphanLeaf"
   }
 
   // From this point the source implementation is inside `type === "token"`.
@@ -51,8 +53,9 @@ export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColor
   }
   if (isSharedSelectedRoute) return "nodeAtlSelectedRoute"
   if (input.isSelectionAncestor) return "nodeAtlUpstream"
-  if (input.isSelectionDescendent) return input.hasDownstream ? "nodeAtlDownstream" : "nodeAtl"
-  return "nodeAtlLeaf"
+  if (input.isRoot) return "nodeAtl"
+  if (input.isSelectionDescendent) return input.hasDownstream ? "nodeAtlDownstream" : "nodeAtlLeaf"
+  return input.hasDownstream ? "nodeAtlDownstream" : "nodeAtlLeaf"
 }
 
 export function resolveGraphNodeVisual(input: NodeColorInput) {
