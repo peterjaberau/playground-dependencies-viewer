@@ -11,6 +11,7 @@ import {
   useReactFlow,
   type NodeMouseHandler,
   type NodeTypes,
+  type EdgeTypes,
   type OnMoveEnd,
   type OnNodeDrag,
 } from "@xyflow/react"
@@ -18,6 +19,7 @@ import "@xyflow/react/dist/style.css"
 import { Search, X } from "lucide-react"
 import { useEffect } from "react"
 import { SpectrumTokenNode } from "./components/spectrum-token-node"
+import { SpectrumTokenEdge } from "./components/spectrum-token-edge"
 import { useDataActor } from "./hooks/use-data-actor"
 import { useGraphActor } from "./hooks/use-graph-actor"
 import { useRootActor } from "./hooks/use-root-actor"
@@ -25,6 +27,7 @@ import { RootProvider } from "./providers/root-provider"
 import type { SpectrumFlowNode, SpectrumFlowNodeData } from "./lib/flow-elements"
 
 const nodeTypes: NodeTypes = { spectrumToken: SpectrumTokenNode }
+const edgeTypes: EdgeTypes = { spectrumToken: SpectrumTokenEdge }
 
 export function S2Visualizer() {
   return (
@@ -234,6 +237,7 @@ function S2VisualizerContent() {
             nodes={graph.nodes}
             edges={graph.edges}
             nodeTypes={nodeTypes}
+            edgeTypes={edgeTypes}
             defaultViewport={graph.viewport}
             onMoveEnd={onMoveEnd}
             onNodeClick={onNodeClick}

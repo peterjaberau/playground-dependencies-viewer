@@ -1,10 +1,12 @@
 import type { Edge, Node } from "@xyflow/react"
 import { GRAPH_EDGE_STYLE } from "./constants"
-import { resolveGraphEdgeVisual } from "./graph-color-resolvers"
+import { resolveGraphEdgeVisual, type GraphEdgeColorRole } from "./graph-color-resolvers"
 import type { GraphNode, GraphState } from "./graph-types"
 
 export type SpectrumFlowNodeData = { graphNode: GraphNode; hasDownstream: boolean; isRoot: boolean; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
 export type SpectrumFlowNode = Node<SpectrumFlowNodeData, "spectrumToken">
+export type SpectrumFlowEdgeData = { colorRole: GraphEdgeColorRole }
+export type SpectrumFlowEdge = Edge<SpectrumFlowEdgeData, "spectrumToken">
 
 export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectedChildDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
   const selectedIds = new Set(selected)
@@ -33,10 +35,10 @@ export function createFlowElements(graph: GraphState, selected: string[], select
       isSelectionDescendentIntersect: descendentIntersectIds.has(graphNode.id),
     },
   }))
-  const edges: Edge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => {
+  const edges: SpectrumFlowEdge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => {
     const sourceNode = graph.nodes[source]
     if (!sourceNode) return []
-    return targets.map((target): Edge => {
+    return targets.map((target): SpectrumFlowEdge => {
       const isOnAncestorPath = ancestorIds.has(source) && ancestorIds.has(target)
       const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
       const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
@@ -48,7 +50,8 @@ export function createFlowElements(graph: GraphState, selected: string[], select
         id: `${source}->${target}`,
         source,
         target,
-        type: "default",
+        type: "spectrumToken",
+        data: { colorRole: visual.role },
         zIndex: visual.zIndex,
         style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: 1 },
       }

@@ -1,6 +1,6 @@
-import type { Edge, Viewport } from "@xyflow/react"
+import type { Viewport } from "@xyflow/react"
 import { assign, setup } from "xstate"
-import { createFlowElements, type SpectrumFlowNode } from "../lib/flow-elements"
+import { createFlowElements, type SpectrumFlowEdge, type SpectrumFlowNode } from "../lib/flow-elements"
 import type { GraphDataChangedEvent } from "../lib/display-graph-events"
 import { EMPTY_GRAPH, type GraphState } from "../lib/graph-types"
 
@@ -94,7 +94,7 @@ function calculateLayout(source: GraphState): GraphState {
   return graph
 }
 
-export type GraphContext = { graph: GraphState; latestGraphData?: GraphDataChangedEvent; nodes: SpectrumFlowNode[]; edges: Edge[]; viewport: Viewport; selected: string[]; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; focusRequest: number; error: string }
+export type GraphContext = { graph: GraphState; latestGraphData?: GraphDataChangedEvent; nodes: SpectrumFlowNode[]; edges: SpectrumFlowEdge[]; viewport: Viewport; selected: string[]; selectionAncestorNodeIds: string[]; selectionDescendentNodeIds: string[]; selectedChildDescendentNodeIds: string[]; selectionDescendentIntersectNodeIds: string[]; focusNodeIds: string[]; focusRequest: number; error: string }
 export type GraphInput = Record<string, never>
 type GraphEvent = { type: "graphData.published"; event: GraphDataChangedEvent } | { type: "viewport.changed"; viewport: Viewport } | { type: "node.moved"; id: string; position: { x: number; y: number } } | { type: "view.reset" }
 

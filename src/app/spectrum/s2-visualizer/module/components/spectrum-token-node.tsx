@@ -27,6 +27,7 @@ export const SpectrumTokenNode = memo(function SpectrumTokenNode({ data }: NodeP
       minHeight={`${height}px`}
       display="flex"
       alignItems="center"
+      data-color={visual.role}
       // bg={`${visual.color}.${visual.fillShade}`}
       bg={visual.fillColor}
       borderWidth="1px"

@@ -27,7 +27,7 @@ export const GRAPH_NODE_COLORS = {
   /** Token with visible descendants in the selected downstream graph. */
   nodeAtlDownstream: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
   /** Token on the selected upstream graph. */
-  nodeAtlUpstream: { fill: "#eff6ff", border: "#eff6ff", label: "#a3cfff" },
+  nodeAtlUpstream: { fill: "#eff6ff", border: "#eff6ff", label: "#2563eb" },
   /** Directly selected token with no directional route variant. */
   nodeAtlSelected: { fill: "#eab308", border: "#eab308", label: "#3f3f46" },
   /** Directly selected token with visible downstream descendants. */
