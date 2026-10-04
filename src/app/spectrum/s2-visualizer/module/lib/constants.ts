@@ -135,6 +135,13 @@ export const GRAPH_EDGE_STYLE = {
   highlightedZIndex: 2,
 } as const
 
+export const GRAPH_GLOBAL_STYLE_RULES = {
+  indirectRouteOpactity: 0.5,
+
+  //   if any of the selected nodeOrphan or nodeAtl has upstream other than a root node level, or has any downstream,
+  // then the all the nodes and edges which are not in its route will be given indirectRouteOpactity as opacity value,
+}
+
 /*
 
 
