@@ -18,14 +18,14 @@ type NodeColorInput = {
  * ordering here rather than duplicating it in the React node component.
  */
 export function resolveGraphNodeColorRole(input: NodeColorInput): GraphNodeColorRole {
-  if (input.isSelected) return "selected"
-  if (input.type === "component") return input.hasDownstream ? "componentWithDownstream" : "component"
-  if (input.type === "orphan-category") return input.hasDownstream ? "orphanCategoryWithDownstream" : "orphanCategory"
+  if (input.isSelected) return "directlySelectedNode"
+  if (input.type === "component") return input.hasDownstream ? "componentNodeWithVisibleChildren" : "componentNode"
+  if (input.type === "orphan-category") return input.hasDownstream ? "orphanCategoryNodeWithVisibleChildren" : "orphanCategoryNode"
   // From this point the source implementation is inside `type === "token"`.
-  if (input.isSelectionDescendentIntersect || (input.isSelectionAncestor && input.isSelectionDescendent)) return "selectionConnection"
-  if (input.isSelectionDescendent) return "descendentPath"
+  if (input.isSelectionDescendentIntersect || (input.isSelectionAncestor && input.isSelectionDescendent)) return "sharedSelectedRouteToken"
+  if (input.isSelectionDescendent) return "downstreamToken"
   // Non-descendant tokens—including upstream ancestors—are purple.
-  return "token"
+  return "nonDownstreamToken"
 }
 
 export function resolveGraphNodeVisual(input: NodeColorInput) {
@@ -36,9 +36,9 @@ export function resolveGraphNodeVisual(input: NodeColorInput) {
     fillColor: palette.fill,
     borderColor: palette.border,
     labelTextColor: palette.label,
-    valuePathBackground: input.isSelected ? GRAPH_NODE_VALUE_COLORS.selectedPathBackground : GRAPH_NODE_VALUE_COLORS.defaultPathBackground,
-    valueBackground: GRAPH_NODE_VALUE_COLORS.background,
-    valueTextColor: GRAPH_NODE_VALUE_COLORS.text,
+    valuePathBackground: input.isSelected ? GRAPH_NODE_VALUE_COLORS.directlySelectedMetadataBackground : GRAPH_NODE_VALUE_COLORS.metadataBackground,
+    valueBackground: GRAPH_NODE_VALUE_COLORS.tokenValueBackground,
+    valueTextColor: GRAPH_NODE_VALUE_COLORS.tokenValueText,
   }
 }
 
@@ -53,23 +53,26 @@ type EdgeColorInput = {
 
 /** Edge-role precedence is centralized so color and z-index cannot diverge. */
 export function resolveGraphEdgeColorRole(input: EdgeColorInput): GraphEdgeColorRole {
-  if (input.isOnSelectedChildDescendentPath) return "selectedChildDescendentPath"
-  if (input.isSelectionConnection) return "selectionConnection"
-  if (input.isOnAncestorPath) return "ancestorPath"
-  if (input.isOnDescendentPath) return "descendentPath"
-  return "default"
+  if (input.isOnSelectedChildDescendentPath) return "directlySelectedTokenDownstream"
+  if (input.isSelectionConnection) return "sharedSelectedRoute"
+  if (input.isOnAncestorPath) return "selectedTokenUpstream"
+  if (input.isOnDescendentPath) return "selectedScopeDownstream"
+  return "unrelated"
 }
 
 export function resolveGraphEdgeVisual(input: EdgeColorInput) {
   const role = resolveGraphEdgeColorRole(input)
   const state = input.isHighlighted ? "highlighted" : input.isFaded ? "faded" : "base"
-  const color = role === "default" && state === "base"
-    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.default.base
+  // Upstream edges retain their visual highlight, but remain below nodes and
+  // other elevated selection routes so they do not obscure the graph.
+  const shouldElevate = input.isHighlighted && role !== "selectedTokenUpstream"
+  const color = role === "unrelated" && state === "base"
+    ? GRAPH_EDGE_STYLE.color ?? GRAPH_EDGE_COLORS.unrelated.base
     : GRAPH_EDGE_COLORS[role][state]
   return {
     role,
     color,
-    zIndex: input.isHighlighted ? GRAPH_EDGE_STYLE.highlightedZIndex : GRAPH_EDGE_STYLE.normalZIndex,
+    zIndex: shouldElevate ? GRAPH_EDGE_STYLE.highlightedZIndex : GRAPH_EDGE_STYLE.normalZIndex,
   }
 }
 
