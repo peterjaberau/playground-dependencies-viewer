@@ -1,0 +1,5257 @@
+{
+  "graph": {
+    "width": 0,
+    "height": 4397,
+    "nodes": {
+      "user-card": {
+        "type": "component",
+        "id": "user-card",
+        "x": 0,
+        "y": 2592
+      },
+      "triple-calendar": {
+        "type": "component",
+        "id": "triple-calendar",
+        "x": 0,
+        "y": 2538
+      },
+      "tree-view": {
+        "type": "component",
+        "id": "tree-view",
+        "x": 0,
+        "y": 2511
+      },
+      "tray": {
+        "type": "component",
+        "id": "tray",
+        "x": 0,
+        "y": 2484
+      },
+      "tooltip": {
+        "type": "component",
+        "id": "tooltip",
+        "x": 0,
+        "y": 2457
+      },
+      "toast": {
+        "type": "component",
+        "id": "toast",
+        "x": 0,
+        "y": 2430
+      },
+      "title": {
+        "type": "component",
+        "id": "title",
+        "x": 0,
+        "y": 2403
+      },
+      "time-field": {
+        "type": "component",
+        "id": "time-field",
+        "x": 0,
+        "y": 2376
+      },
+      "thumbnail": {
+        "type": "component",
+        "id": "thumbnail",
+        "x": 0,
+        "y": 2349
+      },
+      "text-field": {
+        "type": "component",
+        "id": "text-field",
+        "x": 0,
+        "y": 2322
+      },
+      "text-area": {
+        "type": "component",
+        "id": "text-area",
+        "x": 0,
+        "y": 2295
+      },
+      "takeover-dialog": {
+        "type": "component",
+        "id": "takeover-dialog",
+        "x": 0,
+        "y": 2268
+      },
+      "tag": {
+        "type": "component",
+        "id": "tag",
+        "x": 0,
+        "y": 2214
+      },
+      "tag-field": {
+        "type": "component",
+        "id": "tag-field",
+        "x": 0,
+        "y": 2241
+      },
+      "tabs": {
+        "type": "component",
+        "id": "tabs",
+        "x": 0,
+        "y": 2187
+      },
+      "table": {
+        "type": "component",
+        "id": "table",
+        "x": 0,
+        "y": 2160
+      },
+      "switch": {
+        "type": "component",
+        "id": "switch",
+        "x": 0,
+        "y": 2133
+      },
+      "swatch": {
+        "type": "component",
+        "id": "swatch",
+        "x": 0,
+        "y": 2079
+      },
+      "swatch-group": {
+        "type": "component",
+        "id": "swatch-group",
+        "x": 0,
+        "y": 2106
+      },
+      "steplist": {
+        "type": "component",
+        "id": "steplist",
+        "x": 0,
+        "y": 2052
+      },
+      "status-light": {
+        "type": "component",
+        "id": "status-light",
+        "x": 0,
+        "y": 2025
+      },
+      "standard-panel": {
+        "type": "component",
+        "id": "standard-panel",
+        "x": 0,
+        "y": 1998
+      },
+      "standard-dialog": {
+        "type": "component",
+        "id": "standard-dialog",
+        "x": 0,
+        "y": 1971
+      },
+      "stack-item": {
+        "type": "component",
+        "id": "stack-item",
+        "x": 0,
+        "y": 1944
+      },
+      "slider": {
+        "type": "component",
+        "id": "slider",
+        "x": 0,
+        "y": 1917
+      },
+      "single-calendar": {
+        "type": "component",
+        "id": "single-calendar",
+        "x": 0,
+        "y": 1890
+      },
+      "side-navigation": {
+        "type": "component",
+        "id": "side-navigation",
+        "x": 0,
+        "y": 1863
+      },
+      "select-box": {
+        "type": "component",
+        "id": "select-box",
+        "x": 0,
+        "y": 1836
+      },
+      "segmented-text-field": {
+        "type": "component",
+        "id": "segmented-text-field",
+        "x": 0,
+        "y": 1809
+      },
+      "segmented-control": {
+        "type": "component",
+        "id": "segmented-control",
+        "x": 0,
+        "y": 1782
+      },
+      "search-field": {
+        "type": "component",
+        "id": "search-field",
+        "x": 0,
+        "y": 1755
+      },
+      "rating": {
+        "type": "component",
+        "id": "rating",
+        "x": 0,
+        "y": 1728
+      },
+      "radio-button": {
+        "type": "component",
+        "id": "radio-button",
+        "x": 0,
+        "y": 1701
+      },
+      "progress-circle": {
+        "type": "component",
+        "id": "progress-circle",
+        "x": 0,
+        "y": 1674
+      },
+      "progress-bar": {
+        "type": "component",
+        "id": "progress-bar",
+        "x": 0,
+        "y": 1647
+      },
+      "popover": {
+        "type": "component",
+        "id": "popover",
+        "x": 0,
+        "y": 1620
+      },
+      "picker": {
+        "type": "component",
+        "id": "picker",
+        "x": 0,
+        "y": 1593
+      },
+      "opacity-checkerboard": {
+        "type": "component",
+        "id": "opacity-checkerboard",
+        "x": 0,
+        "y": 1566
+      },
+      "number-field": {
+        "type": "component",
+        "id": "number-field",
+        "x": 0,
+        "y": 1539
+      },
+      "meter": {
+        "type": "component",
+        "id": "meter",
+        "x": 0,
+        "y": 1512
+      },
+      "menu": {
+        "type": "component",
+        "id": "menu",
+        "x": 0,
+        "y": 1485
+      },
+      "list-view": {
+        "type": "component",
+        "id": "list-view",
+        "x": 0,
+        "y": 1458
+      },
+      "date-picker": {
+        "type": "component",
+        "id": "date-picker",
+        "x": 0,
+        "y": 945
+      },
+      "alert-icon": {
+        "type": "component",
+        "id": "alert-icon",
+        "x": 0,
+        "y": 162
+      },
+      "validation-icon": {
+        "type": "component",
+        "id": "validation-icon",
+        "x": 0,
+        "y": 2619
+      },
+      "add-icon": {
+        "type": "component",
+        "id": "add-icon",
+        "x": 0,
+        "y": 81
+      },
+      "arrow-icon": {
+        "type": "component",
+        "id": "arrow-icon",
+        "x": 0,
+        "y": 189
+      },
+      "asterisk-icon": {
+        "type": "component",
+        "id": "asterisk-icon",
+        "x": 0,
+        "y": 216
+      },
+      "checkmark-icon": {
+        "type": "component",
+        "id": "checkmark-icon",
+        "x": 0,
+        "y": 486
+      },
+      "chevron-icon": {
+        "type": "component",
+        "id": "chevron-icon",
+        "x": 0,
+        "y": 513
+      },
+      "cross-icon": {
+        "type": "component",
+        "id": "cross-icon",
+        "x": 0,
+        "y": 864
+      },
+      "dash-icon": {
+        "type": "component",
+        "id": "dash-icon",
+        "x": 0,
+        "y": 891
+      },
+      "drag-handle-icon": {
+        "type": "component",
+        "id": "drag-handle-icon",
+        "x": 0,
+        "y": 1053
+      },
+      "gripper-icon": {
+        "type": "component",
+        "id": "gripper-icon",
+        "x": 0,
+        "y": 1215
+      },
+      "link-out-icon": {
+        "type": "component",
+        "id": "link-out-icon",
+        "x": 0,
+        "y": 1431
+      },
+      "ui-icon": {
+        "type": "component",
+        "id": "ui-icon",
+        "x": 0,
+        "y": 2565
+      },
+      "in-line-alert": {
+        "type": "component",
+        "id": "in-line-alert",
+        "x": 0,
+        "y": 1404
+      },
+      "in-field-progress-circle": {
+        "type": "component",
+        "id": "in-field-progress-circle",
+        "x": 0,
+        "y": 1377
+      },
+      "in-field-button": {
+        "type": "component",
+        "id": "in-field-button",
+        "x": 0,
+        "y": 1350
+      },
+      "illustrated-message": {
+        "type": "component",
+        "id": "illustrated-message",
+        "x": 0,
+        "y": 1323
+      },
+      "icon": {
+        "type": "component",
+        "id": "icon",
+        "x": 0,
+        "y": 1296
+      },
+      "help-text": {
+        "type": "component",
+        "id": "help-text",
+        "x": 0,
+        "y": 1269
+      },
+      "heading": {
+        "type": "component",
+        "id": "heading",
+        "x": 0,
+        "y": 1242
+      },
+      "form-item": {
+        "type": "component",
+        "id": "form-item",
+        "x": 0,
+        "y": 1188
+      },
+      "floating-action-button": {
+        "type": "component",
+        "id": "floating-action-button",
+        "x": 0,
+        "y": 1161
+      },
+      "field": {
+        "type": "component",
+        "id": "field",
+        "x": 0,
+        "y": 1107
+      },
+      "field-label": {
+        "type": "component",
+        "id": "field-label",
+        "x": 0,
+        "y": 1134
+      },
+      "drop-zone": {
+        "type": "component",
+        "id": "drop-zone",
+        "x": 0,
+        "y": 1080
+      },
+      "double-calendar": {
+        "type": "component",
+        "id": "double-calendar",
+        "x": 0,
+        "y": 1026
+      },
+      "divider": {
+        "type": "component",
+        "id": "divider",
+        "x": 0,
+        "y": 999
+      },
+      "detail": {
+        "type": "component",
+        "id": "detail",
+        "x": 0,
+        "y": 972
+      },
+      "date-field": {
+        "type": "component",
+        "id": "date-field",
+        "x": 0,
+        "y": 918
+      },
+      "contextual-help": {
+        "type": "component",
+        "id": "contextual-help",
+        "x": 0,
+        "y": 837
+      },
+      "combo-box": {
+        "type": "component",
+        "id": "combo-box",
+        "x": 0,
+        "y": 810
+      },
+      "color-wheel": {
+        "type": "component",
+        "id": "color-wheel",
+        "x": 0,
+        "y": 783
+      },
+      "color-slider": {
+        "type": "component",
+        "id": "color-slider",
+        "x": 0,
+        "y": 756
+      },
+      "color-loupe": {
+        "type": "component",
+        "id": "color-loupe",
+        "x": 0,
+        "y": 729
+      },
+      "color-handle": {
+        "type": "component",
+        "id": "color-handle",
+        "x": 0,
+        "y": 702
+      },
+      "color-control": {
+        "type": "component",
+        "id": "color-control",
+        "x": 0,
+        "y": 675
+      },
+      "color-area": {
+        "type": "component",
+        "id": "color-area",
+        "x": 0,
+        "y": 648
+      },
+      "collection-card": {
+        "type": "component",
+        "id": "collection-card",
+        "x": 0,
+        "y": 621
+      },
+      "code": {
+        "type": "component",
+        "id": "code",
+        "x": 0,
+        "y": 594
+      },
+      "coach-mark": {
+        "type": "component",
+        "id": "coach-mark",
+        "x": 0,
+        "y": 567
+      },
+      "coach-indicator": {
+        "type": "component",
+        "id": "coach-indicator",
+        "x": 0,
+        "y": 540
+      },
+      "checkbox": {
+        "type": "component",
+        "id": "checkbox",
+        "x": 0,
+        "y": 459
+      },
+      "card": {
+        "type": "component",
+        "id": "card",
+        "x": 0,
+        "y": 405
+      },
+      "card-horizontal": {
+        "type": "component",
+        "id": "card-horizontal",
+        "x": 0,
+        "y": 432
+      },
+      "button": {
+        "type": "component",
+        "id": "button",
+        "x": 0,
+        "y": 378
+      },
+      "breadcrumbs": {
+        "type": "component",
+        "id": "breadcrumbs",
+        "x": 0,
+        "y": 351
+      },
+      "body": {
+        "type": "component",
+        "id": "body",
+        "x": 0,
+        "y": 324
+      },
+      "bar-panel": {
+        "type": "component",
+        "id": "bar-panel",
+        "x": 0,
+        "y": 297
+      },
+      "avatar": {
+        "type": "component",
+        "id": "avatar",
+        "x": 0,
+        "y": 243
+      },
+      "avatar-group": {
+        "type": "component",
+        "id": "avatar-group",
+        "x": 0,
+        "y": 270
+      },
+      "alert-dialog": {
+        "type": "component",
+        "id": "alert-dialog",
+        "x": 0,
+        "y": 135
+      },
+      "alert-banner": {
+        "type": "component",
+        "id": "alert-banner",
+        "x": 0,
+        "y": 108
+      },
+      "action-button": {
+        "type": "component",
+        "id": "action-button",
+        "x": 0,
+        "y": 54
+      },
+      "action-bar": {
+        "type": "component",
+        "id": "action-bar",
+        "x": 0,
+        "y": 27
+      },
+      "accordion": {
+        "type": "component",
+        "id": "accordion",
+        "x": 0,
+        "y": 0
+      },
+      "cjk-*": {
+        "type": "orphan-category",
+        "id": "cjk-*",
+        "x": 0,
+        "y": 2997
+      },
+      "component-*": {
+        "type": "orphan-category",
+        "id": "component-*",
+        "x": 0,
+        "y": 3024
+      },
+      "default-*": {
+        "type": "orphan-category",
+        "id": "default-*",
+        "x": 0,
+        "y": 3132
+      },
+      "line-*": {
+        "type": "orphan-category",
+        "id": "line-*",
+        "x": 0,
+        "y": 3564
+      },
+      "text-*": {
+        "type": "orphan-category",
+        "id": "text-*",
+        "x": 0,
+        "y": 4131
+      },
+      "accent-*": {
+        "type": "orphan-category",
+        "id": "accent-*",
+        "x": 0,
+        "y": 2646
+      },
+      "icon-*": {
+        "type": "orphan-category",
+        "id": "icon-*",
+        "x": 0,
+        "y": 3456
+      },
+      "informative-*": {
+        "type": "orphan-category",
+        "id": "informative-*",
+        "x": 0,
+        "y": 3510
+      },
+      "negative-*": {
+        "type": "orphan-category",
+        "id": "negative-*",
+        "x": 0,
+        "y": 3672
+      },
+      "notice-*": {
+        "type": "orphan-category",
+        "id": "notice-*",
+        "x": 0,
+        "y": 3726
+      },
+      "positive-*": {
+        "type": "orphan-category",
+        "id": "positive-*",
+        "x": 0,
+        "y": 3888
+      },
+      "accessory-*": {
+        "type": "orphan-category",
+        "id": "accessory-*",
+        "x": 0,
+        "y": 2673
+      },
+      "android-*": {
+        "type": "orphan-category",
+        "id": "android-*",
+        "x": 0,
+        "y": 2700
+      },
+      "banner-*": {
+        "type": "orphan-category",
+        "id": "banner-*",
+        "x": 0,
+        "y": 2754
+      },
+      "base-*": {
+        "type": "orphan-category",
+        "id": "base-*",
+        "x": 0,
+        "y": 2781
+      },
+      "border-*": {
+        "type": "orphan-category",
+        "id": "border-*",
+        "x": 0,
+        "y": 2835
+      },
+      "character-*": {
+        "type": "orphan-category",
+        "id": "character-*",
+        "x": 0,
+        "y": 2916
+      },
+      "container-*": {
+        "type": "orphan-category",
+        "id": "container-*",
+        "x": 0,
+        "y": 3051
+      },
+      "corner-*": {
+        "type": "orphan-category",
+        "id": "corner-*",
+        "x": 0,
+        "y": 3078
+      },
+      "disclosure-*": {
+        "type": "orphan-category",
+        "id": "disclosure-*",
+        "x": 0,
+        "y": 3186
+      },
+      "drop-*": {
+        "type": "orphan-category",
+        "id": "drop-*",
+        "x": 0,
+        "y": 3213
+      },
+      "field-*": {
+        "type": "orphan-category",
+        "id": "field-*",
+        "x": 0,
+        "y": 3240
+      },
+      "focus-*": {
+        "type": "orphan-category",
+        "id": "focus-*",
+        "x": 0,
+        "y": 3267
+      },
+      "gap-*": {
+        "type": "orphan-category",
+        "id": "gap-*",
+        "x": 0,
+        "y": 3321
+      },
+      "gradient-*": {
+        "type": "orphan-category",
+        "id": "gradient-*",
+        "x": 0,
+        "y": 3348
+      },
+      "group-*": {
+        "type": "orphan-category",
+        "id": "group-*",
+        "x": 0,
+        "y": 3429
+      },
+      "label-*": {
+        "type": "orphan-category",
+        "id": "label-*",
+        "x": 0,
+        "y": 3537
+      },
+      "list-*": {
+        "type": "orphan-category",
+        "id": "list-*",
+        "x": 0,
+        "y": 3591
+      },
+      "navigational-*": {
+        "type": "orphan-category",
+        "id": "navigational-*",
+        "x": 0,
+        "y": 3645
+      },
+      "padding-*": {
+        "type": "orphan-category",
+        "id": "padding-*",
+        "x": 0,
+        "y": 3834
+      },
+      "side-*": {
+        "type": "orphan-category",
+        "id": "side-*",
+        "x": 0,
+        "y": 3996
+      },
+      "spacing-*": {
+        "type": "orphan-category",
+        "id": "spacing-*",
+        "x": 0,
+        "y": 4050
+      },
+      "vertical-*": {
+        "type": "orphan-category",
+        "id": "vertical-*",
+        "x": 0,
+        "y": 4266
+      },
+      "visual-*": {
+        "type": "orphan-category",
+        "id": "visual-*",
+        "x": 0,
+        "y": 4293
+      },
+      "window-*": {
+        "type": "orphan-category",
+        "id": "window-*",
+        "x": 0,
+        "y": 4320
+      },
+      "workflow-*": {
+        "type": "orphan-category",
+        "id": "workflow-*",
+        "x": 0,
+        "y": 4347
+      },
+      "brown-*": {
+        "type": "orphan-category",
+        "id": "brown-*",
+        "x": 0,
+        "y": 2862
+      },
+      "celery-*": {
+        "type": "orphan-category",
+        "id": "celery-*",
+        "x": 0,
+        "y": 2889
+      },
+      "chartreuse-*": {
+        "type": "orphan-category",
+        "id": "chartreuse-*",
+        "x": 0,
+        "y": 2943
+      },
+      "cinnamon-*": {
+        "type": "orphan-category",
+        "id": "cinnamon-*",
+        "x": 0,
+        "y": 2970
+      },
+      "cyan-*": {
+        "type": "orphan-category",
+        "id": "cyan-*",
+        "x": 0,
+        "y": 3105
+      },
+      "fuchsia-*": {
+        "type": "orphan-category",
+        "id": "fuchsia-*",
+        "x": 0,
+        "y": 3294
+      },
+      "gray-*": {
+        "type": "orphan-category",
+        "id": "gray-*",
+        "x": 0,
+        "y": 3375
+      },
+      "indigo-*": {
+        "type": "orphan-category",
+        "id": "indigo-*",
+        "x": 0,
+        "y": 3483
+      },
+      "magenta-*": {
+        "type": "orphan-category",
+        "id": "magenta-*",
+        "x": 0,
+        "y": 3618
+      },
+      "pink-*": {
+        "type": "orphan-category",
+        "id": "pink-*",
+        "x": 0,
+        "y": 3861
+      },
+      "purple-*": {
+        "type": "orphan-category",
+        "id": "purple-*",
+        "x": 0,
+        "y": 3915
+      },
+      "seafoam-*": {
+        "type": "orphan-category",
+        "id": "seafoam-*",
+        "x": 0,
+        "y": 3969
+      },
+      "silver-*": {
+        "type": "orphan-category",
+        "id": "silver-*",
+        "x": 0,
+        "y": 4023
+      },
+      "static-*": {
+        "type": "orphan-category",
+        "id": "static-*",
+        "x": 0,
+        "y": 4104
+      },
+      "transparent-*": {
+        "type": "orphan-category",
+        "id": "transparent-*",
+        "x": 0,
+        "y": 4212
+      },
+      "turquoise-*": {
+        "type": "orphan-category",
+        "id": "turquoise-*",
+        "x": 0,
+        "y": 4239
+      },
+      "yellow-*": {
+        "type": "orphan-category",
+        "id": "yellow-*",
+        "x": 0,
+        "y": 4374
+      },
+      "background-*": {
+        "type": "orphan-category",
+        "id": "background-*",
+        "x": 0,
+        "y": 2727
+      },
+      "blue-*": {
+        "type": "orphan-category",
+        "id": "blue-*",
+        "x": 0,
+        "y": 2808
+      },
+      "disabled-*": {
+        "type": "orphan-category",
+        "id": "disabled-*",
+        "x": 0,
+        "y": 3159
+      },
+      "green-*": {
+        "type": "orphan-category",
+        "id": "green-*",
+        "x": 0,
+        "y": 3402
+      },
+      "neutral-*": {
+        "type": "orphan-category",
+        "id": "neutral-*",
+        "x": 0,
+        "y": 3699
+      },
+      "opacity-*": {
+        "type": "orphan-category",
+        "id": "opacity-*",
+        "x": 0,
+        "y": 3753
+      },
+      "orange-*": {
+        "type": "orphan-category",
+        "id": "orange-*",
+        "x": 0,
+        "y": 3780
+      },
+      "overlay-*": {
+        "type": "orphan-category",
+        "id": "overlay-*",
+        "x": 0,
+        "y": 3807
+      },
+      "red-*": {
+        "type": "orphan-category",
+        "id": "red-*",
+        "x": 0,
+        "y": 3942
+      },
+      "stack-*": {
+        "type": "orphan-category",
+        "id": "stack-*",
+        "x": 0,
+        "y": 4077
+      },
+      "title-*": {
+        "type": "orphan-category",
+        "id": "title-*",
+        "x": 0,
+        "y": 4158
+      },
+      "track-*": {
+        "type": "orphan-category",
+        "id": "track-*",
+        "x": 0,
+        "y": 4185
+      }
+    },
+    "adjacencyList": {}
+  },
+  "nodes": [
+    {
+      "id": "user-card",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2592
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "user-card",
+          "x": 0,
+          "y": 2592
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "triple-calendar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2538
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "triple-calendar",
+          "x": 0,
+          "y": 2538
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tree-view",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2511
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tree-view",
+          "x": 0,
+          "y": 2511
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tray",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2484
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tray",
+          "x": 0,
+          "y": 2484
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tooltip",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2457
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tooltip",
+          "x": 0,
+          "y": 2457
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "toast",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2430
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "toast",
+          "x": 0,
+          "y": 2430
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "title",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2403
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "title",
+          "x": 0,
+          "y": 2403
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "time-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2376
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "time-field",
+          "x": 0,
+          "y": 2376
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "thumbnail",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2349
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "thumbnail",
+          "x": 0,
+          "y": 2349
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "text-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2322
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "text-field",
+          "x": 0,
+          "y": 2322
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "text-area",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2295
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "text-area",
+          "x": 0,
+          "y": 2295
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "takeover-dialog",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2268
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "takeover-dialog",
+          "x": 0,
+          "y": 2268
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tag",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2214
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tag",
+          "x": 0,
+          "y": 2214
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tag-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2241
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tag-field",
+          "x": 0,
+          "y": 2241
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "tabs",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2187
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "tabs",
+          "x": 0,
+          "y": 2187
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "table",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2160
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "table",
+          "x": 0,
+          "y": 2160
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "switch",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2133
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "switch",
+          "x": 0,
+          "y": 2133
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "swatch",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2079
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "swatch",
+          "x": 0,
+          "y": 2079
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "swatch-group",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2106
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "swatch-group",
+          "x": 0,
+          "y": 2106
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "steplist",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2052
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "steplist",
+          "x": 0,
+          "y": 2052
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "status-light",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2025
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "status-light",
+          "x": 0,
+          "y": 2025
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "standard-panel",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1998
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "standard-panel",
+          "x": 0,
+          "y": 1998
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "standard-dialog",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1971
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "standard-dialog",
+          "x": 0,
+          "y": 1971
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "stack-item",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1944
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "stack-item",
+          "x": 0,
+          "y": 1944
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "slider",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1917
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "slider",
+          "x": 0,
+          "y": 1917
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "single-calendar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1890
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "single-calendar",
+          "x": 0,
+          "y": 1890
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "side-navigation",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1863
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "side-navigation",
+          "x": 0,
+          "y": 1863
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "select-box",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1836
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "select-box",
+          "x": 0,
+          "y": 1836
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "segmented-text-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1809
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "segmented-text-field",
+          "x": 0,
+          "y": 1809
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "segmented-control",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1782
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "segmented-control",
+          "x": 0,
+          "y": 1782
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "search-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1755
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "search-field",
+          "x": 0,
+          "y": 1755
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "rating",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1728
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "rating",
+          "x": 0,
+          "y": 1728
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "radio-button",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1701
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "radio-button",
+          "x": 0,
+          "y": 1701
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "progress-circle",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1674
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "progress-circle",
+          "x": 0,
+          "y": 1674
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "progress-bar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1647
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "progress-bar",
+          "x": 0,
+          "y": 1647
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "popover",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1620
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "popover",
+          "x": 0,
+          "y": 1620
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "picker",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1593
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "picker",
+          "x": 0,
+          "y": 1593
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "opacity-checkerboard",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1566
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "opacity-checkerboard",
+          "x": 0,
+          "y": 1566
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "number-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1539
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "number-field",
+          "x": 0,
+          "y": 1539
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "meter",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1512
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "meter",
+          "x": 0,
+          "y": 1512
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "menu",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1485
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "menu",
+          "x": 0,
+          "y": 1485
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "list-view",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1458
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "list-view",
+          "x": 0,
+          "y": 1458
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "date-picker",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 945
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "date-picker",
+          "x": 0,
+          "y": 945
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "alert-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 162
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "alert-icon",
+          "x": 0,
+          "y": 162
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "validation-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2619
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "validation-icon",
+          "x": 0,
+          "y": 2619
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "add-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 81
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "add-icon",
+          "x": 0,
+          "y": 81
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "arrow-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 189
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "arrow-icon",
+          "x": 0,
+          "y": 189
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "asterisk-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 216
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "asterisk-icon",
+          "x": 0,
+          "y": 216
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "checkmark-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 486
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "checkmark-icon",
+          "x": 0,
+          "y": 486
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "chevron-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 513
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "chevron-icon",
+          "x": 0,
+          "y": 513
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "cross-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 864
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "cross-icon",
+          "x": 0,
+          "y": 864
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "dash-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 891
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "dash-icon",
+          "x": 0,
+          "y": 891
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "drag-handle-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1053
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "drag-handle-icon",
+          "x": 0,
+          "y": 1053
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "gripper-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1215
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "gripper-icon",
+          "x": 0,
+          "y": 1215
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "link-out-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1431
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "link-out-icon",
+          "x": 0,
+          "y": 1431
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "ui-icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2565
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "ui-icon",
+          "x": 0,
+          "y": 2565
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "in-line-alert",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1404
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "in-line-alert",
+          "x": 0,
+          "y": 1404
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "in-field-progress-circle",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1377
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "in-field-progress-circle",
+          "x": 0,
+          "y": 1377
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "in-field-button",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1350
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "in-field-button",
+          "x": 0,
+          "y": 1350
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "illustrated-message",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1323
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "illustrated-message",
+          "x": 0,
+          "y": 1323
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "icon",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1296
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "icon",
+          "x": 0,
+          "y": 1296
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "help-text",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1269
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "help-text",
+          "x": 0,
+          "y": 1269
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "heading",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1242
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "heading",
+          "x": 0,
+          "y": 1242
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "form-item",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1188
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "form-item",
+          "x": 0,
+          "y": 1188
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "floating-action-button",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1161
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "floating-action-button",
+          "x": 0,
+          "y": 1161
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1107
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "field",
+          "x": 0,
+          "y": 1107
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "field-label",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1134
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "field-label",
+          "x": 0,
+          "y": 1134
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "drop-zone",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1080
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "drop-zone",
+          "x": 0,
+          "y": 1080
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "double-calendar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 1026
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "double-calendar",
+          "x": 0,
+          "y": 1026
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "divider",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 999
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "divider",
+          "x": 0,
+          "y": 999
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "detail",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 972
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "detail",
+          "x": 0,
+          "y": 972
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "date-field",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 918
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "date-field",
+          "x": 0,
+          "y": 918
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "contextual-help",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 837
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "contextual-help",
+          "x": 0,
+          "y": 837
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "combo-box",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 810
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "combo-box",
+          "x": 0,
+          "y": 810
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-wheel",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 783
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-wheel",
+          "x": 0,
+          "y": 783
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-slider",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 756
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-slider",
+          "x": 0,
+          "y": 756
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-loupe",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 729
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-loupe",
+          "x": 0,
+          "y": 729
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-handle",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 702
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-handle",
+          "x": 0,
+          "y": 702
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-control",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 675
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-control",
+          "x": 0,
+          "y": 675
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "color-area",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 648
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "color-area",
+          "x": 0,
+          "y": 648
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "collection-card",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 621
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "collection-card",
+          "x": 0,
+          "y": 621
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "code",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 594
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "code",
+          "x": 0,
+          "y": 594
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "coach-mark",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 567
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "coach-mark",
+          "x": 0,
+          "y": 567
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "coach-indicator",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 540
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "coach-indicator",
+          "x": 0,
+          "y": 540
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "checkbox",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 459
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "checkbox",
+          "x": 0,
+          "y": 459
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "card",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 405
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "card",
+          "x": 0,
+          "y": 405
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "card-horizontal",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 432
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "card-horizontal",
+          "x": 0,
+          "y": 432
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "button",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 378
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "button",
+          "x": 0,
+          "y": 378
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "breadcrumbs",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 351
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "breadcrumbs",
+          "x": 0,
+          "y": 351
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "body",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 324
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "body",
+          "x": 0,
+          "y": 324
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "bar-panel",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 297
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "bar-panel",
+          "x": 0,
+          "y": 297
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "avatar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 243
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "avatar",
+          "x": 0,
+          "y": 243
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "avatar-group",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 270
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "avatar-group",
+          "x": 0,
+          "y": 270
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "alert-dialog",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 135
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "alert-dialog",
+          "x": 0,
+          "y": 135
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "alert-banner",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 108
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "alert-banner",
+          "x": 0,
+          "y": 108
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "action-button",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 54
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "action-button",
+          "x": 0,
+          "y": 54
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "action-bar",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 27
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "action-bar",
+          "x": 0,
+          "y": 27
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "accordion",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "graphNode": {
+          "type": "component",
+          "id": "accordion",
+          "x": 0,
+          "y": 0
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "cjk-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2997
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "cjk-*",
+          "x": 0,
+          "y": 2997
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "component-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3024
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "component-*",
+          "x": 0,
+          "y": 3024
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "default-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3132
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "default-*",
+          "x": 0,
+          "y": 3132
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "line-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3564
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "line-*",
+          "x": 0,
+          "y": 3564
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "text-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4131
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "text-*",
+          "x": 0,
+          "y": 4131
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "accent-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2646
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "accent-*",
+          "x": 0,
+          "y": 2646
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "icon-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3456
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "icon-*",
+          "x": 0,
+          "y": 3456
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "informative-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3510
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "informative-*",
+          "x": 0,
+          "y": 3510
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "negative-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3672
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "negative-*",
+          "x": 0,
+          "y": 3672
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "notice-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3726
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "notice-*",
+          "x": 0,
+          "y": 3726
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "positive-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3888
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "positive-*",
+          "x": 0,
+          "y": 3888
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "accessory-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2673
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "accessory-*",
+          "x": 0,
+          "y": 2673
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "android-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2700
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "android-*",
+          "x": 0,
+          "y": 2700
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "banner-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2754
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "banner-*",
+          "x": 0,
+          "y": 2754
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "base-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2781
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "base-*",
+          "x": 0,
+          "y": 2781
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "border-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2835
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "border-*",
+          "x": 0,
+          "y": 2835
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "character-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2916
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "character-*",
+          "x": 0,
+          "y": 2916
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "container-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3051
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "container-*",
+          "x": 0,
+          "y": 3051
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "corner-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3078
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "corner-*",
+          "x": 0,
+          "y": 3078
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "disclosure-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3186
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "disclosure-*",
+          "x": 0,
+          "y": 3186
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "drop-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3213
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "drop-*",
+          "x": 0,
+          "y": 3213
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "field-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3240
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "field-*",
+          "x": 0,
+          "y": 3240
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "focus-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3267
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "focus-*",
+          "x": 0,
+          "y": 3267
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "gap-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3321
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "gap-*",
+          "x": 0,
+          "y": 3321
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "gradient-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3348
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "gradient-*",
+          "x": 0,
+          "y": 3348
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "group-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3429
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "group-*",
+          "x": 0,
+          "y": 3429
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "label-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3537
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "label-*",
+          "x": 0,
+          "y": 3537
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "list-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3591
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "list-*",
+          "x": 0,
+          "y": 3591
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "navigational-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3645
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "navigational-*",
+          "x": 0,
+          "y": 3645
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "padding-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3834
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "padding-*",
+          "x": 0,
+          "y": 3834
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "side-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3996
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "side-*",
+          "x": 0,
+          "y": 3996
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "spacing-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4050
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "spacing-*",
+          "x": 0,
+          "y": 4050
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "vertical-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4266
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "vertical-*",
+          "x": 0,
+          "y": 4266
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "visual-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4293
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "visual-*",
+          "x": 0,
+          "y": 4293
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "window-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4320
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "window-*",
+          "x": 0,
+          "y": 4320
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "workflow-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4347
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "workflow-*",
+          "x": 0,
+          "y": 4347
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "brown-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2862
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "brown-*",
+          "x": 0,
+          "y": 2862
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "celery-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2889
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "celery-*",
+          "x": 0,
+          "y": 2889
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "chartreuse-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2943
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "chartreuse-*",
+          "x": 0,
+          "y": 2943
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "cinnamon-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2970
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "cinnamon-*",
+          "x": 0,
+          "y": 2970
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "cyan-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3105
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "cyan-*",
+          "x": 0,
+          "y": 3105
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "fuchsia-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3294
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "fuchsia-*",
+          "x": 0,
+          "y": 3294
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "gray-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3375
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "gray-*",
+          "x": 0,
+          "y": 3375
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "indigo-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3483
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "indigo-*",
+          "x": 0,
+          "y": 3483
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "magenta-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3618
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "magenta-*",
+          "x": 0,
+          "y": 3618
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "pink-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3861
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "pink-*",
+          "x": 0,
+          "y": 3861
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "purple-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3915
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "purple-*",
+          "x": 0,
+          "y": 3915
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "seafoam-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3969
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "seafoam-*",
+          "x": 0,
+          "y": 3969
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "silver-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4023
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "silver-*",
+          "x": 0,
+          "y": 4023
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "static-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4104
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "static-*",
+          "x": 0,
+          "y": 4104
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "transparent-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4212
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "transparent-*",
+          "x": 0,
+          "y": 4212
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "turquoise-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4239
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "turquoise-*",
+          "x": 0,
+          "y": 4239
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "yellow-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4374
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "yellow-*",
+          "x": 0,
+          "y": 4374
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "background-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2727
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "background-*",
+          "x": 0,
+          "y": 2727
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "blue-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 2808
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "blue-*",
+          "x": 0,
+          "y": 2808
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "disabled-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3159
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "disabled-*",
+          "x": 0,
+          "y": 3159
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "green-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3402
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "green-*",
+          "x": 0,
+          "y": 3402
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "neutral-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3699
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "neutral-*",
+          "x": 0,
+          "y": 3699
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "opacity-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3753
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "opacity-*",
+          "x": 0,
+          "y": 3753
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "orange-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3780
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "orange-*",
+          "x": 0,
+          "y": 3780
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "overlay-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3807
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "overlay-*",
+          "x": 0,
+          "y": 3807
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "red-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 3942
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "red-*",
+          "x": 0,
+          "y": 3942
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "stack-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4077
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "stack-*",
+          "x": 0,
+          "y": 4077
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "title-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4158
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "title-*",
+          "x": 0,
+          "y": 4158
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    },
+    {
+      "id": "track-*",
+      "type": "spectrumToken",
+      "position": {
+        "x": 0,
+        "y": 4185
+      },
+      "data": {
+        "graphNode": {
+          "type": "orphan-category",
+          "id": "track-*",
+          "x": 0,
+          "y": 4185
+        },
+        "isSelected": false,
+        "isSelectionAncestor": false,
+        "isSelectionDescendent": false,
+        "isSelectionDescendentIntersect": false
+      }
+    }
+  ],
+  "edges": [],
+  "viewport": {
+    "x": 380,
+    "y": 130,
+    "zoom": 0.7
+  },
+  "selected": [],
+  "selectionAncestorNodeIds": [],
+  "selectionDescendentNodeIds": [],
+  "selectedChildDescendentNodeIds": [],
+  "selectionDescendentIntersectNodeIds": [],
+  "focusNodeIds": [],
+  "focusRequest": 0,
+  "error": "",
+  "latestGraphData": {
+    "type": "graphData.changed",
+    "graph": {
+      "width": 0,
+      "height": 0,
+      "nodes": {
+        "user-card": {
+          "type": "component",
+          "id": "user-card",
+          "x": 0,
+          "y": 0
+        },
+        "triple-calendar": {
+          "type": "component",
+          "id": "triple-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "tree-view": {
+          "type": "component",
+          "id": "tree-view",
+          "x": 0,
+          "y": 0
+        },
+        "tray": {
+          "type": "component",
+          "id": "tray",
+          "x": 0,
+          "y": 0
+        },
+        "tooltip": {
+          "type": "component",
+          "id": "tooltip",
+          "x": 0,
+          "y": 0
+        },
+        "toast": {
+          "type": "component",
+          "id": "toast",
+          "x": 0,
+          "y": 0
+        },
+        "title": {
+          "type": "component",
+          "id": "title",
+          "x": 0,
+          "y": 0
+        },
+        "time-field": {
+          "type": "component",
+          "id": "time-field",
+          "x": 0,
+          "y": 0
+        },
+        "thumbnail": {
+          "type": "component",
+          "id": "thumbnail",
+          "x": 0,
+          "y": 0
+        },
+        "text-field": {
+          "type": "component",
+          "id": "text-field",
+          "x": 0,
+          "y": 0
+        },
+        "text-area": {
+          "type": "component",
+          "id": "text-area",
+          "x": 0,
+          "y": 0
+        },
+        "takeover-dialog": {
+          "type": "component",
+          "id": "takeover-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "tag": {
+          "type": "component",
+          "id": "tag",
+          "x": 0,
+          "y": 0
+        },
+        "tag-field": {
+          "type": "component",
+          "id": "tag-field",
+          "x": 0,
+          "y": 0
+        },
+        "tabs": {
+          "type": "component",
+          "id": "tabs",
+          "x": 0,
+          "y": 0
+        },
+        "table": {
+          "type": "component",
+          "id": "table",
+          "x": 0,
+          "y": 0
+        },
+        "switch": {
+          "type": "component",
+          "id": "switch",
+          "x": 0,
+          "y": 0
+        },
+        "swatch": {
+          "type": "component",
+          "id": "swatch",
+          "x": 0,
+          "y": 0
+        },
+        "swatch-group": {
+          "type": "component",
+          "id": "swatch-group",
+          "x": 0,
+          "y": 0
+        },
+        "steplist": {
+          "type": "component",
+          "id": "steplist",
+          "x": 0,
+          "y": 0
+        },
+        "status-light": {
+          "type": "component",
+          "id": "status-light",
+          "x": 0,
+          "y": 0
+        },
+        "standard-panel": {
+          "type": "component",
+          "id": "standard-panel",
+          "x": 0,
+          "y": 0
+        },
+        "standard-dialog": {
+          "type": "component",
+          "id": "standard-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "stack-item": {
+          "type": "component",
+          "id": "stack-item",
+          "x": 0,
+          "y": 0
+        },
+        "slider": {
+          "type": "component",
+          "id": "slider",
+          "x": 0,
+          "y": 0
+        },
+        "single-calendar": {
+          "type": "component",
+          "id": "single-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "side-navigation": {
+          "type": "component",
+          "id": "side-navigation",
+          "x": 0,
+          "y": 0
+        },
+        "select-box": {
+          "type": "component",
+          "id": "select-box",
+          "x": 0,
+          "y": 0
+        },
+        "segmented-text-field": {
+          "type": "component",
+          "id": "segmented-text-field",
+          "x": 0,
+          "y": 0
+        },
+        "segmented-control": {
+          "type": "component",
+          "id": "segmented-control",
+          "x": 0,
+          "y": 0
+        },
+        "search-field": {
+          "type": "component",
+          "id": "search-field",
+          "x": 0,
+          "y": 0
+        },
+        "rating": {
+          "type": "component",
+          "id": "rating",
+          "x": 0,
+          "y": 0
+        },
+        "radio-button": {
+          "type": "component",
+          "id": "radio-button",
+          "x": 0,
+          "y": 0
+        },
+        "progress-circle": {
+          "type": "component",
+          "id": "progress-circle",
+          "x": 0,
+          "y": 0
+        },
+        "progress-bar": {
+          "type": "component",
+          "id": "progress-bar",
+          "x": 0,
+          "y": 0
+        },
+        "popover": {
+          "type": "component",
+          "id": "popover",
+          "x": 0,
+          "y": 0
+        },
+        "picker": {
+          "type": "component",
+          "id": "picker",
+          "x": 0,
+          "y": 0
+        },
+        "opacity-checkerboard": {
+          "type": "component",
+          "id": "opacity-checkerboard",
+          "x": 0,
+          "y": 0
+        },
+        "number-field": {
+          "type": "component",
+          "id": "number-field",
+          "x": 0,
+          "y": 0
+        },
+        "meter": {
+          "type": "component",
+          "id": "meter",
+          "x": 0,
+          "y": 0
+        },
+        "menu": {
+          "type": "component",
+          "id": "menu",
+          "x": 0,
+          "y": 0
+        },
+        "list-view": {
+          "type": "component",
+          "id": "list-view",
+          "x": 0,
+          "y": 0
+        },
+        "date-picker": {
+          "type": "component",
+          "id": "date-picker",
+          "x": 0,
+          "y": 0
+        },
+        "alert-icon": {
+          "type": "component",
+          "id": "alert-icon",
+          "x": 0,
+          "y": 0
+        },
+        "validation-icon": {
+          "type": "component",
+          "id": "validation-icon",
+          "x": 0,
+          "y": 0
+        },
+        "add-icon": {
+          "type": "component",
+          "id": "add-icon",
+          "x": 0,
+          "y": 0
+        },
+        "arrow-icon": {
+          "type": "component",
+          "id": "arrow-icon",
+          "x": 0,
+          "y": 0
+        },
+        "asterisk-icon": {
+          "type": "component",
+          "id": "asterisk-icon",
+          "x": 0,
+          "y": 0
+        },
+        "checkmark-icon": {
+          "type": "component",
+          "id": "checkmark-icon",
+          "x": 0,
+          "y": 0
+        },
+        "chevron-icon": {
+          "type": "component",
+          "id": "chevron-icon",
+          "x": 0,
+          "y": 0
+        },
+        "cross-icon": {
+          "type": "component",
+          "id": "cross-icon",
+          "x": 0,
+          "y": 0
+        },
+        "dash-icon": {
+          "type": "component",
+          "id": "dash-icon",
+          "x": 0,
+          "y": 0
+        },
+        "drag-handle-icon": {
+          "type": "component",
+          "id": "drag-handle-icon",
+          "x": 0,
+          "y": 0
+        },
+        "gripper-icon": {
+          "type": "component",
+          "id": "gripper-icon",
+          "x": 0,
+          "y": 0
+        },
+        "link-out-icon": {
+          "type": "component",
+          "id": "link-out-icon",
+          "x": 0,
+          "y": 0
+        },
+        "ui-icon": {
+          "type": "component",
+          "id": "ui-icon",
+          "x": 0,
+          "y": 0
+        },
+        "in-line-alert": {
+          "type": "component",
+          "id": "in-line-alert",
+          "x": 0,
+          "y": 0
+        },
+        "in-field-progress-circle": {
+          "type": "component",
+          "id": "in-field-progress-circle",
+          "x": 0,
+          "y": 0
+        },
+        "in-field-button": {
+          "type": "component",
+          "id": "in-field-button",
+          "x": 0,
+          "y": 0
+        },
+        "illustrated-message": {
+          "type": "component",
+          "id": "illustrated-message",
+          "x": 0,
+          "y": 0
+        },
+        "icon": {
+          "type": "component",
+          "id": "icon",
+          "x": 0,
+          "y": 0
+        },
+        "help-text": {
+          "type": "component",
+          "id": "help-text",
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "type": "component",
+          "id": "heading",
+          "x": 0,
+          "y": 0
+        },
+        "form-item": {
+          "type": "component",
+          "id": "form-item",
+          "x": 0,
+          "y": 0
+        },
+        "floating-action-button": {
+          "type": "component",
+          "id": "floating-action-button",
+          "x": 0,
+          "y": 0
+        },
+        "field": {
+          "type": "component",
+          "id": "field",
+          "x": 0,
+          "y": 0
+        },
+        "field-label": {
+          "type": "component",
+          "id": "field-label",
+          "x": 0,
+          "y": 0
+        },
+        "drop-zone": {
+          "type": "component",
+          "id": "drop-zone",
+          "x": 0,
+          "y": 0
+        },
+        "double-calendar": {
+          "type": "component",
+          "id": "double-calendar",
+          "x": 0,
+          "y": 0
+        },
+        "divider": {
+          "type": "component",
+          "id": "divider",
+          "x": 0,
+          "y": 0
+        },
+        "detail": {
+          "type": "component",
+          "id": "detail",
+          "x": 0,
+          "y": 0
+        },
+        "date-field": {
+          "type": "component",
+          "id": "date-field",
+          "x": 0,
+          "y": 0
+        },
+        "contextual-help": {
+          "type": "component",
+          "id": "contextual-help",
+          "x": 0,
+          "y": 0
+        },
+        "combo-box": {
+          "type": "component",
+          "id": "combo-box",
+          "x": 0,
+          "y": 0
+        },
+        "color-wheel": {
+          "type": "component",
+          "id": "color-wheel",
+          "x": 0,
+          "y": 0
+        },
+        "color-slider": {
+          "type": "component",
+          "id": "color-slider",
+          "x": 0,
+          "y": 0
+        },
+        "color-loupe": {
+          "type": "component",
+          "id": "color-loupe",
+          "x": 0,
+          "y": 0
+        },
+        "color-handle": {
+          "type": "component",
+          "id": "color-handle",
+          "x": 0,
+          "y": 0
+        },
+        "color-control": {
+          "type": "component",
+          "id": "color-control",
+          "x": 0,
+          "y": 0
+        },
+        "color-area": {
+          "type": "component",
+          "id": "color-area",
+          "x": 0,
+          "y": 0
+        },
+        "collection-card": {
+          "type": "component",
+          "id": "collection-card",
+          "x": 0,
+          "y": 0
+        },
+        "code": {
+          "type": "component",
+          "id": "code",
+          "x": 0,
+          "y": 0
+        },
+        "coach-mark": {
+          "type": "component",
+          "id": "coach-mark",
+          "x": 0,
+          "y": 0
+        },
+        "coach-indicator": {
+          "type": "component",
+          "id": "coach-indicator",
+          "x": 0,
+          "y": 0
+        },
+        "checkbox": {
+          "type": "component",
+          "id": "checkbox",
+          "x": 0,
+          "y": 0
+        },
+        "card": {
+          "type": "component",
+          "id": "card",
+          "x": 0,
+          "y": 0
+        },
+        "card-horizontal": {
+          "type": "component",
+          "id": "card-horizontal",
+          "x": 0,
+          "y": 0
+        },
+        "button": {
+          "type": "component",
+          "id": "button",
+          "x": 0,
+          "y": 0
+        },
+        "breadcrumbs": {
+          "type": "component",
+          "id": "breadcrumbs",
+          "x": 0,
+          "y": 0
+        },
+        "body": {
+          "type": "component",
+          "id": "body",
+          "x": 0,
+          "y": 0
+        },
+        "bar-panel": {
+          "type": "component",
+          "id": "bar-panel",
+          "x": 0,
+          "y": 0
+        },
+        "avatar": {
+          "type": "component",
+          "id": "avatar",
+          "x": 0,
+          "y": 0
+        },
+        "avatar-group": {
+          "type": "component",
+          "id": "avatar-group",
+          "x": 0,
+          "y": 0
+        },
+        "alert-dialog": {
+          "type": "component",
+          "id": "alert-dialog",
+          "x": 0,
+          "y": 0
+        },
+        "alert-banner": {
+          "type": "component",
+          "id": "alert-banner",
+          "x": 0,
+          "y": 0
+        },
+        "action-button": {
+          "type": "component",
+          "id": "action-button",
+          "x": 0,
+          "y": 0
+        },
+        "action-bar": {
+          "type": "component",
+          "id": "action-bar",
+          "x": 0,
+          "y": 0
+        },
+        "accordion": {
+          "type": "component",
+          "id": "accordion",
+          "x": 0,
+          "y": 0
+        },
+        "cjk-*": {
+          "type": "orphan-category",
+          "id": "cjk-*",
+          "x": 0,
+          "y": 0
+        },
+        "component-*": {
+          "type": "orphan-category",
+          "id": "component-*",
+          "x": 0,
+          "y": 0
+        },
+        "default-*": {
+          "type": "orphan-category",
+          "id": "default-*",
+          "x": 0,
+          "y": 0
+        },
+        "line-*": {
+          "type": "orphan-category",
+          "id": "line-*",
+          "x": 0,
+          "y": 0
+        },
+        "text-*": {
+          "type": "orphan-category",
+          "id": "text-*",
+          "x": 0,
+          "y": 0
+        },
+        "accent-*": {
+          "type": "orphan-category",
+          "id": "accent-*",
+          "x": 0,
+          "y": 0
+        },
+        "icon-*": {
+          "type": "orphan-category",
+          "id": "icon-*",
+          "x": 0,
+          "y": 0
+        },
+        "informative-*": {
+          "type": "orphan-category",
+          "id": "informative-*",
+          "x": 0,
+          "y": 0
+        },
+        "negative-*": {
+          "type": "orphan-category",
+          "id": "negative-*",
+          "x": 0,
+          "y": 0
+        },
+        "notice-*": {
+          "type": "orphan-category",
+          "id": "notice-*",
+          "x": 0,
+          "y": 0
+        },
+        "positive-*": {
+          "type": "orphan-category",
+          "id": "positive-*",
+          "x": 0,
+          "y": 0
+        },
+        "accessory-*": {
+          "type": "orphan-category",
+          "id": "accessory-*",
+          "x": 0,
+          "y": 0
+        },
+        "android-*": {
+          "type": "orphan-category",
+          "id": "android-*",
+          "x": 0,
+          "y": 0
+        },
+        "banner-*": {
+          "type": "orphan-category",
+          "id": "banner-*",
+          "x": 0,
+          "y": 0
+        },
+        "base-*": {
+          "type": "orphan-category",
+          "id": "base-*",
+          "x": 0,
+          "y": 0
+        },
+        "border-*": {
+          "type": "orphan-category",
+          "id": "border-*",
+          "x": 0,
+          "y": 0
+        },
+        "character-*": {
+          "type": "orphan-category",
+          "id": "character-*",
+          "x": 0,
+          "y": 0
+        },
+        "container-*": {
+          "type": "orphan-category",
+          "id": "container-*",
+          "x": 0,
+          "y": 0
+        },
+        "corner-*": {
+          "type": "orphan-category",
+          "id": "corner-*",
+          "x": 0,
+          "y": 0
+        },
+        "disclosure-*": {
+          "type": "orphan-category",
+          "id": "disclosure-*",
+          "x": 0,
+          "y": 0
+        },
+        "drop-*": {
+          "type": "orphan-category",
+          "id": "drop-*",
+          "x": 0,
+          "y": 0
+        },
+        "field-*": {
+          "type": "orphan-category",
+          "id": "field-*",
+          "x": 0,
+          "y": 0
+        },
+        "focus-*": {
+          "type": "orphan-category",
+          "id": "focus-*",
+          "x": 0,
+          "y": 0
+        },
+        "gap-*": {
+          "type": "orphan-category",
+          "id": "gap-*",
+          "x": 0,
+          "y": 0
+        },
+        "gradient-*": {
+          "type": "orphan-category",
+          "id": "gradient-*",
+          "x": 0,
+          "y": 0
+        },
+        "group-*": {
+          "type": "orphan-category",
+          "id": "group-*",
+          "x": 0,
+          "y": 0
+        },
+        "label-*": {
+          "type": "orphan-category",
+          "id": "label-*",
+          "x": 0,
+          "y": 0
+        },
+        "list-*": {
+          "type": "orphan-category",
+          "id": "list-*",
+          "x": 0,
+          "y": 0
+        },
+        "navigational-*": {
+          "type": "orphan-category",
+          "id": "navigational-*",
+          "x": 0,
+          "y": 0
+        },
+        "padding-*": {
+          "type": "orphan-category",
+          "id": "padding-*",
+          "x": 0,
+          "y": 0
+        },
+        "side-*": {
+          "type": "orphan-category",
+          "id": "side-*",
+          "x": 0,
+          "y": 0
+        },
+        "spacing-*": {
+          "type": "orphan-category",
+          "id": "spacing-*",
+          "x": 0,
+          "y": 0
+        },
+        "vertical-*": {
+          "type": "orphan-category",
+          "id": "vertical-*",
+          "x": 0,
+          "y": 0
+        },
+        "visual-*": {
+          "type": "orphan-category",
+          "id": "visual-*",
+          "x": 0,
+          "y": 0
+        },
+        "window-*": {
+          "type": "orphan-category",
+          "id": "window-*",
+          "x": 0,
+          "y": 0
+        },
+        "workflow-*": {
+          "type": "orphan-category",
+          "id": "workflow-*",
+          "x": 0,
+          "y": 0
+        },
+        "brown-*": {
+          "type": "orphan-category",
+          "id": "brown-*",
+          "x": 0,
+          "y": 0
+        },
+        "celery-*": {
+          "type": "orphan-category",
+          "id": "celery-*",
+          "x": 0,
+          "y": 0
+        },
+        "chartreuse-*": {
+          "type": "orphan-category",
+          "id": "chartreuse-*",
+          "x": 0,
+          "y": 0
+        },
+        "cinnamon-*": {
+          "type": "orphan-category",
+          "id": "cinnamon-*",
+          "x": 0,
+          "y": 0
+        },
+        "cyan-*": {
+          "type": "orphan-category",
+          "id": "cyan-*",
+          "x": 0,
+          "y": 0
+        },
+        "fuchsia-*": {
+          "type": "orphan-category",
+          "id": "fuchsia-*",
+          "x": 0,
+          "y": 0
+        },
+        "gray-*": {
+          "type": "orphan-category",
+          "id": "gray-*",
+          "x": 0,
+          "y": 0
+        },
+        "indigo-*": {
+          "type": "orphan-category",
+          "id": "indigo-*",
+          "x": 0,
+          "y": 0
+        },
+        "magenta-*": {
+          "type": "orphan-category",
+          "id": "magenta-*",
+          "x": 0,
+          "y": 0
+        },
+        "pink-*": {
+          "type": "orphan-category",
+          "id": "pink-*",
+          "x": 0,
+          "y": 0
+        },
+        "purple-*": {
+          "type": "orphan-category",
+          "id": "purple-*",
+          "x": 0,
+          "y": 0
+        },
+        "seafoam-*": {
+          "type": "orphan-category",
+          "id": "seafoam-*",
+          "x": 0,
+          "y": 0
+        },
+        "silver-*": {
+          "type": "orphan-category",
+          "id": "silver-*",
+          "x": 0,
+          "y": 0
+        },
+        "static-*": {
+          "type": "orphan-category",
+          "id": "static-*",
+          "x": 0,
+          "y": 0
+        },
+        "transparent-*": {
+          "type": "orphan-category",
+          "id": "transparent-*",
+          "x": 0,
+          "y": 0
+        },
+        "turquoise-*": {
+          "type": "orphan-category",
+          "id": "turquoise-*",
+          "x": 0,
+          "y": 0
+        },
+        "yellow-*": {
+          "type": "orphan-category",
+          "id": "yellow-*",
+          "x": 0,
+          "y": 0
+        },
+        "background-*": {
+          "type": "orphan-category",
+          "id": "background-*",
+          "x": 0,
+          "y": 0
+        },
+        "blue-*": {
+          "type": "orphan-category",
+          "id": "blue-*",
+          "x": 0,
+          "y": 0
+        },
+        "disabled-*": {
+          "type": "orphan-category",
+          "id": "disabled-*",
+          "x": 0,
+          "y": 0
+        },
+        "green-*": {
+          "type": "orphan-category",
+          "id": "green-*",
+          "x": 0,
+          "y": 0
+        },
+        "neutral-*": {
+          "type": "orphan-category",
+          "id": "neutral-*",
+          "x": 0,
+          "y": 0
+        },
+        "opacity-*": {
+          "type": "orphan-category",
+          "id": "opacity-*",
+          "x": 0,
+          "y": 0
+        },
+        "orange-*": {
+          "type": "orphan-category",
+          "id": "orange-*",
+          "x": 0,
+          "y": 0
+        },
+        "overlay-*": {
+          "type": "orphan-category",
+          "id": "overlay-*",
+          "x": 0,
+          "y": 0
+        },
+        "red-*": {
+          "type": "orphan-category",
+          "id": "red-*",
+          "x": 0,
+          "y": 0
+        },
+        "stack-*": {
+          "type": "orphan-category",
+          "id": "stack-*",
+          "x": 0,
+          "y": 0
+        },
+        "title-*": {
+          "type": "orphan-category",
+          "id": "title-*",
+          "x": 0,
+          "y": 0
+        },
+        "track-*": {
+          "type": "orphan-category",
+          "id": "track-*",
+          "x": 0,
+          "y": 0
+        }
+      },
+      "adjacencyList": {}
+    },
+    "selected": [],
+    "selectionAncestorNodeIds": [],
+    "selectionDescendentNodeIds": [],
+    "selectedChildDescendentNodeIds": [],
+    "selectionDescendentIntersectNodeIds": [],
+    "focusNodeIds": []
+  }
+}

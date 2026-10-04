@@ -1,0 +1,76 @@
+import type { Edge, Node } from "@xyflow/react"
+import { GRAPH_EDGE_STYLE, GRAPH_GLOBAL_STYLE_RULES } from "./constants"
+import { resolveGraphEdgeVisual, type GraphEdgeColorRole } from "./graph-color-resolvers"
+import type { GraphNode, GraphState } from "./graph-types"
+import { deriveIndirectRoute, deriveSelectedRouteNodeIds } from "./indirect-route"
+
+export type SpectrumFlowNodeData = { graphNode: GraphNode; hasDownstream: boolean; isRoot: boolean; routeOpacity: number; isSelected: boolean; isSelectionAncestor: boolean; isSelectionDescendent: boolean; isSelectionDescendentIntersect: boolean }
+export type SpectrumFlowNode = Node<SpectrumFlowNodeData, "spectrumToken">
+export type SpectrumFlowEdgeData = { colorRole: GraphEdgeColorRole }
+export type SpectrumFlowEdge = Edge<SpectrumFlowEdgeData, "spectrumToken">
+
+export function createFlowElements(graph: GraphState, selected: string[], selectionAncestorNodeIds: string[], selectionDescendentNodeIds: string[], selectedChildDescendentNodeIds: string[], selectionDescendentIntersectNodeIds: string[]) {
+  const selectedIds = new Set(selected)
+  const ancestorIds = new Set(selectionAncestorNodeIds)
+  const descendentIds = new Set(selectionDescendentNodeIds)
+  const selectedChildDescendentIds = new Set(selectedChildDescendentNodeIds)
+  const descendentIntersectIds = new Set(selectionDescendentIntersectNodeIds)
+  const focusIds = new Set([
+    ...selectionAncestorNodeIds.filter((id) => descendentIds.has(id)),
+    ...selectionDescendentIntersectNodeIds,
+  ].filter((id) => !selectedIds.has(id)))
+  const focusedOrSelectedIds = new Set([...focusIds, ...selectedIds])
+  const isFocusMode = focusIds.size > 0
+  const nodeIdsWithIncomingEdges = new Set(Object.values(graph.adjacencyList).flat())
+  const selectedRouteNodeIds = deriveSelectedRouteNodeIds(
+    selected,
+    selectionAncestorNodeIds,
+    selectionDescendentNodeIds,
+    selectionDescendentIntersectNodeIds,
+  )
+  const indirectRoute = deriveIndirectRoute(graph, selected, selectedRouteNodeIds)
+  const nodes: SpectrumFlowNode[] = Object.values(graph.nodes).map((graphNode) => ({
+    id: graphNode.id,
+    type: "spectrumToken",
+    position: { x: graphNode.x, y: graphNode.y },
+    data: {
+      graphNode,
+      hasDownstream: (graph.adjacencyList[graphNode.id] ?? []).length > 0,
+      isRoot: !nodeIdsWithIncomingEdges.has(graphNode.id),
+      routeOpacity: indirectRoute.isActive && !indirectRoute.nodeIds.has(graphNode.id)
+        ? GRAPH_GLOBAL_STYLE_RULES.indirectRouteOpactity
+        : 1,
+      isSelected: selectedIds.has(graphNode.id),
+      isSelectionAncestor: ancestorIds.has(graphNode.id),
+      isSelectionDescendent: descendentIds.has(graphNode.id),
+      isSelectionDescendentIntersect: descendentIntersectIds.has(graphNode.id),
+    },
+  }))
+  const edges: SpectrumFlowEdge[] = Object.entries(graph.adjacencyList).flatMap(([source, targets]) => {
+    const sourceNode = graph.nodes[source]
+    if (!sourceNode) return []
+    return targets.map((target): SpectrumFlowEdge => {
+      const isOnAncestorPath = ancestorIds.has(source) && ancestorIds.has(target)
+      const isOnDescendentPath = descendentIds.has(source) && descendentIds.has(target)
+      const isOnSelectedChildDescendentPath = selectedChildDescendentIds.has(source) && selectedChildDescendentIds.has(target)
+      const isSelectionConnection = isOnAncestorPath && isOnDescendentPath
+      const isFaded = isFocusMode && !(focusedOrSelectedIds.has(source) && focusedOrSelectedIds.has(target))
+      const routeOpacity = indirectRoute.isActive
+        && !(indirectRoute.nodeIds.has(source) && indirectRoute.nodeIds.has(target))
+        ? GRAPH_GLOBAL_STYLE_RULES.indirectRouteOpactity
+        : 1
+      const isHighlighted = isSelectionConnection || isOnAncestorPath || isOnSelectedChildDescendentPath
+      const visual = resolveGraphEdgeVisual({ sourceType: sourceNode.type, isOnSelectedChildDescendentPath, isSelectionConnection, isOnAncestorPath, isOnDescendentPath, isFaded, isHighlighted })
+      return {
+        id: `${source}->${target}`,
+        source,
+        target,
+        type: "spectrumToken",
+        data: { colorRole: visual.role },
+        zIndex: visual.zIndex,
+        style: { stroke: visual.color, strokeWidth: GRAPH_EDGE_STYLE.strokeWidth, opacity: routeOpacity },
+      }
+    })
+  })
+  return { nodes, edges }
+}
