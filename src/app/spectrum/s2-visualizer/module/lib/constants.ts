@@ -9,6 +9,27 @@
  * - orphanCategoryNode: orphan-category root with no visible children.
  * - orphanCategoryNodeWithVisibleChildren: orphan-category root whose children are visible.
  * - nonDownstreamToken: token outside selection downstream, including upstream tokens.
+ *
+ * node (componentNode)
+ * nodeDownstream
+ * nodeUpstream (componentNodeWithVisibleChildren)
+ * nodeSelected (directlySelectedNode)
+ * nodeSelectedDownstream
+ * nodeSelectedUpstream
+ * nodeAtl (downstreamToken)
+ * nodeAtlDownstream
+ * nodeAtlUpstream (orphanCategoryNodeWithVisibleChildren)
+ * nodeAtlSelected
+ * nodeAtlSelectedDownstream
+ * nodeAtlSelectedUpstream
+ * nodeAtlLeaf (nonDownstreamToken)
+ * nodeOrphan (componentNode)
+ * nodeOrphanDownstream
+ * nodeOrphanUpstream
+ * nodeOrphanSelected
+ * nodeOrphanSelectedDownstream
+ * nodeOrphanSelectedUpstream
+ * nodeOrphanLeaf
  */
 export const GRAPH_NODE_COLORS = {
   /** A component node with no currently visible child graph. */
